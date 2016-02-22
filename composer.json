@@ -1,5 +1,5 @@
 {
-	"name" : "luyadev/luya-boostrap4",
+	"name" : "luyadev/luya-bootstrap4",
 	"description" : "LUYA bootstrap4 helpers and widgets",
 	"type" : "luya-module",
 	"keywords" : ["php", "luya", "module", "cms", "yii2", "bootstrap", "bootstrap4", "twbs4"],
