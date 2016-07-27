@@ -51,4 +51,5 @@ use bootstrap4\ActiveForm;
 > div.required label.control-label:after {
 >    content: " *";
 >    color: red;
->}```
+>}
+>```
