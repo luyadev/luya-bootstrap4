@@ -45,3 +45,10 @@ use bootstrap4\ActiveForm;
     <?= \yii\helpers\Html::submitButton('Login', ['class' => 'btn btn-primary-outline']) ?>
 <?php ActiveForm::end() ?>
 ```
+
+> Tip: In order to style required fields with asterisks, you can use the following CSS:
+> ```
+> div.required label.control-label:after {
+>    content: " *";
+>    color: red;
+>}```
