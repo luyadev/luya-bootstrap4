@@ -1,7 +1,6 @@
-BOOTSTRAP 4 CLASSES
-===================
+# Yii2/LUYA Bootstrap4
 
-Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com).
+Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
 
 + ActiveForm Widget (Yii2 ActiveForm Widget matching the Bootstrap 4 Form builder)
 + ActiveField Widget
