@@ -35,7 +35,11 @@ At the top section of your layout file. This will include all required css and j
 A common way to build forms is the use thy Yii2 ActiveForm widget, to match all bootstrap4 components use it like following:
 
 ```php
-<?php $form = \bootstrap4\ActiveForm::begin() ?>
+<?php
+use bootstrap4\ActiveForm;
+?>
+<h1>Your Bootstrap4 ActiveForm</h1>
+<?php $form = ActiveForm::begin() ?>
     <?= $form->field($model, 'username') ?>
     <?= $form->field($model, 'password')->passwordInput() ?>
 
