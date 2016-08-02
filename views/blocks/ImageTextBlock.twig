@@ -1,0 +1,28 @@
+
+
+<div class="image-text__wrapper">
+    {% if vars.imagePosition == "pull-xs-left" %}
+        <div class="col-sm-6 p-a-0">
+            <img src="{{extras.imageId.source}}" class="img-fluid {{vars.imagePosition}}" />
+        </div>
+        <div class="col-sm-6 p-a-0">
+            {{extras.text}}
+        </div>
+    {% endif %}
+    {% if vars.imagePosition == "pull-xs-right" %}
+        <div class="col-sm-6 p-a-0">
+            {{extras.text}}
+        </div>
+        <div class="col-sm-6 p-a-0">
+            <img src="{{extras.imageId.source}}" class="img-fluid {{vars.imagePosition}}" />
+        </div>
+    {% endif %}
+    {% if vars.imagePosition == "m-x-auto d-block" %}
+        <div class="col-sm-12 p-a-0">
+            <img src="{{extras.imageId.source}}" class="img-fluid {{vars.imagePosition}}{% if vars.imageShapes == "1" %}img-rounded{% endif %}{% if vars.imageShapes == "2" %}img-thumbnail{% endif %}{% if vars.imageShapes == "3" %}img-circle{% endif %}" />
+        </div>
+        <div class="col-sm-12 p-a-0">
+            {{extras.text}}
+        </div>
+    {% endif %}
+</div>
