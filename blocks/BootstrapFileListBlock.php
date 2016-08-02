@@ -1,7 +1,9 @@
 <?php
 
 namespace bootstrap4\blocks;
+
 use bootstrap4\BootstrapBlockGroup;
+use bootstrap4\Module;
 
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta6-dev at 02.08.2016 16:34
@@ -27,15 +29,13 @@ class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
 
     public function name()
     {
-        return 'BootstrapFileListBlock';
+        return Module::t('block_file_list.block_name');
     }
 
-    /*
     public function getBlockGroup()
     {
-        return BootstrapBlockGroup::className();
+        return \bootstrap4\blockgroups\BootstrapGroup::className();
     }
-    */
 
     public function icon()
     {
@@ -45,6 +45,14 @@ class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
     public function config()
     {
         return [
+            'vars' => [
+                ['var' => 'files', 'label' => Module::t('block_file_list.files_label'), 'type' => 'zaa-file-array-upload'],
+            ],
+            'cfgs' => [
+                ['var' => 'showType', 'label' => Module::t('block_file_list.show_type_label'), 'initvalue' => 0, 'type' => 'zaa-checkbox'],
+                ['var' => 'showTypeIcon', 'label' => Module::t('block_file_list.show_type_icon'), 'initvalue' => 0, 'type' => 'zaa-checkbox'],
+                ['var' => 'showFileSize', 'label' => Module::t('block_file_list.show_file_size'), 'initvalue' => 0, 'type' => 'zaa-checkbox'],
+            ],
         ];
     }
 
@@ -54,11 +62,12 @@ class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
     public function extraVars()
     {
         return [
+            'fileList' => $this->zaaFileArrayUpload($this->getVarValue('files')),
         ];
     }
 
     public function admin()
     {
-
+        return 'Dateien…';
     }
 }
