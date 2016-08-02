@@ -70,4 +70,13 @@ class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
     {
         return 'Dateien…';
     }
+
+    public function frontend()
+    {
+        $extras = $this->extraVars();
+        return $this->view->render($this->getViewFileName('php'), [
+            'cfgs' => $this->getCfgValues(),
+            'extras' => $this->extraVars(),
+        ], $this);
+    }
 }
