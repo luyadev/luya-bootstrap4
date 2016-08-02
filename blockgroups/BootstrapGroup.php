@@ -1,8 +1,8 @@
 <?php
 
-namespace bootstrap4;
+namespace bootstrap4\blockgroups;
 
-class BootstrapBlockGroup extends \cmsadmin\base\BlockGroup
+class BootstrapGroup extends \cmsadmin\base\BlockGroup
 {
     public function identifier()
     {
