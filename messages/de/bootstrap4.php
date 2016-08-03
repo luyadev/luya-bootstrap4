@@ -20,7 +20,7 @@ return [
     'block_image_text.circle' => 'Kreis',
     'block_image_text.image' => 'Bild',
     'block_image_text.help' => 'Bilder mit Text positionieren',
-    'block_image_text.no_content' => 'Es wurden noch keine Elemente hinzugefügt.',
-
+    'block_image_text.no_text' => 'Es wurde noch kein Text hinzugefügt.',
+    'block_image_text.no_image' => 'Es wurde noch kein Bild hinzugefügt.',
 
 ];
