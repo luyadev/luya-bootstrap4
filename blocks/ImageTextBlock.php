@@ -10,7 +10,7 @@ use bootstrap4\Module;
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 02.08.2016 16:15
  * 
- * @author Silvan Hahn (silvan.hahn@zephir.ch) Positioning of images and mark down text based on Bootstrap columns, image shapes are also available
+ * @author Silvan Hahn (silvan.hahn@zephir.ch) Positioning of images and mark down text based on Bootstrap columns, image shapes are also available.
  */
 class ImageTextBlock extends \cmsadmin\base\PhpBlock
 {
