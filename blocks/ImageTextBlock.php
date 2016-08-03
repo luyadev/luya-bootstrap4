@@ -126,7 +126,7 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
         '{% endif %}'.
         '{% if vars.imagePosition == "centered" %}'.
             '<div class="center-image" style="text-align:center;">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:none; clear:both;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
-            '{% if vars.text is not empty %} <div class="left-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
+            '{% if vars.text is not empty %} <div class="center-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
         '{% if vars.imageId is empty %}'.
             '<p>'. Module::t('block_image_text.no_image') .'</p>'.
