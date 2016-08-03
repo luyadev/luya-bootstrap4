@@ -8,9 +8,10 @@ use bootstrap4\blockgroups\BootstrapGroup;
 use bootstrap4\Module;
 
 /**
- * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 02.08.2016 16:15
- * 
- * @author Silvan Hahn (silvan.hahn@zephir.ch) Positioning of images and mark down text based on Bootstrap columns, image shapes are also available.
+ * Positioning of images and mark down text based on Bootstrap 4 columns, image shapes are also available out of the box.
+ * Please keep in mind, that Boostrap 4 needs to be installed in your project.
+ *
+ * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
 class ImageTextBlock extends \cmsadmin\base\PhpBlock
 {
@@ -77,10 +78,10 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
         if ($this->getVarValue('textType')) {
             return TagParser::convertWithMarkdown($text);
         }
-     
+
         return $text;
     }
-    
+
     private $_source = null;
 
     public function getImageSource()
@@ -89,7 +90,7 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
             $img = Yii::$app->storage->getImage($this->getVarValue('imageId'), 0);
             $this->_source = $img ? $img->source : false;
         }
-        
+
         return $this->_source;
     }
 
