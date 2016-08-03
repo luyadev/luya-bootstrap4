@@ -51,20 +51,20 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
     {
         return [
            'vars' => [
-               ['var' => 'imagePosition', 'label' => 'Bildposition', 'type' => 'zaa-select', 'initvalue'=>'pull-xs-left', 'options' => [
-                       ['value' => 'pull-xs-left', 'label' => 'Links'],
-                       ['value' => 'pull-xs-right', 'label' => 'Rechts'],
-                       ['value' => 'm-x-auto d-block', 'label' => 'Zentriert'],
+               ['var' => 'imagePosition', 'label' => Module::t('block_image_text.image_position'), 'type' => 'zaa-select', 'initvalue'=>'left', 'options' => [
+                       ['value' => 'left', 'label' => Module::t('block_image_text.left')],
+                       ['value' => 'right', 'label' => Module::t('block_image_text.right')],
+                       ['value' => 'centered', 'label' => Module::t('block_image_text.center')],
                    ],
                ],
-               ['var' => 'imageShapes', 'label' => 'Bildformen', 'initvalue' => 0, 'type' => 'zaa-select', 'options' => [
-                       ['value' => '0', 'label' => 'Keine Form'],
-                       ['value' => '1', 'label' => 'Runde Ecken'],
-                       ['value' => '2', 'label' => 'Thumbnail mit Rahmen'],
-                       ['value' => '3', 'label' => 'Kreis'],
+               ['var' => 'imageShapes', 'label' => Module::t('block_image_text.image_shape'), 'initvalue' => 'img-noshape', 'type' => 'zaa-select', 'options' => [
+                       ['value' => 'img-noshape', 'label' => Module::t('block_image_text.no_shape')],
+                       ['value' => 'img-rounded', 'label' => Module::t('block_image_text.rounded_corners')],
+                       ['value' => 'img-thumbnail', 'label' => Module::t('block_image_text.thumbnail')],
+                       ['value' => 'img-circle', 'label' => Module::t('block_image_text.circle')],
                    ],
                ],
-               ['var' => 'imageId', 'label' => 'Bild', 'type' => 'zaa-image-upload', 'options' => ['no_filter' => false]],
+               ['var' => 'imageId', 'label' => Module::t('block_image_text.image'), 'type' => 'zaa-image-upload', 'options' => ['no_filter' => false]],
                ['var' => 'text', 'label' => 'Text', 'type' => 'zaa-textarea'],
                ['var' => 'textType', 'label' => 'Textformat', 'initvalue' => 0, 'type' => 'zaa-select', 'options' => [
                        ['value' => '0', 'label' => 'Standard'],
@@ -77,7 +77,7 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
     public function getFieldHelp()
     {
         return [
-            'textType' => 'Hilfe',
+            'textType' => Module::t('block_image_text.help')
         ];
     }
 
@@ -85,7 +85,7 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
     {
         $text = $this->getVarValue('text');
 
-        if ($this->getCfgValue('textType')) {
+        if ($this->getVarValue('textType')) {
             return TagParser::convertWithMarkdown($text);
         }
      return $text;
@@ -121,23 +121,25 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
      */
     public function admin()
     {
-        return '{% if vars.imagePosition == "pull-xs-left" %}'.
-        '<div class="left-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:left;" class="img-fluid {{vars.imagePosition}}" />'.
-        '</div>'.
-        '<div class="right-text">'.'{{extras.text}}'.
-        '</div>'.
+        return
+        '{% if vars.imagePosition == "left" %}'.
+            '<div class="left-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:left;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '{% if vars.text is not empty %} <div class="right-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
-        '{% if vars.imagePosition == "pull-xs-right" %}'.
-        '<div class="right-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:right;" class="img-fluid {{vars.imagePosition}}" />'.
-        '</div>'.
-        '<div class="left-text">'.'{{extras.text}}'.
-        '</div>'.
+        '{% if vars.imagePosition == "right" %}'.
+            '<div class="right-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:right;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '{% if vars.text is not empty %} <div class="left-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
-        '{% if vars.imagePosition == "m-x-auto d-block" %}'.
-        '<div class="center-image" style="text-align:center;">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:none; clear:both;" class="img-fluid {{vars.imagePosition}}" />'.
-        '</div>'.
-        '<div class="center-text">'.'{{extras.text}}'.
-        '</div>'.
+        '{% if vars.imagePosition == "centered" %}'.
+            '<div class="center-image" style="text-align:center;">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:none; clear:both;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '{% if vars.text is not empty %} <div class="left-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
+        '{% endif %}'.
+        '{% if vars.imageId is empty %}'.
+            '<p>'. Module::t('block_image_text.no_image') .'</p>'.
+        '{% endif %}'.
+        '{% if vars.text is empty %}'.
+            '<p>'. Module::t('block_image_text.no_text') .'</p>'.
         '{% endif %}';
+
     }
 }
