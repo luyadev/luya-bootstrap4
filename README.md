@@ -19,6 +19,25 @@ AS this extension is only a library with "helper" classes you can now use the he
 
 # Usage
 
+### Using Bootstrap 4 Blocks
+
+If you like to use all the Bootstrap 4 blocks (which are by default matching the theme and styling of new bootstrap 4) then you have to inlcude the Module to your project and run the import command. Otherwhise the CMS can not find the blocks (and groups).
+
+To include the Boostrap4 Module just added the following line to your project configuration modules section:
+
+```php
+return [
+    'modules' => [
+        // ...
+        'bootstrap4' => 'bootstrap4\Module',
+        // ...
+    ],
+    // ...
+];
+```
+
+Now run the [import command](https://luya.io/guide/luya-console) and alle blocks and groups are ready to use.
+
 ### Assets Resources of Bootstrap
 
 To use the css and js files of bootstrap just register the `Bootstrap4Asset` into your layout file with the following code of your layout.php file:
