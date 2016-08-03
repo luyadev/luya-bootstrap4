@@ -2,8 +2,8 @@
 
 namespace bootstrap4\blocks;
 
-use bootstrap4\BootstrapBlockGroup;
 use bootstrap4\Module;
+use bootstrap4\blockgroups\BootstrapGroup;
 
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta6-dev at 02.08.2016 16:34
@@ -34,7 +34,7 @@ class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
 
     public function getBlockGroup()
     {
-        return \bootstrap4\blockgroups\BootstrapGroup::className();
+        return BootstrapGroup::className();
     }
 
     public function icon()
