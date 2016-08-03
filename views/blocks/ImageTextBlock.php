@@ -1,0 +1,9 @@
+<?
+
+// $vars
+// $cfgs
+// $extras
+
+?>
+
+Huhu!

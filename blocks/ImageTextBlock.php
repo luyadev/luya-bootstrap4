@@ -3,13 +3,14 @@
 namespace bootstrap4\blocks;
 
 use Yii;
-use cmsadmin\Module;
 use cms\helpers\TagParser;
+use bootstrap4\blockgroups\BootstrapGroup;
+use bootstrap4\Module;
 
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 02.08.2016 16:15
  */
-class ImageTextBlock extends \cmsadmin\base\Block
+class ImageTextBlock extends \cmsadmin\base\PhpBlock
 {
 
     public $module = 'bootstrap4';
@@ -33,7 +34,12 @@ class ImageTextBlock extends \cmsadmin\base\Block
 
     public function name()
     {
-        return 'ImageTextBlock';
+        return Module::t('block_image_text.block_name');;
+    }
+
+    public function getBlockGroup()
+    {
+        return BootstrapGroup::className();
     }
 
     public function icon()
@@ -105,18 +111,6 @@ class ImageTextBlock extends \cmsadmin\base\Block
         ];
     }
 
-    /**
-     * Available twig variables:
-     * @param {{vars.imagePosition}}
-     * @param {{extras.imageId}}
-     * @param {{vars.imageId}}
-     * @param {{vars.text}}
-     */
-    public function twigFrontend()
-    {
-        return $this->render();
-    }
-
 
     /**
      * Available twig variables:
@@ -125,7 +119,7 @@ class ImageTextBlock extends \cmsadmin\base\Block
      * @param {{vars.imageId}}
      * @param {{vars.text}}
      */
-    public function twigAdmin()
+    public function admin()
     {
         return '{% if vars.imagePosition == "pull-xs-left" %}'.
         '<div class="left-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:left;" class="img-fluid {{vars.imagePosition}}" />'.
@@ -145,6 +139,5 @@ class ImageTextBlock extends \cmsadmin\base\Block
         '<div class="center-text">'.'{{extras.text}}'.
         '</div>'.
         '{% endif %}';
-
     }
 }
