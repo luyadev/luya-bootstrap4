@@ -9,27 +9,17 @@ use bootstrap4\Module;
 
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 02.08.2016 16:15
+ * 
+ * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
 class ImageTextBlock extends \cmsadmin\base\PhpBlock
 {
-
     public $module = 'bootstrap4';
-
-    /**
-     * @var bool Choose whether block is a layout/container/segmnet/section block or not, Container elements will be optically displayed
-     * in a different way for a better user experience. Container block will not display isDirty colorizing.
-     */
-    public $isContainer = false;
 
     /**
      * @var bool Choose whether a block can be cached trough the caching component. Be carefull with caching container blocks.
      */
-    public $cacheEnabled = false;
-
-    /**
-     * @var int The cache lifetime for this block in seconds (3600 = 1 hour), only affects when cacheEnabled is true
-     */
-    public $cacheExpiration = 3600;
+    public $cacheEnabled = true;
 
     public function name()
     {
@@ -87,8 +77,11 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
         if ($this->getVarValue('textType')) {
             return TagParser::convertWithMarkdown($text);
         }
-     return $text;
+     
+        return $text;
     }
+    
+    private $_source = null;
 
     public function getImageSource()
     {
@@ -96,7 +89,8 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
             $img = Yii::$app->storage->getImage($this->getVarValue('imageId'), 0);
             $this->_source = $img ? $img->source : false;
         }
-    return $this->_source;
+        
+        return $this->_source;
     }
 
     /**
@@ -139,6 +133,5 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
         '{% if vars.text is empty %}'.
             '<p>'. Module::t('block_image_text.no_text') .'</p>'.
         '{% endif %}';
-
     }
 }
