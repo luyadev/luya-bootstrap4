@@ -13,7 +13,7 @@ use bootstrap4\Module;
  *
  * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
-class ImageTextBlock extends \cmsadmin\base\PhpBlock
+class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
 {
     public $module = 'bootstrap4';
 
