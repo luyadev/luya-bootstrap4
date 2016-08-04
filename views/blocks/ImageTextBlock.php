@@ -1,5 +1,5 @@
 <? if (isset($vars['imagePosition'])): ?>
-    <div class="container p-a-0">
+    <div class="container p-a-0 image-text">
         <? if ($vars['imagePosition'] == 'left'): ?>
             <div class="image-text__wrapper">
                 <div class="col-sm-6 p-a-0">
