@@ -56,7 +56,7 @@ class ImageTextBlock extends \cmsadmin\base\PhpBlock
                ],
                ['var' => 'imageId', 'label' => Module::t('block_image_text.image'), 'type' => 'zaa-image-upload', 'options' => ['no_filter' => false]],
                ['var' => 'text', 'label' => 'Text', 'type' => 'zaa-textarea'],
-               ['var' => 'textType', 'label' => 'Textformat', 'initvalue' => 0, 'type' => 'zaa-select', 'options' => [
+               ['var' => 'textType', 'label' => 'Textformat', 'initvalue' => '0', 'type' => 'zaa-select', 'options' => [
                        ['value' => '0', 'label' => 'Standard'],
                        ['value' => '1', 'label' => 'Markdown'],
                    ],
