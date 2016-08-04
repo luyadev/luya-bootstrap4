@@ -110,6 +110,6 @@ class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
 
     public function admin()
     {
-        return 'test';
+        return  $this->getText();
     }
 }
