@@ -22,5 +22,16 @@ return [
     'block_image_text.help' => 'Bilder mit Text positionieren',
     'block_image_text.no_text' => 'Es wurde noch kein Text hinzugefügt.',
     'block_image_text.no_image' => 'Es wurde noch kein Bild hinzugefügt.',
+    'block_inlinetext.name'=> 'Inline Textblock',
+    'block_inlinetext.size-sm'=> 'Grösse Mobile',
+    'block_inlinetext.size-md'=> 'Grösse Tablet',
+    'block_inlinetext.size-lg'=> 'Grösse Desktop',
+    'block_inlinetext.size-full'=> 'Volle Breite',
+    'block_inlinetext.size'=> 'Breite',
+    'block_inline_wrapper.label'=>'Inline Blöcke hier platzieren ...',
+    'block_inline_wrapper.name'=>'Rahmen für Inline Blöcke',
+
+
+
 
 ];
