@@ -23,6 +23,7 @@ return [
     'block_image_text.no_text' => 'No text has been added yet.',
     'block_image_text.no_image' => 'No image has been added yet.',
     'block_inlinetext.name'=> 'Inline Text Block',
+    'block_inlinetext.empty'=> 'No text has been added yet.',
     'block_inlinetext.size-sm'=> 'Size mobile',
     'block_inlinetext.size-md'=> 'Size tablet',
     'block_inlinetext.size-lg'=> 'Size desktop',

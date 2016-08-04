@@ -67,6 +67,6 @@ class BootstrapInlineTextWrapperBlock extends \cmsadmin\base\PhpBlock
      */
     public function Admin()
     {
-        return '<p>My Admin Twig of this Block</p>';
+        return '';
     }
 }

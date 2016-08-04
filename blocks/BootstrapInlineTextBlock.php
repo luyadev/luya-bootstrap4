@@ -112,6 +112,6 @@ class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
 
     public function admin()
     {
-        return  $this->getText();
+        return $this->getText();
     }
 }
