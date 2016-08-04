@@ -29,7 +29,7 @@ return [
     'block_inlinetext.size-full'=> 'Volle Breite',
     'block_inlinetext.size'=> 'Breite',
     'block_inline_wrapper.label'=>'Inline Blöcke hier platzieren ...',
-    'block_inline_wrapper.name'=>'Rahmen für Inline Blöcke',
+    'block_inline_wrapper.name'=>'Inline Textblock Raster',
 
 
 

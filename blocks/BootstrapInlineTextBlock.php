@@ -8,7 +8,9 @@ use bootstrap4\Module;
 use bootstrap4\blockgroups\BootstrapGroup;
 
 /**
- * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 04.08.2016 12:17
+ * Bootstrap inline Block with Markdown text
+ *
+ * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
 class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
 {
@@ -67,7 +69,7 @@ class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
                         ['value' => 'col-lg-4', 'label' => '1/3'.' '.Module::t('block_inlinetext.size')],
                         ['value' => 'col-lg-6', 'label' => '1/2'.' '.Module::t('block_inlinetext.size')],
                         ['value' => 'col-lg-8', 'label' => '2/3'.' '.Module::t('block_inlinetext.size')],
-                        ['value' => 'col-lg-12', 'label' => Module::t('block_inlinetext.full')],
+                        ['value' => 'col-lg-12', 'label' => Module::t('block_inlinetext.size-full')],
                     ]
                 ],
                 ['var' => 'text', 'label' => 'Text', 'type' => 'zaa-textarea'],
