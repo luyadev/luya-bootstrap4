@@ -44,7 +44,6 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
                ['var' => 'imagePosition', 'label' => Module::t('block_image_text.image_position'), 'type' => 'zaa-select', 'initvalue'=>'left', 'options' => [
                        ['value' => 'left', 'label' => Module::t('block_image_text.left')],
                        ['value' => 'right', 'label' => Module::t('block_image_text.right')],
-                    //  ['value' => 'right', 'label' => Module::t('block_image_text.centered')],
                    ],
                ],
                ['var' => 'imageShapes', 'label' => Module::t('block_image_text.image_shape'), 'initvalue' => 'img-noshape', 'type' => 'zaa-select', 'options' => [
@@ -84,7 +83,7 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
                 ],
 
              ['var' => 'imageCaptionVisibility', 'label' => Module::t('block_image_text.image.caption.visibility'), 'initvalue'=>'1', 'type' => 'zaa-checkbox'],
-                
+
             ],
 
         ];

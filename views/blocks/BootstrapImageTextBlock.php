@@ -45,15 +45,6 @@
 
                 </div>
             </div>
-        <!-- <? elseif ($vars['imagePosition'] == 'centered'): ?>
-            <div class="image-text__wrapper">
-                <div class="col-sm-12 p-a-0 text-xs-center">
-                    <img src="<?= $extras['imageId']['source'] ?>" class="img-fluid m-x-auto d-block <?= $vars['imageShapes'] ?> ?>" style="<? if (isset($cfgs['imageWidth'])):?>width: <?= $cfgs['imageWidth']?>; <? endif ?> max-width:100%;"/>
-                </div>
-                <div class="col-sm-12 p-a-0">
-                    <?= $extras['text'] ?>
-                </div>
-            </div> -->
         <? endif; ?>
     </div>
 <? endif; ?>
