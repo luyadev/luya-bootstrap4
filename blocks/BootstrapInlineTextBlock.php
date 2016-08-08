@@ -8,7 +8,7 @@ use bootstrap4\Module;
 use bootstrap4\blockgroups\BootstrapGroup;
 
 /**
- * Bootstrap inline Block with Markdown text
+ * Bootstrap inline Block with Markdown
  *
  * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
@@ -112,6 +112,6 @@ class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
 
     public function admin()
     {
-        return $this->getText();
+        return  $this->getText();
     }
 }

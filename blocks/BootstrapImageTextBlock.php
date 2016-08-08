@@ -44,7 +44,7 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
                ['var' => 'imagePosition', 'label' => Module::t('block_image_text.image_position'), 'type' => 'zaa-select', 'initvalue'=>'left', 'options' => [
                        ['value' => 'left', 'label' => Module::t('block_image_text.left')],
                        ['value' => 'right', 'label' => Module::t('block_image_text.right')],
-                       ['value' => 'centered', 'label' => Module::t('block_image_text.center')],
+                    //  ['value' => 'right', 'label' => Module::t('block_image_text.centered')],
                    ],
                ],
                ['var' => 'imageShapes', 'label' => Module::t('block_image_text.image_shape'), 'initvalue' => 'img-noshape', 'type' => 'zaa-select', 'options' => [
@@ -55,6 +55,7 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
                    ],
                ],
                ['var' => 'imageId', 'label' => Module::t('block_image_text.image'), 'type' => 'zaa-image-upload', 'options' => ['no_filter' => false]],
+               ['var' => 'imageCaption', 'label' => Module::t('block_image_text.image.caption'), 'type' => 'zaa-text'],
                ['var' => 'text', 'label' => 'Text', 'type' => 'zaa-textarea'],
                ['var' => 'textType', 'label' => 'Textformat', 'initvalue' => 1, 'type' => 'zaa-select', 'options' => [
                        ['value' => 0, 'label' => 'Standard'],
@@ -62,6 +63,30 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
                    ],
                ],
            ],
+
+           'cfgs' => [
+
+               ['var' => 'imageWidth', 'label' => Module::t('block_image_text.image.width'), 'initvalue' => '50%', 'type' => 'zaa-select', 'options' => [
+                       ['value' => '8.3333%', 'label' => '1/12'],
+                       ['value' => '16.6666%', 'label' => '2/12'],
+                       ['value' => '25%', 'label' => '3/12'],
+                       ['value' => '33.3333%', 'label' => '4/12'],
+                       ['value' => '41.6666%', 'label' => '5/12'],
+                       ['value' => '50%', 'label' => '6/12'],
+                       ['value' => '58.333%', 'label' => '7/12'],
+                       ['value' => '66.6666%', 'label' => '8/12'],
+                       ['value' => '75%', 'label' => '9/12'],
+                       ['value' => '83.3333%', 'label' => '10/12'],
+                       ['value' => '91.666%', 'label' => '11/12'],
+                       ['value' => '100%', 'label' => '12/12'],
+                   ],
+
+                ],
+
+             ['var' => 'imageCaptionVisibility', 'label' => Module::t('block_image_text.image.caption.visibility'), 'initvalue'=>'1', 'type' => 'zaa-checkbox'],
+                
+            ],
+
         ];
     }
     public function getFieldHelp()
