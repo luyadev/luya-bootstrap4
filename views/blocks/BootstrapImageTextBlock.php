@@ -13,7 +13,7 @@
                     </div>
                     <?= $extras['text'] ?>
                     <div class="image-text__wrapper_small hidden-sm-up">
-                        <img src="<?= $extras['imageId']['source'] ?>" alt="<? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <? endif ?>" style="width:100%; max-width:100%;" class="img-fluid <?= $vars['imageShapes'] ?>"/>
+                        <img src="<?= $extras['imageId']['source'] ?>" alt="<? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <? endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid <?= $vars['imageShapes'] ?>"/>
                         <? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?>
                             <span class="image-text__wrapper__image__caption <? if (isset($cfgs['imageCaptionVisibility']) && ($cfgs['imageCaptionVisibility'] == 0)): ?>  hidden-xs-up <? endif ?>">
                                 <?= $vars['imageCaption'] ?>
@@ -35,7 +35,7 @@
                     </div>
                     <?= $extras['text'] ?>
                     <div class="image-text__wrapper_small hidden-sm-up">
-                        <img src="<?= $extras['imageId']['source'] ?>" alt="<? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <? endif ?>" style="width:100%; max-width:100%;" class="img-fluid <?= $vars['imageShapes'] ?>"/>
+                        <img src="<?= $extras['imageId']['source'] ?>" alt="<? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <? endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid <?= $vars['imageShapes'] ?>"/>
                         <? if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?>
                             <span class="image-text__wrapper__image__caption <? if (isset($cfgs['imageCaptionVisibility']) && ($cfgs['imageCaptionVisibility'] == 0)): ?>  hidden-xs-up <? endif ?>">
                                 <?= $vars['imageCaption'] ?>
