@@ -126,6 +126,7 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
         return [
             'imageId' => $this->zaaImageUpload($this->getVarValue('imageId')),
             'text' => $this->getText(),
+            'thumbnail' => $this->zaaImageUpload($this->getVarValue('imageId'), 'small-thumbnail'),
         ];
     }
 
@@ -141,15 +142,15 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
     {
         return
         '{% if vars.imagePosition == "left" %}'.
-            '<div class="left-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:left;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '<div class="left-image">'.'<img src="{{extras.thumbnail.source}}" style="max-width:50%; float:left;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
             '{% if vars.text is not empty %} <div class="right-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
         '{% if vars.imagePosition == "right" %}'.
-            '<div class="right-image">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:right;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '<div class="right-image">'.'<img src="{{extras.thumbnail.source}}" style="max-width:50%; float:right;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
             '{% if vars.text is not empty %} <div class="left-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
         '{% if vars.imagePosition == "centered" %}'.
-            '<div class="center-image" style="text-align:center;">'.'<img src="{{extras.imageId.source}}" style="max-width:50%; float:none; clear:both;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
+            '<div class="center-image" style="text-align:center;">'.'<img src="{{extras.thumbnail.source}}" style="max-width:50%; float:none; clear:both;" class="img-fluid {{vars.imagePosition}}" />'.'</div>'.
             '{% if vars.text is not empty %} <div class="center-text">'.'{{extras.text}}'.'</div>'.'{% endif %}'.
         '{% endif %}'.
         '{% if vars.imageId is empty %}'.
