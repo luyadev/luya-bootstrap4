@@ -65,10 +65,11 @@ use bootstrap4\ActiveForm;
 <?php ActiveForm::end() ?>
 ```
 
-> Tip: In order to style required fields with asterisks, you can use the following CSS:
-> ```
-> div.required label.control-label:after {
->    content: " *";
->    color: red;
->}
->```
+Tip: In order to style required fields with asterisks, you can use the following CSS:
+
+```css
+div.required label.control-label:after {
+   content: " *";
+   color: red;
+}
+```
