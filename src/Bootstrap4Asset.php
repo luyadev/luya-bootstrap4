@@ -1,6 +1,6 @@
 <?php
 
-namespace bootstrap4;
+namespace luya\bootstrap4;
 
 /**
  * Bootstrap4 CDN assets depending on yii jquery asset

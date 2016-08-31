@@ -1,6 +1,6 @@
 <?php
 
-namespace bootstrap4\blockgroups;
+namespace luya\bootstrap4\blockgroups;
 
 class BootstrapGroup extends \luya\cms\base\BlockGroup
 {

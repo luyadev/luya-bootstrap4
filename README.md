@@ -29,7 +29,7 @@ To include the Boostrap4 Module just added the following line to your project co
 return [
     'modules' => [
         // ...
-        'bootstrap4' => 'bootstrap4\Module',
+        'bootstrap4' => 'luya\bootstrap4\Module',
         // ...
     ],
     // ...
@@ -43,7 +43,7 @@ Now run the [import command](https://luya.io/guide/luya-console) and alle blocks
 To use the css and js files of bootstrap just register the `Bootstrap4Asset` into your layout file with the following code of your layout.php file:
 
 ```php
-bootstrap4\Bootstrap4Asset::register($this)
+luya\bootstrap4\Bootstrap4Asset::register($this)
 ```
 
 At the top section of your layout file. This will include all required css and js files to use bootstrap 4 and set the right depenecy with jquery.
@@ -54,7 +54,7 @@ A common way to build forms is the use thy Yii2 ActiveForm widget, to match all 
 
 ```php
 <?php
-use bootstrap4\ActiveForm;
+use luya\bootstrap4\ActiveForm;
 ?>
 <h1>Your Bootstrap4 ActiveForm</h1>
 <?php $form = ActiveForm::begin() ?>

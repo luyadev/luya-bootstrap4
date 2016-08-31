@@ -17,7 +17,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"bootstrap4\\" : ""
+			"luya\\bootstrap4\\" : "src/"
 		}
 	},
 	"extra": {

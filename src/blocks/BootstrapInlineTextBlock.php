@@ -1,11 +1,11 @@
 <?php
 
-namespace bootstrap4\blocks;
+namespace luya\bootstrap4\blocks;
 
 use Yii;
 use luya\cms\helpers\TagParser;
-use bootstrap4\Module;
-use bootstrap4\blockgroups\BootstrapGroup;
+use luya\bootstrap4\Module;
+use luya\bootstrap4\blockgroups\BootstrapGroup;
 
 /**
  * Bootstrap inline Block with Markdown

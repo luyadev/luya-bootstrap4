@@ -1,6 +1,6 @@
 <?php
 
-namespace bootstrap4;
+namespace luya\bootstrap4;
 
 use Yii;
 

@@ -1,10 +1,14 @@
 <?php
 
-namespace bootstrap4;
+namespace luya\bootstrap4;
 
+/**
+ * 
+ * @author Basil Suter <basil@nadar.io>
+ */
 class ActiveForm extends \yii\widgets\ActiveForm
 {
-    public $fieldClass = 'bootstrap4\ActiveField';
+    public $fieldClass = 'luya\bootstrap4\ActiveField';
     
     public $errorCssClass = 'has-danger';
     
