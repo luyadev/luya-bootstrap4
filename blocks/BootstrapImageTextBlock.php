@@ -3,7 +3,7 @@
 namespace bootstrap4\blocks;
 
 use Yii;
-use cms\helpers\TagParser;
+use luya\cms\helpers\TagParser;
 use bootstrap4\blockgroups\BootstrapGroup;
 use bootstrap4\Module;
 
@@ -13,7 +13,7 @@ use bootstrap4\Module;
  *
  * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
-class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
+class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
 {
     public $module = 'bootstrap4';
 
@@ -24,7 +24,7 @@ class BootstrapImageTextBlock extends \cmsadmin\base\PhpBlock
 
     public function name()
     {
-        return Module::t('block_image_text.block_name');;
+        return Module::t('block_image_text.block_name');
     }
 
     public function getBlockGroup()

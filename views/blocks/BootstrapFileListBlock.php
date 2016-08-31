@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
  *
@@ -22,20 +22,20 @@
 
 ?>
 
-<? if (count($extras['fileList'])): ?>
+<?php if (count($extras['fileList'])): ?>
 <ul>
-    <? foreach($extras['fileList'] as $file): ?>
+    <?php foreach ($extras['fileList'] as $file): ?>
         <li>
             <a href="<?= $file['source'] ?>">
                 <?= $file['caption'] ?: $file['name'] ?>
-                <? if ($cfgs['showType']): ?>
+                <?php if ($cfgs['showType']): ?>
                     <span><?= $file['extension'] ?></span>
-                <? endif; ?>
-                <? if ($cfgs['showFileSize']): ?>
+                <?php endif; ?>
+                <?php if ($cfgs['showFileSize']): ?>
                     <span><?= $file['sizeReadable'] ?></span>
-                <? endif; ?>
+                <?php endif; ?>
             </a>
         </li>
-    <? endforeach; ?>
+    <?php endforeach; ?>
 </ul>
-<? endif; ?>
+<?php endif; ?>

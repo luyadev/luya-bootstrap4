@@ -8,7 +8,7 @@ use bootstrap4\blockgroups\BootstrapGroup;
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta6-dev at 02.08.2016 16:34
  */
-class BootstrapFileListBlock extends \cmsadmin\base\PhpBlock
+class BootstrapFileListBlock extends \luya\cms\base\PhpBlock
 {
     public $module = 'bootstrap4';
     /**

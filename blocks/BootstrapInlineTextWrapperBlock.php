@@ -5,12 +5,12 @@ namespace bootstrap4\blocks;
 use Yii;
 use bootstrap4\blockgroups\BootstrapGroup;
 use bootstrap4\Module;
+
 /**
  * Block created with Luya Block Creator Version 1.0.0-beta8-dev at 04.08.2016 12:19
  */
-class BootstrapInlineTextWrapperBlock extends \cmsadmin\base\PhpBlock
+class BootstrapInlineTextWrapperBlock extends \luya\cms\base\PhpBlock
 {
-
     public $module = 'bootstrap4';
 
     /**
@@ -33,7 +33,9 @@ class BootstrapInlineTextWrapperBlock extends \cmsadmin\base\PhpBlock
     {
         return Module::t('block_inline_wrapper.name');
     }
-    public function getBlockGroup() {
+    
+    public function getBlockGroup()
+    {
         return BootstrapGroup::className();
     }
 

@@ -3,7 +3,7 @@
 namespace bootstrap4\blocks;
 
 use Yii;
-use cms\helpers\TagParser;
+use luya\cms\helpers\TagParser;
 use bootstrap4\Module;
 use bootstrap4\blockgroups\BootstrapGroup;
 
@@ -12,9 +12,8 @@ use bootstrap4\blockgroups\BootstrapGroup;
  *
  * @author Silvan Hahn (silvan.hahn@zephir.ch)
  */
-class BootstrapInlineTextBlock extends \cmsadmin\base\PhpBlock
+class BootstrapInlineTextBlock extends \luya\cms\base\PhpBlock
 {
-
     public $module = 'bootstrap4';
 
     /**

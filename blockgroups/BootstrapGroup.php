@@ -2,7 +2,7 @@
 
 namespace bootstrap4\blockgroups;
 
-class BootstrapGroup extends \cmsadmin\base\BlockGroup
+class BootstrapGroup extends \luya\cms\base\BlockGroup
 {
     public function identifier()
     {
