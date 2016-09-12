@@ -10,11 +10,12 @@ namespace luya\bootstrap4;
 class Bootstrap4Asset extends \yii\web\AssetBundle
 {
     public $js = [
-        '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js',
+        '//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js',
+        '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js',
     ];
     
     public $css = [
-        '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css',
+        '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css',
     ];
     
     public $depends = [
