@@ -4,9 +4,6 @@
             <div class="image-text__wrapper">
                 <div class="col-sm-12 p-a-0">
 
-
-                                        <?= var_dump($extras['file']['source']); ?>
-
                     <div class="image-text__wrapper__image hidden-xs-down" style="float:left;<?php if (isset($cfgs['imageWidth'])):?>width: <?= $cfgs['imageWidth']?>; <?php endif ?> max-width:100%;">
 
                         <? if ($vars['fileDownload'] == 0 ): ?>
