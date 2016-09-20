@@ -6,11 +6,11 @@
 
                     <div class="image-text__wrapper__image hidden-xs-down" style="float:left;<?php if (isset($cfgs['imageWidth'])):?>width: <?= $cfgs['imageWidth']?>; <?php endif ?> max-width:100%;">
 
-                        <? if ($vars['fileDownload'] == 0 ): ?>
+                        <? if (isset($vars['fileDownload']) && ($vars['fileDownload'] == 0 )): ?>
 
                             <? if (isset($extras['link']) && (!empty($extras['link']))):?> <a href="<?= $extras['link'] ?>"><? endif; ?>
 
-                        <? elseif ($vars['fileDownload'] == 1 ): ?>
+                        <? elseif (isset($vars['fileDownload']) &&  ($vars['fileDownload'] == 1 )): ?>
 
                             <? if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><? endif; ?>
 
@@ -26,13 +26,15 @@
                             </div>
                         <?php endif ?>
                     </div>
+                    
                     <?= $extras['text'] ?>
+
                     <div class="image-text__wrapper_small hidden-sm-up">
-                        <? if ($vars['fileDownload'] == 0 ): ?>
+                        <? if (isset($vars['fileDownload']) && ($vars['fileDownload'] == 0 )): ?>
 
                             <? if (isset($extras['link']) && (!empty($extras['link']))):?> <a href="<?= $extras['link'] ?>"><? endif; ?>
 
-                        <? elseif ($vars['fileDownload'] == 1 ): ?>
+                        <? elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1 )): ?>
 
                             <? if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><? endif; ?>
 
@@ -55,11 +57,11 @@
                 <div class="col-sm-12 p-a-0">
                     <div class="image-text__wrapper__image hidden-xs-down" style="float:right;<?php if (isset($cfgs['imageWidth'])):?>width: <?= $cfgs['imageWidth']?>; <?php endif ?> max-width:100%;">
 
-                        <? if ($vars['fileDownload'] == 0 ): ?>
+                        <? if (isset($vars['fileDownload']) && ($vars['fileDownload'] == 0 )): ?>
 
                             <? if (isset($extras['link']) && (!empty($extras['link']))):?> <a href="<?= $extras['link'] ?>"><? endif; ?>
 
-                        <? elseif ($vars['fileDownload'] == 1 ): ?>
+                        <? elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1 )): ?>
 
                             <? if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><? endif; ?>
 
@@ -79,11 +81,11 @@
                     <?= $extras['text'] ?>
                     <div class="image-text__wrapper_small hidden-sm-up">
 
-                        <? if ($vars['fileDownload'] == 0 ): ?>
+                        <? if (isset($vars['fileDownload']) && ($vars['fileDownload'] == 0 )): ?>
 
                             <? if (isset($extras['link']) && (!empty($extras['link']))):?> <a href="<?= $extras['link'] ?>"><? endif; ?>
 
-                        <? elseif ($vars['fileDownload'] == 1 ): ?>
+                        <? elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1 )): ?>
 
                             <? if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><? endif; ?>
 
