@@ -61,6 +61,10 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
                        ['value' => 1, 'label' => 'Markdown'],
                    ],
                ],
+
+               ['var' => 'link', 'label' => Module::t('block_image_text.link'), 'type' => 'zaa-link'],
+               ['var' => 'file', 'label' => Module::t('block_image_text.file'), 'type' => 'zaa-file-upload'],
+               ['var' => 'fileDownload', 'label' => Module::t('block_image_text.file_download'), 'type' => 'zaa-checkbox'],
            ],
 
            'cfgs' => [
@@ -118,12 +122,56 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
         return $this->_source;
     }
 
+    public function getLinkTarget()
+    {
+        $linkData = $this->getVarValue('link', null);
+        $data = null;
+
+        if ($linkData) {
+
+            if ($linkData) {
+                if ($linkData['type'] == '1') {
+                    $menu = Yii::$app->menu->find()->where(['nav_id' => $linkData['value']])->one();
+                    if ($menu) {
+                        $data = $menu->getLink();
+                    }
+                }
+
+                if ($linkData['type'] == '2') {
+
+                    $data = $linkData['value'];
+
+                }
+            }
+
+            return $data;
+        }
+
+    }
+
+    public function getFileUrl()
+    {
+
+        $fileData = $this->zaaFileUpload($this->getVarValue('file'));
+        $data = null;
+
+        if ($fileData) {
+
+            $data = $fileData;
+        }
+
+        return $data;
+
+    }
+
     /**
      * Return an array containg all extra vars. Those variables you can access in the Twig Templates via {{extras.*}}.
      */
     public function extraVars()
     {
         return [
+            'link' => $this->getLinkTarget(),
+            'file' => $this->getFileUrl(),
             'imageId' => $this->zaaImageUpload($this->getVarValue('imageId')),
             'text' => $this->getText(),
             'thumbnail' => $this->zaaImageUpload($this->getVarValue('imageId'), 'small-thumbnail'),
