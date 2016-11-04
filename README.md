@@ -55,6 +55,9 @@ A common way to build forms is the use thy Yii2 ActiveForm widget, to match all 
 ```php
 <?php
 use luya\bootstrap4\ActiveForm;
+
+/* @var $this luya\web\View */
+/* @var $form luya\bootstrap4\ActiveForm */
 ?>
 <h1>Your Bootstrap4 ActiveForm</h1>
 <?php $form = ActiveForm::begin() ?>
