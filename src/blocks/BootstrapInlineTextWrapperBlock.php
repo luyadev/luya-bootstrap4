@@ -34,7 +34,7 @@ class BootstrapInlineTextWrapperBlock extends \luya\cms\base\PhpBlock
         return Module::t('block_inline_wrapper.name');
     }
     
-    public function getBlockGroup()
+    public function blockGroup()
     {
         return BootstrapGroup::className();
     }
@@ -58,8 +58,7 @@ class BootstrapInlineTextWrapperBlock extends \luya\cms\base\PhpBlock
      */
     public function extraVars()
     {
-        return [
-        ];
+        return [];
     }
 
 

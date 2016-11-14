@@ -1,3 +1,11 @@
+<?php
+// <!-- RC2 UPDATE FIX!
+$vars = $this->context->getVarValues();
+$cfgs = $this->context->getCfgValues();
+$extras = $this->context->getExtraVarValues();
+$placeholders = $this->context->getPlaceholderValues();
+// -->
+?>
 <?php if (isset($vars['imagePosition'])): ?>
     <div class="clearfix image-text">
         <?php if ($vars['imagePosition'] == 'left'): ?>

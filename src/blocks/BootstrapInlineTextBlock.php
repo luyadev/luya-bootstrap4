@@ -37,7 +37,7 @@ class BootstrapInlineTextBlock extends \luya\cms\base\PhpBlock
         return Module::t('block_inlinetext.name');
     }
 
-    public function getBlockGroup()
+    public function blockGroup()
     {
         return BootstrapGroup::className();
     }

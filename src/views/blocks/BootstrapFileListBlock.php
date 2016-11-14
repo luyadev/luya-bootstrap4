@@ -1,5 +1,10 @@
 <?php
-
+// <!-- RC2 UPDATE FIX!
+$vars = $this->context->getVarValues();
+$cfgs = $this->context->getCfgValues();
+$extras = $this->context->getExtraVarValues();
+$placeholders = $this->context->getPlaceholderValues();
+// -->
 /*
  *
  * Array (

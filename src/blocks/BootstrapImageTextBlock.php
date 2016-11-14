@@ -3,6 +3,7 @@
 namespace luya\bootstrap4\blocks;
 
 use Yii;
+use luya\cms\helper\BlockHelper;
 use luya\TagParser;
 use luya\bootstrap4\blockgroups\BootstrapGroup;
 use luya\bootstrap4\Module;
@@ -27,7 +28,7 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
         return Module::t('block_image_text.block_name');
     }
 
-    public function getBlockGroup()
+    public function blockGroup()
     {
         return BootstrapGroup::className();
     }
@@ -152,7 +153,7 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
     public function getFileUrl()
     {
 
-        $fileData = $this->zaaFileUpload($this->getVarValue('file'));
+        $fileData = BlockHelper::imageUpload($this->getVarValue('file'));
         $data = null;
 
         if ($fileData) {
@@ -172,9 +173,9 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
         return [
             'link' => $this->getLinkTarget(),
             'file' => $this->getFileUrl(),
-            'imageId' => $this->zaaImageUpload($this->getVarValue('imageId')),
+            'imageId' => BlockHelper::imageUpload($this->getVarValue('imageId')),
             'text' => $this->getText(),
-            'thumbnail' => $this->zaaImageUpload($this->getVarValue('imageId'), 'small-thumbnail'),
+            'thumbnail' => BlockHelper::imageUpload($this->getVarValue('imageId'), 'small-thumbnail'),
         ];
     }
 

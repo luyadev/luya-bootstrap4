@@ -2,6 +2,7 @@
 
 namespace luya\bootstrap4\blocks;
 
+use luya\cms\helper\BlockHelper;
 use luya\bootstrap4\Module;
 use luya\bootstrap4\blockgroups\BootstrapGroup;
 
@@ -32,7 +33,7 @@ class BootstrapFileListBlock extends \luya\cms\base\PhpBlock
         return Module::t('block_file_list.block_name');
     }
 
-    public function getBlockGroup()
+    public function blockGroup()
     {
         return BootstrapGroup::className();
     }
@@ -62,7 +63,7 @@ class BootstrapFileListBlock extends \luya\cms\base\PhpBlock
     public function extraVars()
     {
         return [
-            'fileList' => $this->zaaFileArrayUpload($this->getVarValue('files')),
+            'fileList' => BlockHelper::fileArrayUpload($this->getVarValue('files')),
         ];
     }
 
