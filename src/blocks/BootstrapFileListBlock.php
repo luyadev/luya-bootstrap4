@@ -2,7 +2,7 @@
 
 namespace luya\bootstrap4\blocks;
 
-use luya\cms\helper\BlockHelper;
+use luya\cms\helpers\BlockHelper;
 use luya\bootstrap4\Module;
 use luya\bootstrap4\blockgroups\BootstrapGroup;
 

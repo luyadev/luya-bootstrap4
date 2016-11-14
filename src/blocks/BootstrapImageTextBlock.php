@@ -3,7 +3,7 @@
 namespace luya\bootstrap4\blocks;
 
 use Yii;
-use luya\cms\helper\BlockHelper;
+use luya\cms\helpers\BlockHelper;
 use luya\TagParser;
 use luya\bootstrap4\blockgroups\BootstrapGroup;
 use luya\bootstrap4\Module;
