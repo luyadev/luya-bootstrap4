@@ -129,7 +129,6 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
         $data = null;
 
         if ($linkData) {
-
             if ($linkData) {
                 if ($linkData['type'] == '1') {
                     $menu = Yii::$app->menu->find()->where(['nav_id' => $linkData['value']])->one();
@@ -139,30 +138,24 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
                 }
 
                 if ($linkData['type'] == '2') {
-
                     $data = $linkData['value'];
-
                 }
             }
 
             return $data;
         }
-
     }
 
     public function getFileUrl()
     {
-
         $fileData = BlockHelper::imageUpload($this->getVarValue('file'));
         $data = null;
 
         if ($fileData) {
-
             $data = $fileData;
         }
 
         return $data;
-
     }
 
     /**

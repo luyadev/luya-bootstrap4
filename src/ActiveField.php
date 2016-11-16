@@ -3,7 +3,7 @@
 namespace luya\bootstrap4;
 
 /**
- * 
+ *
  * @author Basil Suter <basil@nadar.io>
  */
 class ActiveField extends \yii\widgets\ActiveField
