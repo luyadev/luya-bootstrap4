@@ -1,6 +1,6 @@
 # Bootstrap4 CSS for LUYA
 
-Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
+Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii 2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
 
 + ActiveForm Widget (Yii2 ActiveForm Widget matching the Bootstrap 4 Form builder)
 + ActiveField Widget
@@ -55,16 +55,16 @@ A common way to build forms is the use thy Yii2 ActiveForm widget, to match all 
 ```php
 <?php
 use luya\bootstrap4\ActiveForm;
+use yii\helpers\Html;
 
 /* @var $this luya\web\View */
 /* @var $form luya\bootstrap4\ActiveForm */
 ?>
-<h1>Your Bootstrap4 ActiveForm</h1>
+<h1>Bootstrap 4 ActiveForm</h1>
 <?php $form = ActiveForm::begin() ?>
     <?= $form->field($model, 'username') ?>
     <?= $form->field($model, 'password')->passwordInput() ?>
-
-    <?= \yii\helpers\Html::submitButton('Login', ['class' => 'btn btn-primary-outline']) ?>
+    <?= Html::submitButton('Login', ['class' => 'btn btn-primary-outline']) ?>
 <?php ActiveForm::end() ?>
 ```
 
