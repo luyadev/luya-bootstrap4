@@ -2,6 +2,8 @@
 
 namespace luya\bootstrap4\grid;
 
+use luya\bootstrap4\widgets\LinkPager;
+
 /**
  * GridView Bootstrap4 Widget.
  *
@@ -14,4 +16,7 @@ class GridView extends \yii\grid\GridView
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $tableOptions = ['class' => 'table table-striped table-bordered'];
+    
+    public $pager = ['class' => LinkPager::class];
 }
+
