@@ -3,10 +3,14 @@
 namespace luya\bootstrap4;
 
 /**
- *
+ * Bootstrap 4 Active Field.
+ * 
  * @author Basil Suter <basil@nadar.io>
  */
 class ActiveField extends \yii\widgets\ActiveField
 {
+	/**
+	 * @inheritdoc
+	 */
     public $errorOptions = ['class' => 'text-muted text-help'];
 }
