@@ -39,6 +39,23 @@ class ActiveFromTest extends Bootstrap4TestCase
 		echo $form->field($model, 'firstname');
 		ActiveForm::end();
 		
-		$this->assertContains('<div class="form-group row field-stubmodel-firstname"><label class="col-sm-2 col-form-label" for="stubmodel-firstname">Firstname</label><div class="col-sm-10"><input type="text" id="stubmodel-firstname" name="StubModel[firstname]"></div><div class="text-muted text-help"></div></div>', $this->trimmer(ob_get_clean()));
+		$this->assertContains('<div class="form-group row field-stubmodel-firstname"><label class="col-sm-2 col-form-label" for="stubmodel-firstname">Firstname</label><div class="col-sm-10"><input type="text" id="stubmodel-firstname" class="form-control" name="StubModel[firstname]"></div><div class="text-muted text-help"></div></div>', $this->trimmer(ob_get_clean()));
 	}
 }
+
+/*
+<div class="form-group row field-dynamicmodel-wunsch">
+	<label class="col-sm-2 col-form-label" for="dynamicmodel-wunsch">Wunsch</label>
+	<div class="col-sm-10">
+		<textarea id="dynamicmodel-wunsch" name="DynamicModel[wunsch]"></textarea>
+	</div>
+	<div class="text-muted text-help"></div>
+</div>
+ * 
+<div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+ */

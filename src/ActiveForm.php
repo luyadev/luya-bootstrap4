@@ -36,9 +36,6 @@ class ActiveForm extends \yii\widgets\ActiveForm
     {
     	$this->options = ['class' => 'form-group row'];
     	$this->fieldConfig = [
-    		'inputOptions' => [
-    			//'class' => 'form-control',
-    		],
     		'options' => [
     			'class' => 'form-group row',
     		],
