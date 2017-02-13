@@ -45,7 +45,10 @@ class LinkPager extends \yii\widgets\LinkPager
      */
     public $disabledPageCssClass = 'disabled';
     
-    public $disabledSpanOptions = ['class' => 'page-link'];
+    /**
+     * @inheritdoc
+     */
+    public $disabledListItemSubTagOptions = ['class' => 'page-link', 'tag' => 'a'];
     
     /**
      * @var int maximum number of page buttons that can be displayed. Defaults to 10.
