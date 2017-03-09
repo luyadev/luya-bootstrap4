@@ -17,5 +17,5 @@ class ActiveField extends \yii\widgets\ActiveField
 	/**
 	 * @inheritdoc
 	 */
-    public $errorOptions = ['class' => 'text-muted text-help'];
+    public $errorOptions = ['class' => 'form-control-feedback'];
 }
