@@ -2,9 +2,14 @@
 
 Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii 2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
 
-+ ActiveForm Widget (Yii2 ActiveForm Widget matching the Bootstrap 4 Form builder)
-+ ActiveField Widget
-+ CMS Blocks
++ Widgets
+   + ActiveForm Widget (Yii2 ActiveForm Widget matching the Bootstrap 4 Form builder)
+   + Breadcrumbs
+   + LinkPager
+   + ActiveField Widget
+   + Grid View / Action Column
++ Tags for Tooltips
++ CMS Blocks build for Bootstrap 4
 + Asset File (contains precompiled bootstrap4 css and js files)
 
 ## Installation
