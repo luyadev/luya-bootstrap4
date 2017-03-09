@@ -9,6 +9,11 @@ namespace luya\bootstrap4;
  */
 class ActiveField extends \yii\widgets\ActiveField
 {
+    /**
+	 * @inheritdoc
+	 */
+    public $hintOptions = ['class' => 'form-text text-muted'];
+
 	/**
 	 * @inheritdoc
 	 */
