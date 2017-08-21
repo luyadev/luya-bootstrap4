@@ -32,6 +32,6 @@ class Module extends \luya\base\Module
      */
     public static function t($message, array $params = [])
     {
-        return Yii::t('bootstrap4', $message, $params, Yii::$app->luyaLanguage);
+        return Yii::t('bootstrap4', $message, $params);
     }
 }
