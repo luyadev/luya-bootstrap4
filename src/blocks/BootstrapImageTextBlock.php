@@ -148,7 +148,7 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
 
     public function getFileUrl()
     {
-        $fileData = BlockHelper::imageUpload($this->getVarValue('file'));
+        $fileData = BlockHelper::fileUpload($this->getVarValue('file'));
         $data = null;
 
         if ($fileData) {
