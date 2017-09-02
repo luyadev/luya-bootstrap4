@@ -26,6 +26,11 @@
 		}
 	},
 	"extra": {
+		"luya" : {
+			"blocks" : [
+				"src/blocks"
+			]
+		},
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         },
