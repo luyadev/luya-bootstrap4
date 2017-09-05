@@ -2,8 +2,6 @@
 
 namespace luya\bootstrap4;
 
-use Yii;
-
 /**
  * Bootstrap4 Module
  *
@@ -14,24 +12,29 @@ use Yii;
  */
 class Module extends \luya\base\Module
 {
-    public $translations = [
-        [
-            'prefix' => 'bootstrap4*',
-            'basePath' => '@bootstrap4/messages',
-            'fileMap' => [
-                'bootstrap4' => 'bootstrap4.php',
-            ],
-        ],
-    ];
+	/**
+	 * @inheritdoc
+	 */
+    public static function onLoad()
+    {
+    	//Yii::setAlias('@bootstrap4', static::staticBasePath());
+    	
+    	self::registerTranslation('bootstrap4', static::staticBasePath() . '/messages', [
+    		'fileMap' => [
+    			'bootstrap4' => 'bootstrap4',
+    		],
+    	]);
+    }
 
     /**
-     * Translations for CMS Module.
-     *
+     * Translations
+     * 
      * @param unknown $message
      * @param array $params
+     * @return unknown
      */
     public static function t($message, array $params = [])
     {
-        return Yii::t('bootstrap4', $message, $params);
+        return parent::baseT('bootstrap4', $message, $params);
     }
 }
