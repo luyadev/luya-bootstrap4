@@ -9,14 +9,14 @@ use luya\testsuite\cases\WebApplicationTestCase;
 
 class Bootstrap4Test extends WebApplicationTestCase
 {
-	public function getConfigArray()
-	{
-		return [
-			'id' => 'bs4app',
-			'basePath' => dirname(__DIR__) . '/../',
-		];
-	}
-	
+    public function getConfigArray()
+    {
+        return [
+            'id' => 'bs4app',
+            'basePath' => dirname(__DIR__) . '/../',
+        ];
+    }
+    
     public function testActiveFormLayout()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -43,12 +43,12 @@ class Bootstrap4Test extends WebApplicationTestCase
 
 class StubModel extends Model
 {
-	public $firstname = null;
+    public $firstname = null;
 
-	public function rules()
-	{
-		return [
-				[['firstname'], 'string'],
-		];
-	}
+    public function rules()
+    {
+        return [
+                [['firstname'], 'string'],
+        ];
+    }
 }
