@@ -2,6 +2,8 @@
 
 namespace luya\bootstrap4;
 
+use Yii;
+
 /**
  * Bootstrap4 Module
  *
