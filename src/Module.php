@@ -17,11 +17,11 @@ class Module extends \luya\base\Module
      */
     public static function onLoad()
     {
-        //Yii::setAlias('@bootstrap4', static::staticBasePath());
+        Yii::setAlias('@bootstrap4', static::staticBasePath());
         
-        self::registerTranslation('bootstrap4', static::staticBasePath() . '/messages', [
+        self::registerTranslation('bootstrap4*', static::staticBasePath() . '/messages', [
             'fileMap' => [
-                'bootstrap4' => 'bootstrap4',
+                'bootstrap4' => 'bootstrap4.php',
             ],
         ]);
     }
