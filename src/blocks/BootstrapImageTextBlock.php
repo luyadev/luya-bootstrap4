@@ -117,7 +117,7 @@ class BootstrapImageTextBlock extends \luya\cms\base\PhpBlock
     {
         if ($this->_source === null) {
             $img = Yii::$app->storage->getImage($this->getVarValue('imageId'), 0);
-            $this->_source = $img ? $img->source : false;
+            $this->_source = $img ? $img->httpSource : false;
         }
 
         return $this->_source;
