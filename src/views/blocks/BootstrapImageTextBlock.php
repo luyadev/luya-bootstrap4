@@ -24,7 +24,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php endif; ?>
 
-                            <img src="<?= $extras['imageId']['source'] ?>" style="padding-right:10px;" alt="<?php if (isset($vars['imageCaption'])): echo $vars['imageCaption']; endif; ?>" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
+                            <img src="<?= $extras['imageId']['httpSource'] ?>" style="padding-right:10px;" alt="<?php if (isset($vars['imageCaption'])): echo $vars['imageCaption']; endif; ?>" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
 
                         <?php if (isset($extras['link']) || ($extras['file'])):?></a><?php endif; ?>
 
@@ -48,7 +48,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php endif; ?>
 
-                        <img src="<?= $extras['imageId']['source'] ?>" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
+                        <img src="<?= $extras['imageId']['httpSource'] ?>" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
 
                         <?php if (isset($extras['link']) || ($extras['file']))  :?></a><?php endif; ?>
 
@@ -76,7 +76,7 @@ $placeholders = $this->context->getPlaceholderValues();
                         <?php endif; ?>
 
 
-                        <img src="<?= $extras['imageId']['source'] ?>" style="padding-left: 10px;" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
+                        <img src="<?= $extras['imageId']['httpSource'] ?>" style="padding-left: 10px;" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
 
                         <?php if (isset($extras['link']) || ($extras['file']))  :?></a><?php endif; ?>
 
@@ -100,7 +100,7 @@ $placeholders = $this->context->getPlaceholderValues();
                         <?php endif; ?>
 
 
-                        <img src="<?= $extras['imageId']['source'] ?>" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
+                        <img src="<?= $extras['imageId']['httpSource'] ?>" alt="<?php if (isset($vars['imageCaption']) && (!empty($vars['imageCaption']))): ?> <?= $vars['imageCaption'] ?> <?php endif ?>" style="margin:auto; padding-top:10px;" class="img-fluid img-responsive <?= $vars['imageShapes'] ?>"/>
 
                         <?php if (isset($extras['link']) || ($extras['file']))  :?></a><?php endif; ?>
 
