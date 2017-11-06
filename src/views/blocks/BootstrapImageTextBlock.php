@@ -20,7 +20,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php elseif (isset($vars['fileDownload']) &&  ($vars['fileDownload'] == 1)): ?>
 
-                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><?php endif; ?>
+                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['href']?>" download><?php endif; ?>
 
                         <?php endif; ?>
 
@@ -44,7 +44,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1)): ?>
 
-                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><?php endif; ?>
+                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['href']?>" download><?php endif; ?>
 
                         <?php endif; ?>
 
@@ -71,7 +71,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1)): ?>
 
-                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><?php endif; ?>
+                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['href']?>" download><?php endif; ?>
 
                         <?php endif; ?>
 
@@ -95,7 +95,7 @@ $placeholders = $this->context->getPlaceholderValues();
 
                         <?php elseif (isset($vars['fileDownload']) && ($vars['fileDownload'] == 1)): ?>
 
-                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['source']?>" download><?php endif; ?>
+                            <?php if (isset($extras['file']) && (!empty($extras['file']))):?><a href="<?= $extras['file']['href']?>" download><?php endif; ?>
 
                         <?php endif; ?>
 

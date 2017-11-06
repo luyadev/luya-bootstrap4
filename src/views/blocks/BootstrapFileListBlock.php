@@ -31,7 +31,7 @@ $placeholders = $this->context->getPlaceholderValues();
 <ul>
     <?php foreach ($extras['fileList'] as $file): ?>
         <li>
-            <a href="<?= $file['source'] ?>">
+            <a href="<?= $file['link'] ?>">
                 <?= $file['caption'] ?: $file['name'] ?>
                 <?php if ($cfgs['showType']): ?>
                     <span><?= $file['extension'] ?></span>
