@@ -31,9 +31,9 @@ class Module extends \luya\base\Module
     /**
      * Translations
      *
-     * @param unknown $message
+     * @param string $message
      * @param array $params
-     * @return unknown
+     * @return string
      */
     public static function t($message, array $params = [])
     {
