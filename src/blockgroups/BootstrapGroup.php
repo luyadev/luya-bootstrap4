@@ -11,6 +11,6 @@ class BootstrapGroup extends \luya\cms\base\BlockGroup
 
     public function label()
     {
-        return 'Bootstrap';
+        return 'Bootstrap 4';
     }
 }
