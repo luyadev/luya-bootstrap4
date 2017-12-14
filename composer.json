@@ -1,7 +1,7 @@
 {
 	"name" : "luyadev/luya-bootstrap4",
 	"description" : "Bootstrap4 Assets and Helper classes like ActiveForm for LUYA and Yii2.",
-	"type" : "luya-module",
+	"type" : "luya-extension",
 	"keywords" : ["php", "luya", "module", "cms", "yii2", "bootstrap", "bootstrap4", "twbs4", "luya-module", "bootstrap4", "bootstrap", "assets"],
 	"license": "MIT",
 	"homepage" : "http://luya.io",
