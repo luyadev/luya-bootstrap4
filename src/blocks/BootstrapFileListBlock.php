@@ -40,7 +40,7 @@ class BootstrapFileListBlock extends \luya\cms\base\PhpBlock
 
     public function icon()
     {
-        return 'extension'; // choose icon from: http://materializecss.com/icons.html
+        return 'view_list';
     }
 
     public function config()
