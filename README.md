@@ -2,6 +2,10 @@
 
 Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii 2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
 
++ Bootstrap Alpha = RC4
++ Bootstrap Beta 2 = RC5
++ Bootstrap Beta 3 = RC6
+
 > **Attention:** As of Bootstrap 4, the grid is completely written in FLEX. Check the [Browser Support](http://caniuse.com/#search=flex) to decide if you want to use Bootstrap 4 for your Project.
 
 + Widgets
