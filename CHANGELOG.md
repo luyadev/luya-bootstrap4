@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. This projec
 ## 1.0.0 (in progress)
 
 + [#5](https://github.com/luyadev/luya-bootstrap4/issues/5) Add carousel block.
++ [#6](https://github.com/luyadev/luya-bootstrap4/issues/6) Added Layout and LayoutColumn block.
 
 ## 1.0.0-RC7 (28. January 2018)
 
