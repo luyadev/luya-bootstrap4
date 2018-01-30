@@ -2,17 +2,17 @@
 
 namespace luya\bootstrap4\blocks;
 
-use luya\cms\base\PhpBlock;
 use luya\bootstrap4\blockgroups\BootstrapGroup;
 use luya\bootstrap4\Module;
 use luya\cms\helpers\BlockHelper;
+use luya\bootstrap4\BaseBootstrap4Block;
 
 /**
  * Bootstrap 4 Carousel Component.
  * 
  * @author Basil Suter <basil@nadar.io>
  */
-class CarouselBlock extends PhpBlock
+class CarouselBlock extends BaseBootstrap4Block
 {
 	public $module = 'bootstrap4';
 	
