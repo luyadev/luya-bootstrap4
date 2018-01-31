@@ -149,9 +149,8 @@ class LayoutColumnBlock extends PhpBlock
         $columnClass = '';
 
         $i = 1;
-        foreach($columns as $breakpoint => $columnCount) {
-
-            if($breakpoint === 'xs') {
+        foreach ($columns as $breakpoint => $columnCount) {
+            if ($breakpoint === 'xs') {
                 $columnClass .= 'col-' . $columnCount;
             } else {
                 $columnClass .= 'col-' . $breakpoint . '-' . $columnCount;

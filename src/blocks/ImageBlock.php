@@ -9,7 +9,7 @@ use luya\cms\helpers\BlockHelper;
 /**
  * Image Block.
  *
- * File has been created with `block/create` command. 
+ * File has been created with `block/create` command.
  */
 class ImageBlock extends PhpBlock
 {
@@ -77,7 +77,7 @@ class ImageBlock extends PhpBlock
     }
 
     /**
-     * {@inheritDoc} 
+     * {@inheritDoc}
      *
      * @param {{extras.image}}
      * @param {{vars.align}}

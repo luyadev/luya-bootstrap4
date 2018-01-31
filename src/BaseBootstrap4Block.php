@@ -14,11 +14,11 @@ use luya\cms\base\PhpBlock;
  */
 abstract class BaseBootstrap4Block extends PhpBlock
 {
-	/**
-	 * @inheritdoc
-	 */
-	public function getViewPath()
-	{
-		return  dirname(__DIR__) . '/src/views/blocks';
-	}
+    /**
+     * @inheritdoc
+     */
+    public function getViewPath()
+    {
+        return  dirname(__DIR__) . '/src/views/blocks';
+    }
 }

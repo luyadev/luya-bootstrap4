@@ -8,7 +8,7 @@ use luya\cms\frontend\blockgroups\LayoutGroup;
 /**
  * Layout Block.
  *
- * File has been created with `block/create` command. 
+ * File has been created with `block/create` command.
  */
 class LayoutBlock extends PhpBlock
 {
@@ -60,7 +60,7 @@ class LayoutBlock extends PhpBlock
     }
     
     /**
-     * {@inheritDoc} 
+     * {@inheritDoc}
      *
      * @param {{placeholders.content}}
     */

@@ -2,7 +2,7 @@
 /* @var $this \luya\cms\base\PhpBlockView */
 
 if (!$this->isPrevEqual) {
-	$this->appView->registerJs("$('.carousel').carousel()");
+    $this->appView->registerJs("$('.carousel').carousel()");
 }
 ?>
 <?php if (!$this->getIsPrevEqual()): ?>

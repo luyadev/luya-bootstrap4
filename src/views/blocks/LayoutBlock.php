@@ -1,8 +1,8 @@
 <?php
 /**
- * View file for block: LayoutBlock 
+ * View file for block: LayoutBlock
  *
- * File has been created with `block/create` command. 
+ * File has been created with `block/create` command.
  *
  * @param $this->placeholderValue('content');
  *
