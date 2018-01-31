@@ -20,7 +20,7 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'caption' => 'Test']);
 
         $this->assertContainsTrimmed('
-            <div class="image ">
+            <div class="image">
                 <figure class="figure d-block text-left">
                     <img src="luya.jpg" class="figure-img img-fluid" alt="Test">
                 </figure>
@@ -33,7 +33,7 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'caption' => 'Test']);
 
         $this->assertContainsTrimmed('
-            <div class="image ">
+            <div class="image">
                 <figure class="figure d-block text-center">
                     <img src="luya.jpg" class="figure-img img-fluid" alt="Test">
                 </figure>
@@ -46,7 +46,7 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'caption' => 'Test']);
 
         $this->assertContainsTrimmed('
-            <div class="image ">
+            <div class="image">
                 <figure class="figure d-block text-right">
                     <img src="luya.jpg" class="figure-img img-fluid" alt="Test">
                 </figure>
@@ -59,7 +59,7 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'caption' => 'Test']);
 
         $this->assertContainsTrimmed('
-            <div class="image ">
+            <div class="image">
                 <figure class="figure d-block text-right">
                     <img src="luya.jpg" class="figure-img img-fluid" alt="Test">
                     <figcaption class="figure-caption">Test</figcaption>

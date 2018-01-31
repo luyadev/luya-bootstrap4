@@ -2,6 +2,7 @@
 
 namespace luya\bootstrap4\blocks;
 
+use luya\bootstrap4\Module;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\MediaGroup;
 use luya\cms\helpers\BlockHelper;
@@ -41,7 +42,7 @@ class ImageBlock extends PhpBlock
      */
     public function name()
     {
-        return 'Image';
+        return Module::t('block_image.block_name');
     }
     
     /**
@@ -59,9 +60,9 @@ class ImageBlock extends PhpBlock
     {
         return [
             'vars' => [
-                 ['var' => 'image', 'label' => 'Bild', 'type' => self::TYPE_IMAGEUPLOAD, 'options' => ['no_filter' => false]],
-                 ['var' => 'align', 'label' => 'Alignment', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption(['left' => 'Left', 'center' => 'Center', 'right' => 'Right'])],
-                 ['var' => 'showCaption', 'label' => 'Show caption', 'type' => self::TYPE_CHECKBOX],
+                 ['var' => 'image', 'label' => Module::t('block_image.image'), 'type' => self::TYPE_IMAGEUPLOAD, 'options' => ['no_filter' => false]],
+                 ['var' => 'align', 'label' => Module::t('block_image.align'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption(['left' => Module::t('block_image.align_left'), 'center' => Module::t('block_image.align_center'), 'right' => Module::t('block_image.align_right')])],
+                 ['var' => 'showCaption', 'label' => Module::t('block_image.show_caption'), 'type' => self::TYPE_CHECKBOX],
             ],
         ];
     }

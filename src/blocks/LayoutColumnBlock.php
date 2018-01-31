@@ -2,6 +2,7 @@
 
 namespace luya\bootstrap4\blocks;
 
+use luya\bootstrap4\Module;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\LayoutGroup;
 use luya\cms\helpers\BlockHelper;
@@ -70,14 +71,14 @@ class LayoutColumnBlock extends PhpBlock
     {
         return [
             'vars' => [
-                ['var' => 'columnCount', 'label' => 'Size XS up', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
-                ['var' => 'columnCountSM', 'label' => 'Size SM up', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
-                ['var' => 'columnCountMD', 'label' => 'Size MD up', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
-                ['var' => 'columnCountLG', 'label' => 'Size LG up', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
-                ['var' => 'columnCountXL', 'label' => 'Size XL up', 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
+                ['var' => 'columnCount', 'label' => Module::t('block_layout_column.column_count'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
+                ['var' => 'columnCountSM', 'label' => Module::t('block_layout_column.column_count_sm'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
+                ['var' => 'columnCountMD', 'label' => Module::t('block_layout_column.column_count_md'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
+                ['var' => 'columnCountLG', 'label' => Module::t('block_layout_column.column_count_lg'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
+                ['var' => 'columnCountXL', 'label' => Module::t('block_layout_column.column_count_xl'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption($this->columns)],
             ],
             'placeholders' => [
-                 ['var' => 'content', 'label' => 'Column content'],
+                 ['var' => 'content', 'label' => Module::t('block_layout_column.content')],
             ],
         ];
     }

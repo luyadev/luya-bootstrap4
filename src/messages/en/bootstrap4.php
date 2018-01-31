@@ -8,6 +8,31 @@ return [
     'block_file_list.show_type_label' => 'Display file type',
     'block_file_list.show_type_icon' => 'Display file type icon',
     'block_file_list.show_file_size' => 'Display file size',
+
+    'block_image.block_name' => 'Image',
+    'block_image.image' => 'Image',
+    'block_image.align' => 'Image position',
+    'block_image.align_left' => 'Left',
+    'block_image.align_right' => 'Right',
+    'block_image.align_center' => 'Center',
+    'block_image.show_caption' => 'Show caption',
+
+    'block_layout.block_name' => 'Layout: Row',
+    'block_layout.content' => 'Row content',
+
+    'block_layout_column.block_name' => 'Layout: Column',
+    'block_layout_column.column_count' => 'Size XS up',
+    'block_layout_column.column_count_sm' => 'Size SM up',
+    'block_layout_column.column_count_md' => 'Size MD up',
+    'block_layout_column.column_count_lg' => 'Size LG up',
+    'block_layout_column.column_count_xl' => 'Size XL up',
+    'block_layout_column.content' => 'Column content',
+
+    'block_carousel.block_name' => 'Carousel',
+    'block_carousel.title' => 'Title',
+    'block_carousel.caption' => 'Image caption',
+    'block_carousel.image' => 'Image',
+
     'block_image_text.block_name' => 'Image with Text',
     'block_image_text.image_position' => 'Image position',
     'block_image_text.left' => 'Left',
@@ -28,6 +53,7 @@ return [
     'block_image_text.link' => 'Image link',
     'block_image_text.file' => 'Attach file',
     'block_image_text.file_download' => 'Download file via image',
+
     'block_inlinetext.name'=> 'Inline Text Block',
     'block_inlinetext.empty'=> 'No text has been added yet.',
     'block_inlinetext.size-sm'=> 'Size mobile',
@@ -35,6 +61,7 @@ return [
     'block_inlinetext.size-lg'=> 'Size desktop',
     'block_inlinetext.size-full'=> 'Full width',
     'block_inlinetext.size'=> 'width',
+
     'block_inline_wrapper.label'=>'Place inline blocks here ...',
     'block_inline_wrapper.name'=>'Inline Block Container',
 ];

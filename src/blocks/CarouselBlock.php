@@ -18,7 +18,7 @@ class CarouselBlock extends BaseBootstrap4Block
     
     public function name()
     {
-        return Module::t('carousel_block_name');
+        return Module::t('block_carousel.block_name');
     }
     
     public function blockGroup()
@@ -35,9 +35,9 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         return [
             'vars' => [
-                ['type' => self::TYPE_TEXT, 'var' => 'title', 'label' => 'Title'],
-                ['type' => self::TYPE_TEXTAREA, 'var' => 'caption', 'label' => 'Caption'],
-                ['type' => self::TYPE_IMAGEUPLOAD, 'var' => 'image', 'label' => 'IMage']
+                ['type' => self::TYPE_TEXT, 'var' => 'title', 'label' => Module::t('block_carousel.title')],
+                ['type' => self::TYPE_TEXTAREA, 'var' => 'caption', 'label' => Module::t('block_carousel.caption')],
+                ['type' => self::TYPE_IMAGEUPLOAD, 'var' => 'image', 'label' => Module::t('block_carousel.image')]
             ]
         ];
     }

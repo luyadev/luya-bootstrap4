@@ -2,6 +2,7 @@
 
 namespace luya\bootstrap4\blocks;
 
+use luya\bootstrap4\Module;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\LayoutGroup;
 
@@ -36,7 +37,7 @@ class LayoutBlock extends PhpBlock
      */
     public function name()
     {
-        return 'Layout: Row';
+        return Module::t('block_layout.block_name');
     }
     
     /**
@@ -54,7 +55,7 @@ class LayoutBlock extends PhpBlock
     {
         return [
             'placeholders' => [
-                 ['var' => 'content', 'label' => 'Row content'],
+                 ['var' => 'content', 'label' => Module::t('block_layout.content')],
             ],
         ];
     }
