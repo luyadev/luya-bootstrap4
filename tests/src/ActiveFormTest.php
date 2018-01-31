@@ -6,7 +6,6 @@ use Yii;
 use yii\base\Model;
 use luya\bootstrap4\ActiveForm;
 use luya\testsuite\cases\WebApplicationTestCase;
-use luya\base\DynamicModel;
 
 class Bootstrap4Test extends WebApplicationTestCase
 {
