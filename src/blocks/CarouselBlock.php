@@ -11,26 +11,39 @@ use luya\bootstrap4\BaseBootstrap4Block;
  * Bootstrap 4 Carousel Component.
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class CarouselBlock extends BaseBootstrap4Block
 {
     public $module = 'bootstrap4';
     
+    /**
+     * @inheritdoc
+     */
     public function name()
     {
         return Module::t('block_carousel.block_name');
     }
     
+    /**
+     * @inheritdoc
+     */
     public function blockGroup()
     {
         return BootstrapGroup::class;
     }
     
+    /**
+     * @inheritdoc
+     */
     public function icon()
     {
         return 'view_carousel';
     }
     
+    /**
+     * @inheritdoc
+     */
     public function config()
     {
         return [
@@ -42,6 +55,9 @@ class CarouselBlock extends BaseBootstrap4Block
         ];
     }
     
+    /**
+     * @inheritdoc
+     */
     public function extraVars()
     {
         return [
@@ -50,8 +66,13 @@ class CarouselBlock extends BaseBootstrap4Block
         ];
     }
     
+    /**
+     * @inheritdoc
+     */
     public function admin()
     {
-        return 'Bootstrap 4 Carousel Container';
+        return '{% if extras.image %}<div>
+              <img src="{{extras.image.source}}" class="img-fluid" />
+      </div>{% endif %}';
     }
 }

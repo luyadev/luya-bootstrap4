@@ -14,7 +14,7 @@ class BaseBootstrap4BlockTestCase extends CmsBlockTestCase
             'components' => [
                 'assetManager' => [
                     'basePath' => dirname(__DIR__) . '/assets',
-                ]
+                ],
             ]
         ];
     }

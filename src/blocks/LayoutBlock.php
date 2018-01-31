@@ -10,6 +10,9 @@ use luya\cms\frontend\blockgroups\LayoutGroup;
  * Layout Block.
  *
  * File has been created with `block/create` command.
+ * 
+ * @author Marc Stampfli <marc@zephir.ch>
+ * @since 1.0.0
  */
 class LayoutBlock extends PhpBlock
 {

@@ -124,7 +124,8 @@
                     "node_modules",
                     "package.json"
                 ]
-            }
+            },
+            "time": "2014-10-22T12:02:42+00:00"
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -884,16 +885,16 @@
         },
         {
             "name": "luyadev/luya-testsuite",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-testsuite.git",
-                "reference": "5d2dbf63962546149d0e9c7995c4fcf383a2142a"
+                "reference": "70635b31e806ff8f0baf7d39c3dcf718d43b26b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/5d2dbf63962546149d0e9c7995c4fcf383a2142a",
-                "reference": "5d2dbf63962546149d0e9c7995c4fcf383a2142a",
+                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/70635b31e806ff8f0baf7d39c3dcf718d43b26b5",
+                "reference": "70635b31e806ff8f0baf7d39c3dcf718d43b26b5",
                 "shasum": ""
             },
             "require": {
@@ -933,7 +934,7 @@
                 "module",
                 "php"
             ],
-            "time": "2018-01-12T13:50:25+00:00"
+            "time": "2018-01-31T12:28:21+00:00"
         },
         {
             "name": "myclabs/deep-copy",
