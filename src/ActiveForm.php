@@ -22,6 +22,8 @@ class ActiveForm extends \yii\widgets\ActiveForm
      */
     public $layout = 'default';
     
+    public $validationStateOn = self::VALIDATION_STATE_ON_INPUT;
+    
     /**
      * @var string The error Summary alert class
      */
@@ -35,12 +37,12 @@ class ActiveForm extends \yii\widgets\ActiveForm
     /**
      * @inheritdoc
      */
-    public $errorCssClass = 'has-danger';
+    public $errorCssClass = 'is-invalid';
     
     /**
      * @inheritdoc
      */
-    public $successCssClass = 'has-success';
+    public $successCssClass = 'is-valid';
     
     /**
      * @inheritdoc

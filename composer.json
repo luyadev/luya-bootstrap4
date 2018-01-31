@@ -16,6 +16,7 @@
 		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
 	},
 	"require-dev" : {
+		"yiisoft/yii2" : "^2.0@dev",
 		"luyadev/luya-testsuite" : "~1.0.0"
 	},
 	"autoload" : {
