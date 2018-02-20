@@ -15,9 +15,6 @@
 	"support" : {
 		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
 	},
-	"require" : {
-		"yiisoft/yii2" : "^2.0@dev"
-	},
 	"require-dev" : {
 		"luyadev/luya-testsuite" : "~1.0.0"
 	},
