@@ -11,6 +11,7 @@ namespace luya\bootstrap4;
  * + horizontal: Horizontal layout set the labels left to the fields.
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class ActiveForm extends \yii\widgets\ActiveForm
 {
@@ -22,6 +23,9 @@ class ActiveForm extends \yii\widgets\ActiveForm
      */
     public $layout = 'default';
     
+    /**
+     * @var string Change the validation state to the input field.
+     */
     public $validationStateOn = self::VALIDATION_STATE_ON_INPUT;
     
     /**
