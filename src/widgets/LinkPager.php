@@ -2,6 +2,11 @@
 
 namespace luya\bootstrap4\widgets;
 
+/**
+ * Link Pager Widget.
+ *
+ * @since 1.0.0
+ */
 class LinkPager extends \yii\widgets\LinkPager
 {
     /**
