@@ -16,7 +16,7 @@
 		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
 	},
 	"require-dev" : {
-		"luyadev/luya-testsuite" : "~1.0.0"
+		"luyadev/luya-testsuite" : "~1.1.0"
 	},
 	"autoload" : {
 		"psr-4" : {
