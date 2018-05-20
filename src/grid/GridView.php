@@ -8,6 +8,7 @@ use luya\bootstrap4\widgets\LinkPager;
  * GridView Bootstrap4 Widget.
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class GridView extends \yii\grid\GridView
 {

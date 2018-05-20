@@ -6,6 +6,7 @@ namespace luya\bootstrap4;
  * Bootstrap 4 Active Field.
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class ActiveField extends \yii\widgets\ActiveField
 {

@@ -5,6 +5,7 @@ namespace luya\bootstrap4\widgets;
 /**
  * Link Pager Widget.
  *
+ * @author Basil Suter <basil@nadar.io>
  * @since 1.0.0
  */
 class LinkPager extends \yii\widgets\LinkPager

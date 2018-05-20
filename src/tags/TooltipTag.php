@@ -6,6 +6,12 @@ use luya\tag\BaseTag;
 use luya\web\View;
 use yii\helpers\Html;
 
+/**
+ * Bootstrap 4 Tooltip Tag.
+ * 
+ * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
+ */
 class TooltipTag extends BaseTag
 {
     public $position = 'top';

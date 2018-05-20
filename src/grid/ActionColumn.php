@@ -9,6 +9,7 @@ use yii\helpers\Html;
  * ActionColumn for Bootstrap4 with FontAwesome.
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class ActionColumn extends \yii\grid\ActionColumn
 {

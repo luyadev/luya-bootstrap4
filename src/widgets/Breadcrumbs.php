@@ -23,6 +23,7 @@ namespace luya\bootstrap4\widgets;
  * ```
  *
  * @author Basil Suter <basil@nadar.io>
+ * @since 1.0.0
  */
 class Breadcrumbs extends \yii\widgets\Breadcrumbs
 {
