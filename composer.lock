@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dcc4f78e36abb28bc161d1a6afa72a4",
+    "content-hash": "a716849392bbcb9166ea351798bfa4bf",
     "packages": [],
     "packages-dev": [
         {
@@ -225,16 +225,16 @@
         },
         {
             "name": "curl/curl",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "16e8489b048ef57ffbf74591a201f7808155b2db"
+                "reference": "d4970cf3451de7688b90af77299548ada72b53dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/16e8489b048ef57ffbf74591a201f7808155b2db",
-                "reference": "16e8489b048ef57ffbf74591a201f7808155b2db",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/d4970cf3451de7688b90af77299548ada72b53dd",
+                "reference": "d4970cf3451de7688b90af77299548ada72b53dd",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "curl",
                 "dot"
             ],
-            "time": "2017-08-12T11:44:08+00:00"
+            "time": "2018-05-02T16:32:35+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -541,16 +541,16 @@
         },
         {
             "name": "luyadev/luya-core",
-            "version": "1.0.5",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-core.git",
-                "reference": "6b42a8eb7a434c379d2345c217368cc4b67f0603"
+                "reference": "393af7540a371dba40929545bc3b82acc9dddd17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/6b42a8eb7a434c379d2345c217368cc4b67f0603",
-                "reference": "6b42a8eb7a434c379d2345c217368cc4b67f0603",
+                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/393af7540a371dba40929545bc3b82acc9dddd17",
+                "reference": "393af7540a371dba40929545bc3b82acc9dddd17",
                 "shasum": ""
             },
             "require": {
@@ -594,20 +594,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-03-26T15:55:52+00:00"
+            "time": "2018-05-14T11:08:07+00:00"
         },
         {
             "name": "luyadev/luya-module-admin",
-            "version": "1.1.0",
+            "version": "1.2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-admin.git",
-                "reference": "e2363912b46849796f0cf8f2fe50ce4d983d274d"
+                "reference": "34df83579d064a550eabefbbf4033eebb1d5dee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/e2363912b46849796f0cf8f2fe50ce4d983d274d",
-                "reference": "e2363912b46849796f0cf8f2fe50ce4d983d274d",
+                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/34df83579d064a550eabefbbf4033eebb1d5dee0",
+                "reference": "34df83579d064a550eabefbbf4033eebb1d5dee0",
                 "shasum": ""
             },
             "require": {
@@ -633,7 +633,7 @@
             "type": "luya-core",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -667,20 +667,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-03-26T17:21:08+00:00"
+            "time": "2018-05-17T13:38:26+00:00"
         },
         {
             "name": "luyadev/luya-module-cms",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-cms.git",
-                "reference": "37dd0951ffd60fe213f537ee2659a818721a3925"
+                "reference": "c8db3138001f300afa5790ea3ade86eb0734ea08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/37dd0951ffd60fe213f537ee2659a818721a3925",
-                "reference": "37dd0951ffd60fe213f537ee2659a818721a3925",
+                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/c8db3138001f300afa5790ea3ade86eb0734ea08",
+                "reference": "c8db3138001f300afa5790ea3ade86eb0734ea08",
                 "shasum": ""
             },
             "require-dev": {
@@ -731,27 +731,27 @@
                 "yii2",
                 "yii2-cms"
             ],
-            "time": "2018-03-26T17:04:29+00:00"
+            "time": "2018-05-17T11:22:10+00:00"
         },
         {
             "name": "luyadev/luya-testsuite",
-            "version": "1.1.0",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-testsuite.git",
-                "reference": "b4c65c4fbcc7358c40971e0cc99ef1918ca16f04"
+                "reference": "cf085193dfb4e2fc24f97a8edd57b1240bf02e83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/b4c65c4fbcc7358c40971e0cc99ef1918ca16f04",
-                "reference": "b4c65c4fbcc7358c40971e0cc99ef1918ca16f04",
+                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/cf085193dfb4e2fc24f97a8edd57b1240bf02e83",
+                "reference": "cf085193dfb4e2fc24f97a8edd57b1240bf02e83",
                 "shasum": ""
             },
             "require": {
                 "curl/curl": "^1.0",
-                "luyadev/luya-core": "~1.0.0",
-                "luyadev/luya-module-admin": "~1.1.0",
-                "luyadev/luya-module-cms": "~1.0.0",
+                "luyadev/luya-core": "~1.0",
+                "luyadev/luya-module-admin": "~1.0",
+                "luyadev/luya-module-cms": "~1.0",
                 "phpunit/phpunit": "~6.0.0",
                 "twig/twig": "^1.0"
             },
@@ -784,7 +784,7 @@
                 "module",
                 "php"
             ],
-            "time": "2018-03-26T19:59:46+00:00"
+            "time": "2018-05-09T12:42:53+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1051,23 +1051,23 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.7.5",
+            "version": "1.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
-                "sebastian/comparator": "^1.1|^2.0",
+                "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
             "require-dev": {
@@ -1110,7 +1110,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-19T10:16:54+00:00"
+            "time": "2018-04-18T13:57:24+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

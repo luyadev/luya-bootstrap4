@@ -2,11 +2,23 @@
 	"name" : "luyadev/luya-bootstrap4",
 	"description" : "Bootstrap4 Assets and Helper classes like ActiveForm for LUYA and Yii2.",
 	"type" : "luya-extension",
-	"keywords" : ["php", "luya", "module", "cms", "yii2", "bootstrap", "bootstrap4", "twbs4", "luya-module", "bootstrap4", "bootstrap", "assets"],
-	"license": "MIT",
-	"homepage" : "http://luya.io",
-	"authors" : [
-		{
+	"keywords" : [
+		"php",
+		"luya",
+		"module",
+		"cms",
+		"yii2",
+		"bootstrap",
+		"bootstrap4",
+		"twbs4",
+		"luya-module",
+		"bootstrap4",
+		"bootstrap",
+		"assets"
+	],
+	"license" : "MIT",
+	"homepage" : "https://luya.io",
+	"authors" : [{
 			"name" : "Basil",
 			"email" : "git@nadar.io",
 			"homepage" : "https://github.com/nadar"
@@ -16,7 +28,7 @@
 		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
 	},
 	"require-dev" : {
-		"luyadev/luya-testsuite" : "~1.1.0"
+		"luyadev/luya-testsuite" : "~1.0.0"
 	},
 	"autoload" : {
 		"psr-4" : {
@@ -24,18 +36,18 @@
 			"luya\\bootstrap4\\tests\\" : "tests/"
 		}
 	},
-	"extra": {
+	"extra" : {
 		"luya" : {
 			"blocks" : [
 				"src/blocks"
 			]
 		},
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        },
-        "asset-pattern-skip-version": "(-build|-patch)",
-        "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
-        }
-    }
+		"branch-alias" : {
+			"dev-master" : "1.0.x-dev"
+		},
+		"asset-pattern-skip-version" : "(-build|-patch)",
+		"asset-installer-paths" : {
+			"bower-asset-library" : "vendor/bower"
+		}
+	}
 }

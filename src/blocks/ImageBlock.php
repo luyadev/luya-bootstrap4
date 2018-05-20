@@ -93,10 +93,10 @@ class ImageBlock extends PhpBlock
         return '<div class="clearfix" {% if vars.align == \'center\' %}style="text-align: center;"{% endif %}>
                     <div style="display: inline-block; max-width: 80%; {% if vars.align == \'left\' %} float: left;{% elseif vars.align == \'right\' %} float: right;{% endif %}">
                         <div>
-                            <img src="{{extras.image.source}}" style="width: 100%; height: auto;" />
+                            <img src="{{extras.image.source}}" class="img-fluid" alt="" />
                         </div>
                         {% if vars.showCaption and extras.image.caption %}
-                            <p style="display: inline-block;"><small>{{extras.image.caption}}</small></p>
+                            <p class="text-muted"><small>{{extras.image.caption}}</small></p>
                         {% endif %}
                     </div>
                 </div>';
