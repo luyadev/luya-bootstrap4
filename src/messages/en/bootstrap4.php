@@ -75,5 +75,6 @@ return [
     'block_carousel.config_keyboard' => 'Keyboard',
     'block_carousel.config_pause' => 'Pause',
     'block_carousel.config_ride' => 'Ride',
-    'block_carousel.config_wrap' => 'Wrap'
+    'block_carousel.config_wrap' => 'Wrap',
+    'block_carousel.config_row' => 'Row'
 ];

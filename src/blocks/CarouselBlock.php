@@ -62,7 +62,8 @@ class CarouselBlock extends BaseBootstrap4Block
                 ['var' => 'keyboard', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_keyboard'), 'initvalue' => 1],
                 ['var' => 'pause', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_pause')],
                 ['var' => 'ride', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_ride')],
-                ['var' => 'wrap', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_wrap'), 'initvalue' => 1]
+                ['var' => 'wrap', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_wrap'), 'initvalue' => 0],
+                ['var' => 'row', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_row'), 'initvalue' => 0]
             ]
         ];
     }

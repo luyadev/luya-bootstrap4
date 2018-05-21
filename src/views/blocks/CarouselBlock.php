@@ -25,7 +25,7 @@ $indicators = '';
 $counter = 0;
 ?>
 
-<div id="<?= $id ?>" class="carousel slide <?= $this->varValue('crossfade') ? 'carousel-fade' : '' ?>" data-ride="carousel">
+<div id="<?= $id ?>" class="carousel slide<?= $this->varValue('crossfade') ? ' carousel-fade' : '' ?><?= $this->varValue('row') ? ' row' : '' ?>" data-ride="carousel">
     <div class="carousel-inner">
     <?php if ($images):
         foreach ($images as $image):
