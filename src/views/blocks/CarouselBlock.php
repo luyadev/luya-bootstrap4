@@ -16,6 +16,7 @@ if ($this->varValue('ride')) {
 if ($this->varValue('wrap')==1) {
     $config .= 'wrap: true,';
 }
+$config = rtrim($config, ',');
 $this->appView->registerJs("$('.carousel').carousel({".$config."})");
 $id = $this->extraValue('id');
 $images = $this->extraValue('images');
