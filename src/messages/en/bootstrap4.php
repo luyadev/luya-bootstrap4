@@ -28,10 +28,13 @@ return [
     'block_layout_column.column_count_xl' => 'Size XL up',
     'block_layout_column.content' => 'Column content',
 
+    'block_carousel.items' => 'Slides',
     'block_carousel.block_name' => 'Carousel',
     'block_carousel.title' => 'Title',
     'block_carousel.caption' => 'Image caption',
     'block_carousel.image' => 'Image',
+    'block_carousel.alt' => 'Alt',
+    'block_carousel.image_link' => 'Link',
 
     'block_image_text.block_name' => 'Image with Text',
     'block_image_text.image_position' => 'Image position',
@@ -64,4 +67,13 @@ return [
 
     'block_inline_wrapper.label'=>'Place inline blocks here ...',
     'block_inline_wrapper.name'=>'Inline Block Container',
+
+    'block_carousel.config_controls' => 'Controls',
+    'block_carousel.config_indicators' => 'Indicators',
+    'block_carousel.config_crossfade' => 'Crossfade',
+    'block_carousel.config_interval' => 'Interval',
+    'block_carousel.config_keyboard' => 'Keyboard',
+    'block_carousel.config_pause' => 'Pause',
+    'block_carousel.config_ride' => 'Ride',
+    'block_carousel.config_wrap' => 'Wrap'
 ];
