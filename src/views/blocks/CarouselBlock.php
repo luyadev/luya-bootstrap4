@@ -33,7 +33,7 @@ $hasImages = false;
     endif;?>
     </div>
 
-    <?php if ($images): ?>
+    <?php if ($hasImages): ?>
         <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>') ?>
 
         <?= $this->cfgValue('controls', null,
