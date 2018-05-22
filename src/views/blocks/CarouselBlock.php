@@ -3,13 +3,13 @@
 $this->appView->registerJs("$('.carousel').carousel(".$this->extraValue('jsConfig', '').")");
 $id = $this->extraValue('id');
 $images = $this->extraValue('images');
+$hasImages = false;
 ?>
 
 <div id="<?= $id ?>" class="carousel slide<?= $this->cfgValue('crossfade', null , ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
     <div class="carousel-inner">
     <?php if ($images):
         $indicators = '';
-        $hasImages = false;
         $counter = 0;
         foreach ($images as $image): $counter++;
             if (isset($image['image'])):
@@ -33,7 +33,7 @@ $images = $this->extraValue('images');
     endif;?>
     </div>
 
-    <?php if ($hasImages): ?>
+    <?php if ($images): ?>
         <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>') ?>
 
         <?= $this->cfgValue('controls', null,
