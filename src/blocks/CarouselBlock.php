@@ -71,28 +71,38 @@ class CarouselBlock extends BaseBootstrap4Block
         ];
     }
 
+    /**
+     * Get all carousel images (slides)
+     *
+     * @return array images
+     */
     public function images()
     {
         $images = [];
         foreach ($this->getVarValue('images', []) as $item) {
             $images[] = [
-                'image'             => isset($item['image']) ? BlockHelper::imageUpload($item['image'], false, true) : null,
-                'alt'               => isset($item['alt']) ? $item['alt'] : 'no-alt-text-set',
-                'title'             => isset($item['title']) ? $item['title'] : '',
-                'caption'           => isset($item['caption']) ? $item['caption'] : '',
-                'link'              => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
+                'image' => isset($item['image']) ? BlockHelper::imageUpload($item['image'], false, true) : null,
+                'alt' => isset($item['alt']) ? $item['alt'] : '',
+                'title' => isset($item['title']) ? $item['title'] : '',
+                'caption' => isset($item['caption']) ? $item['caption'] : '',
+                'link' => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
             ];
         }
         return $images;
     }
 
-    public function conf() {
+    /**
+     * Returns the carousel javascript configuration
+     *
+     * @return string Json encoded configuration
+     */
+    public function getJsConfig() {
         return Json::encode([
             'interval' => $this->getCfgValue('interval', 5000),
-            'keyboard' => $this->getCfgValue('keyboard', true),
+            'keyboard' => $this->getCfgValue('keyboard', 1) == 1 ? true : false,
             'pause' => $this->getCfgValue('pause', 'hover'),
             'ride' => $this->getCfgValue('ride', false),
-            'wrap' => $this->getCfgValue('wrap', true)
+            'wrap' => $this->getCfgValue('wrap', 1) == 1 ? true : false,
         ]);
     }
 
@@ -104,13 +114,14 @@ class CarouselBlock extends BaseBootstrap4Block
         return [
             'images' => $this->images(),
             'id' => md5($this->getEnvOption('blockId')),
-            'conf' => $this->conf()
+            'jsConfig' => $this->getJsConfig()
         ];
     }
     
     /**
      * @inheritdoc
      */
+    // Todo: Needs adjustment to display correct
     public function admin()
     {
         return '{% if extras.image %}<div>
