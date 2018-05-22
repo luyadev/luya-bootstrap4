@@ -26,6 +26,21 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         
         $this->assertSame('', $this->renderAdminNoSpace());
     }
+
+    public function testImagesFrontend()
+    {
+        // Todo: Single image
+        // Todo: Multiple image
+        // Todo: Image item with empty image
+    }
+
+    public function testConfigurationFrontend()
+    {
+        // Todo: Indicators
+        // Todo: Controls
+        // Todo: Crossfade
+        // Todo: Row
+    }
     
     public function testVarsFrontend()
     {
