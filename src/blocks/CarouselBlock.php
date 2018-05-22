@@ -96,7 +96,8 @@ class CarouselBlock extends BaseBootstrap4Block
      *
      * @return string Json encoded configuration
      */
-    public function getJsConfig() {
+    public function getJsConfig()
+    {
         return Json::encode([
             'interval' => $this->getCfgValue('interval', 5000),
             'keyboard' => $this->getCfgValue('keyboard', 1) == 1 ? true : false,
