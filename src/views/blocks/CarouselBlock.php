@@ -1,23 +1,6 @@
 <?php
 /* @var $this \luya\cms\base\PhpBlockView */
-$config = '';
-if ($this->varValue('interval')) {
-    $config .= 'interval: '.$this->varValue('interval').',';
-}
-if ($this->varValue('keyboard')) {
-    $config .= 'keyboard: true,';
-}
-if ($this->varValue('pause')) {
-    $config .= 'pause: '.$this->varValue('pause').',';
-}
-if ($this->varValue('ride')) {
-    $config .= 'ride: '.$this->varValue('ride').',';
-}
-if ($this->varValue('wrap')==1) {
-    $config .= 'wrap: true,';
-}
-$config = rtrim($config, ',');
-$this->appView->registerJs("$('.carousel').carousel({".$config."})");
+$this->appView->registerJs("$('.carousel').carousel(".$this->extraValue('conf').")");
 $id = $this->extraValue('id');
 $images = $this->extraValue('images');
 $first = true;
@@ -25,7 +8,7 @@ $indicators = '';
 $counter = 0;
 ?>
 
-<div id="<?= $id ?>" class="carousel slide<?= $this->varValue('crossfade') ? ' carousel-fade' : '' ?><?= $this->varValue('row') ? ' row' : '' ?>" data-ride="carousel">
+<div id="<?= $id ?>" class="carousel slide<?= $this->cfgValue('crossfade', null , ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
     <div class="carousel-inner">
     <?php if ($images):
         foreach ($images as $image):
@@ -51,20 +34,15 @@ $counter = 0;
         <?php endforeach; ?>
     <?php endif;?>
     </div>
-    <?php if ($this->varValue('indicators')): ?>
-        <ol class="carousel-indicators">
-            <?= $indicators ?>
-        </ol>
-    <?php endif; ?>
+    <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>') ?>
 
-    <?php if ($this->varValue('controls')): ?>
-        <a class="carousel-control-prev" href="#<?= $this->extraValue('id'); ?>" role="button" data-slide="prev">
+    <?= $this->cfgValue('controls', null,
+        '<a class="carousel-control-prev" href="#'.$this->extraValue('id').'" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#<?= $this->extraValue('id'); ?>" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#'.$this->extraValue('id').'" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
-    <?php endif; ?>
+        </a>') ?>
 </div>

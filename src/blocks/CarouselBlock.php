@@ -6,6 +6,7 @@ use luya\bootstrap4\blockgroups\BootstrapGroup;
 use luya\bootstrap4\Module;
 use luya\cms\helpers\BlockHelper;
 use luya\bootstrap4\BaseBootstrap4Block;
+use luya\helpers\Json;
 
 /**
  * Bootstrap 4 Carousel Component.
@@ -55,6 +56,8 @@ class CarouselBlock extends BaseBootstrap4Block
                     ['var' => 'alt', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.alt')],
                     ['var' => 'link', 'type' => self::TYPE_LINK, 'label' => Module::t('block_carousel.image_link')]
                 ]],
+            ],
+            'cfgs' => [
                 ['var' => 'controls', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_controls'), 'initvalue' => 1],
                 ['var' => 'indicators', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_indicators'), 'initvalue' => 1],
                 ['var' => 'crossfade', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_crossfade'), 'initvalue' => 1],
@@ -68,21 +71,29 @@ class CarouselBlock extends BaseBootstrap4Block
         ];
     }
 
-    public function images($image = null)
+    public function images()
     {
-        $imagesInput = $image != null ? $image : $this->getVarValue('images', []);
         $images = [];
-        foreach ($imagesInput as $item) {
+        foreach ($this->getVarValue('images', []) as $item) {
             $images[] = [
                 'image'             => isset($item['image']) ? BlockHelper::imageUpload($item['image'], false, true) : null,
                 'alt'               => isset($item['alt']) ? $item['alt'] : 'no-alt-text-set',
                 'title'             => isset($item['title']) ? $item['title'] : '',
-                'caption'             => isset($item['caption']) ? $item['caption'] : '',
+                'caption'           => isset($item['caption']) ? $item['caption'] : '',
                 'link'              => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
             ];
         }
-
         return $images;
+    }
+
+    public function conf() {
+        return Json::encode([
+            'interval' => $this->getCfgValue('interval', 5000),
+            'keyboard' => $this->getCfgValue('keyboard', true),
+            'pause' => $this->getCfgValue('pause', 'hover'),
+            'ride' => $this->getCfgValue('ride', false),
+            'wrap' => $this->getCfgValue('wrap', true)
+        ]);
     }
 
     /**
@@ -93,6 +104,7 @@ class CarouselBlock extends BaseBootstrap4Block
         return [
             'images' => $this->images(),
             'id' => md5($this->getEnvOption('blockId')),
+            'conf' => $this->conf()
         ];
     }
     
