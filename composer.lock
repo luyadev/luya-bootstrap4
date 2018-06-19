@@ -225,16 +225,16 @@
         },
         {
             "name": "curl/curl",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "d4970cf3451de7688b90af77299548ada72b53dd"
+                "reference": "958363d1fed599aa24efb2221e2c1e6c61711464"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/d4970cf3451de7688b90af77299548ada72b53dd",
-                "reference": "d4970cf3451de7688b90af77299548ada72b53dd",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/958363d1fed599aa24efb2221e2c1e6c61711464",
+                "reference": "958363d1fed599aa24efb2221e2c1e6c61711464",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "curl",
                 "dot"
             ],
-            "time": "2018-05-02T16:32:35+00:00"
+            "time": "2018-05-23T20:32:06+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -541,16 +541,16 @@
         },
         {
             "name": "luyadev/luya-core",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-core.git",
-                "reference": "393af7540a371dba40929545bc3b82acc9dddd17"
+                "reference": "449fd840937e88a0f7a013770c544c61a959df41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/393af7540a371dba40929545bc3b82acc9dddd17",
-                "reference": "393af7540a371dba40929545bc3b82acc9dddd17",
+                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/449fd840937e88a0f7a013770c544c61a959df41",
+                "reference": "449fd840937e88a0f7a013770c544c61a959df41",
                 "shasum": ""
             },
             "require": {
@@ -594,20 +594,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-05-14T11:08:07+00:00"
+            "time": "2018-06-01T10:03:31+00:00"
         },
         {
             "name": "luyadev/luya-module-admin",
-            "version": "1.2.0.1",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-admin.git",
-                "reference": "34df83579d064a550eabefbbf4033eebb1d5dee0"
+                "reference": "11ff9381ce34dbe66d1eac58b8506ed883266a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/34df83579d064a550eabefbbf4033eebb1d5dee0",
-                "reference": "34df83579d064a550eabefbbf4033eebb1d5dee0",
+                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/11ff9381ce34dbe66d1eac58b8506ed883266a2a",
+                "reference": "11ff9381ce34dbe66d1eac58b8506ed883266a2a",
                 "shasum": ""
             },
             "require": {
@@ -667,20 +667,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-05-17T13:38:26+00:00"
+            "time": "2018-06-05T13:23:29+00:00"
         },
         {
             "name": "luyadev/luya-module-cms",
-            "version": "1.0.4",
+            "version": "1.0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-cms.git",
-                "reference": "c8db3138001f300afa5790ea3ade86eb0734ea08"
+                "reference": "2bb4096befb6de9ad2aab52c19556068dec3a7fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/c8db3138001f300afa5790ea3ade86eb0734ea08",
-                "reference": "c8db3138001f300afa5790ea3ade86eb0734ea08",
+                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/2bb4096befb6de9ad2aab52c19556068dec3a7fb",
+                "reference": "2bb4096befb6de9ad2aab52c19556068dec3a7fb",
                 "shasum": ""
             },
             "require-dev": {
@@ -731,7 +731,7 @@
                 "yii2",
                 "yii2-cms"
             ],
-            "time": "2018-05-17T11:22:10+00:00"
+            "time": "2018-06-09T08:36:36+00:00"
         },
         {
             "name": "luyadev/luya-testsuite",
@@ -788,25 +788,28 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.7.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
+            },
+            "replace": {
+                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^4.1"
+                "phpunit/phpunit": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -829,7 +832,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-10-19T19:58:43+00:00"
+            "time": "2018-06-11T23:09:50+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",

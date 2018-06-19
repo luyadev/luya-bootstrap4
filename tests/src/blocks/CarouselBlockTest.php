@@ -3,7 +3,9 @@
 namespace luya\bootstrap4\tests\src\blocks;
 
 
+use Yii;
 use luya\bootstrap4\tests\src\BaseBootstrap4BlockTestCase;
+use luya\admin\image\Item;
 
 class CarouselBlockTest extends BaseBootstrap4BlockTestCase
 {
@@ -28,14 +30,22 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
      */
     public function testOneImageItemWithoutImageInArray()
     {
-        $this->block->setVarValues(['images' => [
-            ['image' => (object) []]
-        ]]);
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+        
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 123, 'source' => '123123', 'file_id' => 1, 'filter_id' => 0]),
+                'alt' => 'alt',
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+                
+            ]
+        ]);
 
         $this->assertContainsTrimmed(
-            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner"></div>
-            </div>', $this->renderFrontendNoSpace());
+            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>123</p></div></div></div></div>', $this->renderFrontendNoSpace());
     }
 
     /**

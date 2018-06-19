@@ -16,7 +16,7 @@ class BaseBootstrap4BlockTestCase extends CmsBlockTestCase
                     'basePath' => dirname(__DIR__) . '/assets',
                 ],
                 'storage' => [
-                    'class' => 'luya\admin\filesystem\LocalFileSystem',
+                    'class' => 'luya\admin\filesystem\DummyFileSystem',
                     'filesArray' => [],
                     'imagesArray' => [],
                 ],
