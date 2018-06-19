@@ -53,7 +53,6 @@ class CarouselBlock extends BaseBootstrap4Block
                     ['var' => 'title', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.title')],
                     ['var' => 'caption', 'type' => self::TYPE_TEXTAREA, 'label' => Module::t('block_carousel.caption')],
                     ['var' => 'image', 'type' => self::TYPE_IMAGEUPLOAD, 'label' => Module::t('block_carousel.image')],
-                    ['var' => 'alt', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.alt')],
                     ['var' => 'link', 'type' => self::TYPE_LINK, 'label' => Module::t('block_carousel.image_link')]
                 ]],
             ],
@@ -80,13 +79,17 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         $images = [];
         foreach ($this->getVarValue('images', []) as $item) {
-            $images[] = [
-                'image' => isset($item['image']) ? BlockHelper::imageUpload($item['image'], false, true) : null,
-                'alt' => isset($item['alt']) ? $item['alt'] : '',
-                'title' => isset($item['title']) ? $item['title'] : '',
-                'caption' => isset($item['caption']) ? $item['caption'] : '',
-                'link' => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
-            ];
+            $image = BlockHelper::imageUpload($item['image'], false, true);
+            if ($image) {
+                if (!empty($item['caption'])) {
+                    $image->caption = $item['caption'];
+                }
+                $images[] = [
+                    'image' => $image,
+                    'title' => $item['title'],
+                    'link' => BlockHelper::linkObject($item['link']),
+                ];
+            }
         }
         return $images;
     }
@@ -125,8 +128,15 @@ class CarouselBlock extends BaseBootstrap4Block
     // Todo: Needs adjustment to display correct
     public function admin()
     {
-        return '{% if extras.image %}<div>
-              <img src="{{extras.image.source}}" class="img-fluid" />
-      </div>{% endif %}';
+        return '
+        {% if extras.images %}
+        <div class="row">
+            {% for image in extras.images %}
+                <div class="col">
+                      <img src="{{image.image.source}}" class="img-fluid" />
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}';
     }
 }

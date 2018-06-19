@@ -15,7 +15,7 @@ if ($images):
         <div class="carousel-inner">
         <?php foreach ($images as $image): $counter++; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="active"></li>'; ?>
             <div class="carousel-item<?= $counter == 1 ? ' active' : '' ?>">
-                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['title']; ?>">
+                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['image']->caption; ?>">
                 <?php if (!empty($image['title']) || !empty($image['image']->caption)): ?>
                     <div class="carousel-caption d-none d-md-block">
                         <?php if (!empty($image['title'])): ?>

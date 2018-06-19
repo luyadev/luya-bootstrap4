@@ -35,10 +35,8 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         
         $this->block->addExtraVar('images', [
             [
-                'image' => Item::create(['caption' => 123, 'file_id' => 1, 'filter_id' => 0]),
-                'alt' => 'alt',
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
                 'title' => 'title',
-                'caption' => 'caption',
                 'link' => 'foobar',
                 
             ]
@@ -48,10 +46,10 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                            <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title">
+                            <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="cap-title">
                         <div class="carousel-caption d-none d-md-block">
                         <h5>title</h5>
-                        <p>123</p>
+                        <p>cap-title</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +82,6 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('images', [
             [
                 'image' => Item::create(['caption' => 'caption',  'file_id' => 1, 'filter_id' => 0]),
-                'alt' => 'alt',
                 'title' => 'title',
                 'caption' => 'caption',
                 'link' => 'foobar',
@@ -92,9 +89,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             ],
             [
                 'image' => Item::create(['caption' => 'caption',  'file_id' => 2, 'filter_id' => 0]),
-                'alt' => 'alt',
                 'title' => 'title',
-                'caption' => 'caption',
                 'link' => 'foobar',
                 
             ]
@@ -105,10 +100,23 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
     <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>caption</p></div></div><div class="carousel-item"><img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>caption</p></div></div></div></div>
+                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="caption">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>title</h5><p>caption</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="caption">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>title</h5><p>caption</p>
+                </div>
+            </div>
+        </div>
+    </div>
             
 ', $this->renderFrontendNoSpace());
         
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="/var/www/luya-bootstrap4/storage/http-path/0_6" class="img-fluid" /></div><div class="col"><img src="/var/www/luya-bootstrap4/storage/http-path/0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
     /**
