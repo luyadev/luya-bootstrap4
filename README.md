@@ -9,7 +9,7 @@
 [![Total Downloads](https://poser.pugx.org/luyadev/luya-bootstrap4/downloads)](https://packagist.org/packages/luyadev/luya-bootstrap4)
 [![Slack Support](https://img.shields.io/badge/Slack-luyadev-yellowgreen.svg)](https://slack.luya.io/)
 
-Wrapper classes for new [Bootstrap 4](http://v4-alpha.getbootstrap.com) CSS Framework for [Yii 2](https://github.com/yiisoft/yii2) and/or [LUYA](https://github.com/luyadev/luya).
+Wrapper classes for new [Bootstrap 4](https://getbootstrap.com/) CSS Framework for [Yii](https://yiiframework.com) and/or [LUYA](https://luya.io).
 
 > As of Bootstrap 4, the grid is completely written in FLEX. Check the [Browser Support](http://caniuse.com/#search=flex) to decide if you want to use Bootstrap 4 for your project.
 
@@ -36,7 +36,7 @@ Add the package to your project via composer
 composer require luyadev/luya-bootstrap4:^1.0@dev
 ```
 
-## Assets Resources
+## Assets Bundle
 
 To use the css and js files of bootstrap just register the `Bootstrap4Asset` into your layout file with the following code of your layout.php file:
 
