@@ -6,6 +6,7 @@ use luya\bootstrap4\blockgroups\BootstrapGroup;
 use luya\bootstrap4\Module;
 use luya\cms\helpers\BlockHelper;
 use luya\bootstrap4\BaseBootstrap4Block;
+use luya\helpers\Json;
 
 /**
  * Bootstrap 4 Carousel Component.
@@ -48,27 +49,80 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         return [
             'vars' => [
-                ['type' => self::TYPE_TEXT, 'var' => 'title', 'label' => Module::t('block_carousel.title')],
-                ['type' => self::TYPE_TEXTAREA, 'var' => 'caption', 'label' => Module::t('block_carousel.caption')],
-                ['type' => self::TYPE_IMAGEUPLOAD, 'var' => 'image', 'label' => Module::t('block_carousel.image')]
+                ['var' => 'images', 'label' => Module::t('block_carousel.items'), 'type' => self::TYPE_MULTIPLE_INPUTS, 'options' => [
+                    ['var' => 'title', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.title')],
+                    ['var' => 'caption', 'type' => self::TYPE_TEXTAREA, 'label' => Module::t('block_carousel.caption')],
+                    ['var' => 'image', 'type' => self::TYPE_IMAGEUPLOAD, 'label' => Module::t('block_carousel.image')],
+                    ['var' => 'alt', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.alt')],
+                    ['var' => 'link', 'type' => self::TYPE_LINK, 'label' => Module::t('block_carousel.image_link')]
+                ]],
+            ],
+            'cfgs' => [
+                ['var' => 'controls', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_controls'), 'initvalue' => 1],
+                ['var' => 'indicators', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_indicators'), 'initvalue' => 1],
+                ['var' => 'crossfade', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_crossfade'), 'initvalue' => 1],
+                ['var' => 'interval', 'type' => self::TYPE_NUMBER, 'label' => Module::t('block_carousel.config_interval')],
+                ['var' => 'keyboard', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_keyboard'), 'initvalue' => 1],
+                ['var' => 'pause', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_pause')],
+                ['var' => 'ride', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_ride')],
+                ['var' => 'wrap', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_wrap'), 'initvalue' => 0],
+                ['var' => 'row', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_row'), 'initvalue' => 0]
             ]
         ];
     }
-    
+
     /**
-     * @inheritdoc
+     * Get all carousel images (slides)
+     *
+     * @return array images
+     */
+    public function images()
+    {
+        $images = [];
+        foreach ($this->getVarValue('images', []) as $item) {
+            $images[] = [
+                'image' => isset($item['image']) ? BlockHelper::imageUpload($item['image'], false, true) : null,
+                'alt' => isset($item['alt']) ? $item['alt'] : '',
+                'title' => isset($item['title']) ? $item['title'] : '',
+                'caption' => isset($item['caption']) ? $item['caption'] : '',
+                'link' => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
+            ];
+        }
+        return $images;
+    }
+
+    /**
+     * Returns the carousel javascript configuration
+     *
+     * @return string Json encoded configuration
+     */
+    public function getJsConfig()
+    {
+        return Json::encode([
+            'interval' => $this->getCfgValue('interval', 5000),
+            'keyboard' => $this->getCfgValue('keyboard', 1) == 1 ? true : false,
+            'pause' => $this->getCfgValue('pause', 'hover'),
+            'ride' => $this->getCfgValue('ride', false),
+            'wrap' => $this->getCfgValue('wrap', 1) == 1 ? true : false,
+        ]);
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function extraVars()
     {
         return [
-            'image' => BlockHelper::imageUpload($this->getVarValue('image'), false, true),
+            'images' => $this->images(),
             'id' => md5($this->getEnvOption('blockId')),
+            'jsConfig' => $this->getJsConfig()
         ];
     }
     
     /**
      * @inheritdoc
      */
+    // Todo: Needs adjustment to display correct
     public function admin()
     {
         return '{% if extras.image %}<div>
