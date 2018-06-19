@@ -35,7 +35,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         
         $this->block->addExtraVar('images', [
             [
-                'image' => Item::create(['caption' => 123, 'source' => '123123', 'file_id' => 1, 'filter_id' => 0]),
+                'image' => Item::create(['caption' => 123, 'file_id' => 1, 'filter_id' => 0]),
                 'alt' => 'alt',
                 'title' => 'title',
                 'caption' => 'caption',
@@ -44,8 +44,18 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             ]
         ]);
 
-        $this->assertContainsTrimmed(
-            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>123</p></div></div></div></div>', $this->renderFrontendNoSpace());
+        $this->assertSameTrimmed(
+            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                            <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>title</h5>
+                        <p>123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>', $this->renderFrontendNoSpace());
     }
 
     /**
@@ -67,7 +77,38 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
      */
     public function testMultipleImagesInArray()
     {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->addDummyFile(['id' => 2]);
+        Yii::$app->storage->insertDummyFiles();
+        
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 1, 'filter_id' => 0]),
+                'alt' => 'alt',
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+                
+            ],
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 2, 'filter_id' => 0]),
+                'alt' => 'alt',
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+                
+            ]
+        ]);
+        
+        $this->assertSameTrimmed('
 
+    <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>caption</p></div></div><div class="carousel-item"><img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title"><div class="carousel-caption d-none d-md-block"><h5>title</h5><p>caption</p></div></div></div></div>
+            
+', $this->renderFrontendNoSpace());
+        
     }
 
     /**
