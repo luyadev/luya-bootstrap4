@@ -81,13 +81,13 @@ class CarouselBlock extends BaseBootstrap4Block
         foreach ($this->getVarValue('images', []) as $item) {
             $image = BlockHelper::imageUpload($item['image'], false, true);
             if ($image) {
-                if (!empty($item['caption'])) {
+                if (isset($item['caption']) && !empty($item['caption'])) {
                     $image->caption = $item['caption'];
                 }
                 $images[] = [
                     'image' => $image,
-                    'title' => $item['title'],
-                    'link' => BlockHelper::linkObject($item['link']),
+                    'title' => isset($item['title']) ?: null,
+                    'link' => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
                 ];
             }
         }

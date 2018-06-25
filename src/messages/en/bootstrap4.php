@@ -33,7 +33,6 @@ return [
     'block_carousel.title' => 'Title',
     'block_carousel.caption' => 'Image caption',
     'block_carousel.image' => 'Image',
-    'block_carousel.alt' => 'Alt',
     'block_carousel.image_link' => 'Link',
 
     'block_image_text.block_name' => 'Image with Text',

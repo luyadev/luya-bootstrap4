@@ -28,10 +28,12 @@ return [
     'block_layout_column.column_count_xl' => 'Grösse XL aufwärts',
     'block_layout_column.content' => 'Column Inhalt',
 
+    'block_carousel.items' => 'Slides',
     'block_carousel.block_name' => 'Carousel',
     'block_carousel.title' => 'Titel',
     'block_carousel.caption' => 'Bildunterschrift',
     'block_carousel.image' => 'Bild',
+    'block_carousel.image_link' => 'Link',
 
     'block_image_text.block_name' => 'Bild mit Text',
     'block_image_text.image_position' => 'Bildposition',
@@ -43,10 +45,10 @@ return [
     'block_image_text.rounded_corners' => 'Abgerundete Ecken',
     'block_image_text.thumbnail' => 'Thumbnail mit Umrandung',
     'block_image_text.circle' => 'Kreis',
+    'block_image_text.image' => 'Bild',
     'block_image_text.image.width' => 'Bildbreite',
     'block_image_text.image.caption' => 'Bildlegende',
     'block_image_text.image.caption.visibility' => 'Bildlegende anzeigen',
-    'block_image_text.image' => 'Bild',
     'block_image_text.help' => 'Bilder mit Text positionieren',
     'block_image_text.no_text' => 'Es wurde noch kein Text hinzugefügt.',
     'block_image_text.no_image' => 'Es wurde noch kein Bild hinzugefügt.',
@@ -65,7 +67,13 @@ return [
     'block_inline_wrapper.label'=>'Inline Blöcke hier platzieren ...',
     'block_inline_wrapper.name'=>'Inline Textblock Raster',
 
-
-
-
+    'block_carousel.config_controls' => 'Controls',
+    'block_carousel.config_indicators' => 'Indicators',
+    'block_carousel.config_crossfade' => 'Crossfade',
+    'block_carousel.config_interval' => 'Interval',
+    'block_carousel.config_keyboard' => 'Keyboard',
+    'block_carousel.config_pause' => 'Pause',
+    'block_carousel.config_ride' => 'Ride',
+    'block_carousel.config_wrap' => 'Wrap',
+    'block_carousel.config_row' => 'Row'
 ];
