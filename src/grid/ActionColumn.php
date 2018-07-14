@@ -17,7 +17,7 @@ class ActionColumn extends \yii\grid\ActionColumn
     {
         // do not call parent is then the glyphicons button would be added
         $this->initBs4Icons('view', 'fa-search-plus');
-        $this->initBs4Icons('update', 'fa-pencil-square-o');
+        $this->initBs4Icons('update', 'fa-edit');
         $this->initBs4Icons('delete', 'fa-trash', [
             'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
             'data-method' => 'post',
