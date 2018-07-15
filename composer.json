@@ -33,6 +33,10 @@
 	"autoload" : {
 		"psr-4" : {
 			"luya\\bootstrap4\\" : "src/",
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
 			"luya\\bootstrap4\\tests\\" : "tests/"
 		}
 	},
