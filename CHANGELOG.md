@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project make usage of the [Yii Versioning Strategy](https://github.com/yiisoft/yii2/blob/master/docs/internals/versions.md).
 
-## 1.0.0 (in progress)
+## 1.0.0 (18. July 2018)
 
 + [#10](https://github.com/luyadev/luya-bootstrap4/issues/10) Update to Bootstrap 4.1
 + [#3](https://github.com/luyadev/luya-bootstrap4/issues/3) Use new Bootstrap 4 form validation classes.
