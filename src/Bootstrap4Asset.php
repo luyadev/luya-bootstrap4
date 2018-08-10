@@ -11,12 +11,11 @@ namespace luya\bootstrap4;
 class Bootstrap4Asset extends \yii\web\AssetBundle
 {
     public $js = [
-        ['//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', 'integrity' => 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', 'crossorigin' => 'anonymous'],
-        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', 'integrity' => 'sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', 'crossorigin' => 'anonymous'],
+        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js', 'integrity' => 'sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl', 'crossorigin' => 'anonymous'],
     ];
     
     public $css = [
-        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', 'integrity' => 'sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4', 'crossorigin' => 'anonymous'], 
+        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', 'integrity' => 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', 'crossorigin' => 'anonymous'], 
     ];
         
     public $depends = [
