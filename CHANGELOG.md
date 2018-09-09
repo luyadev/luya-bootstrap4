@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project make usage of the [Yii Versioning Strategy](https://github.com/yiisoft/yii2/blob/master/docs/internals/versions.md).
 
+## 1.1.0
+
++ []() Added the link, changed caption away from image to field caption.
+
 ## 1.0.1 (in progress)
 
 + [#19](https://github.com/luyadev/luya-bootstrap4/pull/19) Polish translations.
