@@ -16,16 +16,16 @@ if ($images):
         <?php foreach ($images as $image): $counter++; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="active"></li>'; ?>
             <div class="carousel-item<?= $counter == 1 ? ' active' : '' ?>">
                 <?php if (!empty($image['link'])): ?>
-                    <a href="<?= $image['link']->itemArray['link'] ?>">
+                    <a href="<?= $image['link']->itemArray['link'] ?>" title="<?= $image['title'] ?>">
                 <?php endif; ?>
-                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['image']->caption; ?>">
-                <?php if (!empty($image['title']) || !empty($image['image']->caption)): ?>
+                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['title'] ?>">
+                <?php if (!empty($image['title']) || !empty($image['caption'])): ?>
                     <div class="carousel-caption d-none d-md-block">
                         <?php if (!empty($image['title'])): ?>
                             <h5><?= $image['title'] ?></h5>
                         <?php endif;
-                        if (!empty($image['image']->caption)): ?>
-                            <p><?= $image['image']->caption ?></p>
+                        if (!empty($image['caption'])): ?>
+                            <p><?= $image['caption'] ?></p>
                         <?php endif; ?>
                     </div>
                 <?php endif;
