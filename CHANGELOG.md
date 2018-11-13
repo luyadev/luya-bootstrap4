@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ## 1.0.1 (in progress)
 
++ [#20](https://github.com/luyadev/luya-bootstrap4/pull/20) Russian translations.
 + [#19](https://github.com/luyadev/luya-bootstrap4/pull/19) Polish translations.
 + [#18](https://github.com/luyadev/luya-bootstrap4/issues/18) Update to Bootstrap version 4.1.3, use js bundle file.
 
