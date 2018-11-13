@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ## 1.1.0
 
-+ []() Added the link, changed caption away from image to field caption.
++ []() Added the link (around the image). Changed caption property away from image to slide. Added caption CSS class posibility.
 
 ## 1.0.1 (in progress)
 

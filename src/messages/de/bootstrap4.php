@@ -67,6 +67,8 @@ return [
     'block_inline_wrapper.label'=>'Inline Blöcke hier platzieren ...',
     'block_inline_wrapper.name'=>'Inline Textblock Raster',
 
+    'block_carousel.config_block_css_class' => 'Block CSS Klasse',
+    'block_carousel.config_caption_css_class' => 'Caption CSS Klasse',
     'block_carousel.config_controls' => 'Controls',
     'block_carousel.config_indicators' => 'Indicators',
     'block_carousel.config_crossfade' => 'Crossfade',

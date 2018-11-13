@@ -57,6 +57,8 @@ class CarouselBlock extends BaseBootstrap4Block
                 ]],
             ],
             'cfgs' => [
+                ['var' => 'blockCssClass', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_block_css_class')],
+                ['var' => 'captionCssClass', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_caption_css_class')],
                 ['var' => 'controls', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_controls'), 'initvalue' => 1],
                 ['var' => 'indicators', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_indicators'), 'initvalue' => 1],
                 ['var' => 'crossfade', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_crossfade'), 'initvalue' => 1],
