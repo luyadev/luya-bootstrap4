@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "a716849392bbcb9166ea351798bfa4bf",
@@ -225,16 +225,16 @@
         },
         {
             "name": "curl/curl",
-            "version": "1.9.1",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "958363d1fed599aa24efb2221e2c1e6c61711464"
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/958363d1fed599aa24efb2221e2c1e6c61711464",
-                "reference": "958363d1fed599aa24efb2221e2c1e6c61711464",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/43436a604b18c2a985cbc3f983be817fbe500e99",
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "curl",
                 "dot"
             ],
-            "time": "2018-05-23T20:32:06+00:00"
+            "time": "2018-09-05T17:16:47+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -541,16 +541,16 @@
         },
         {
             "name": "luyadev/luya-core",
-            "version": "1.0.9",
+            "version": "1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-core.git",
-                "reference": "449fd840937e88a0f7a013770c544c61a959df41"
+                "reference": "ac920503016031b39a24ef998d2267ce543031ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/449fd840937e88a0f7a013770c544c61a959df41",
-                "reference": "449fd840937e88a0f7a013770c544c61a959df41",
+                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/ac920503016031b39a24ef998d2267ce543031ba",
+                "reference": "ac920503016031b39a24ef998d2267ce543031ba",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +584,7 @@
                     "homepage": "https://github.com/nadar"
                 }
             ],
-            "description": "LUYA is a fast and flexible PHP framework and content management system built with the goal to please developers, clients and users alike. Built upon Yii 2.",
+            "description": "LUYA is a scalable web framework and content management system with the goal to please developers, clients and users alike.",
             "homepage": "https://luya.io",
             "keywords": [
                 "admin",
@@ -594,20 +594,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-06-01T10:03:31+00:00"
+            "time": "2018-10-30T11:06:56+00:00"
         },
         {
             "name": "luyadev/luya-module-admin",
-            "version": "1.2.1",
+            "version": "1.2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-admin.git",
-                "reference": "11ff9381ce34dbe66d1eac58b8506ed883266a2a"
+                "reference": "4889d1a0c81a2ddbe50508ce5a4e8b5251381028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/11ff9381ce34dbe66d1eac58b8506ed883266a2a",
-                "reference": "11ff9381ce34dbe66d1eac58b8506ed883266a2a",
+                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/4889d1a0c81a2ddbe50508ce5a4e8b5251381028",
+                "reference": "4889d1a0c81a2ddbe50508ce5a4e8b5251381028",
                 "shasum": ""
             },
             "require": {
@@ -619,6 +619,7 @@
                 "bower-asset/angular-filter": "~0.5.15",
                 "bower-asset/angular-loading-bar": "^0.9",
                 "bower-asset/angularjs-datepicker": "^2.1.0",
+                "bower-asset/angularjs-slider": "~6.6.0",
                 "bower-asset/bowser": "~1.7.3",
                 "bower-asset/echarts": "~3.8.5",
                 "bower-asset/ng-file-upload": "~12.2.0",
@@ -626,7 +627,7 @@
                 "bower-asset/ng-wig": "~3.0.0",
                 "bower-asset/twigjs-bower": "~0.10.5",
                 "bower-asset/ui-router": "~0.4.0",
-                "luyadev/luya-testsuite": "~1.0.0",
+                "luyadev/luya-testsuite": "~1.0.11",
                 "php-coveralls/php-coveralls": "^1.0",
                 "twbs/bootstrap": "v4.0.0-beta"
             },
@@ -667,20 +668,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-06-05T13:23:29+00:00"
+            "time": "2018-10-08T14:52:50+00:00"
         },
         {
             "name": "luyadev/luya-module-cms",
-            "version": "1.0.5.1",
+            "version": "1.0.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-cms.git",
-                "reference": "2bb4096befb6de9ad2aab52c19556068dec3a7fb"
+                "reference": "4b57893b2d847c0cbddf4796332c225188f7c6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/2bb4096befb6de9ad2aab52c19556068dec3a7fb",
-                "reference": "2bb4096befb6de9ad2aab52c19556068dec3a7fb",
+                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/4b57893b2d847c0cbddf4796332c225188f7c6ca",
+                "reference": "4b57893b2d847c0cbddf4796332c225188f7c6ca",
                 "shasum": ""
             },
             "require-dev": {
@@ -731,36 +732,31 @@
                 "yii2",
                 "yii2-cms"
             ],
-            "time": "2018-06-09T08:36:36+00:00"
+            "time": "2018-10-17T19:22:23+00:00"
         },
         {
             "name": "luyadev/luya-testsuite",
-            "version": "1.0.10",
+            "version": "1.0.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-testsuite.git",
-                "reference": "cf085193dfb4e2fc24f97a8edd57b1240bf02e83"
+                "reference": "941544dd0d46e1ac6df818bc42dfd291fba62f12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/cf085193dfb4e2fc24f97a8edd57b1240bf02e83",
-                "reference": "cf085193dfb4e2fc24f97a8edd57b1240bf02e83",
+                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/941544dd0d46e1ac6df818bc42dfd291fba62f12",
+                "reference": "941544dd0d46e1ac6df818bc42dfd291fba62f12",
                 "shasum": ""
             },
             "require": {
                 "curl/curl": "^1.0",
-                "luyadev/luya-core": "~1.0",
-                "luyadev/luya-module-admin": "~1.0",
-                "luyadev/luya-module-cms": "~1.0",
+                "luyadev/luya-core": "^1.0",
+                "luyadev/luya-module-admin": "^1.0",
+                "luyadev/luya-module-cms": "^1.0",
                 "phpunit/phpunit": "~6.0.0",
                 "twig/twig": "^1.0"
             },
             "type": "luya-core",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "luya\\testsuite\\": "src/"
@@ -784,7 +780,7 @@
                 "module",
                 "php"
             ],
-            "time": "2018-05-09T12:42:53+00:00"
+            "time": "2018-10-25T21:44:20+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1054,16 +1050,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.7.6",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712"
+                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
-                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
+                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
                 "shasum": ""
             },
             "require": {
@@ -1075,12 +1071,12 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5|^3.2",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5 || ^7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -1113,7 +1109,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-04-18T13:57:24+00:00"
+            "time": "2018-08-05T17:53:17+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2067,25 +2063,28 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.8.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -2118,7 +2117,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-04-30T19:57:29+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "theseer/tokenizer",
