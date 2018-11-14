@@ -87,7 +87,7 @@ class CarouselBlock extends BaseBootstrap4Block
                     'image' => $image,
                     'title' => isset($item['title']) ? $item['title'] : null,
                     'caption' => isset($item['caption']) ? $item['caption'] : null,
-                    'link' => (isset($item['link']) && !empty(BlockHelper::linkObject($item['link']))) ? BlockHelper::linkObject($item['link']) : null,
+                    'link' => isset($item['link'])  ? BlockHelper::linkObject($item['link']) : null,
                 ];
             }
         }
