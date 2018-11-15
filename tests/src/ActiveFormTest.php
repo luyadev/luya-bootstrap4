@@ -14,6 +14,20 @@ class Bootstrap4Test extends WebApplicationTestCase
         return [
             'id' => 'bs4app',
             'basePath' => dirname(__DIR__) . '/../',
+            'components' => [
+                'assetManager' => [
+                    'basePath' => dirname(__DIR__) . '/assets',
+                    'bundles' => [
+                        'yii\web\JqueryAsset' => false,
+                        'luya\bootstrap4\Bootstrap4Asset' => false,
+                    ],
+                ],
+                'storage' => [
+                    'class' => 'luya\admin\filesystem\DummyFileSystem',
+                    'filesArray' => [],
+                    'imagesArray' => [],
+                ],
+            ]
         ];
     }
     

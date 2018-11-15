@@ -9,18 +9,14 @@ class BaseBootstrap4BlockTestCase extends CmsBlockTestCase
     public function getConfigArray()
     {
         return [
-            'id' => 'carouselBlockTest',
+            'id' => 'bootstrap4test',
             'basePath' => dirname(__DIR__) . '/../',
             'components' => [
                 'assetManager' => [
                     'basePath' => dirname(__DIR__) . '/assets',
                     'bundles' => [
-                        'yii\web\JqueryAsset' => [
-                            'sourcePath' => null,
-                        ],
-                        'luya\bootstrap4\Bootstrap4Asset' => [
-                            'sourcePath' => null,
-                        ]
+                        'yii\web\JqueryAsset' => false,
+                        'luya\bootstrap4\Bootstrap4Asset' => false,
                     ],
                 ],
                 'storage' => [
