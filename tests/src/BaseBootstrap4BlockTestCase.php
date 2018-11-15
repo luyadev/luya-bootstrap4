@@ -14,6 +14,14 @@ class BaseBootstrap4BlockTestCase extends CmsBlockTestCase
             'components' => [
                 'assetManager' => [
                     'basePath' => dirname(__DIR__) . '/assets',
+                    'bundles' => [
+                        'yii\web\JqueryAsset' => [
+                            'sourcePath' => null,
+                        ],
+                        'luya\bootstrap4\Bootstrap4Asset' => [
+                            'sourcePath' => null,
+                        ]
+                    ],
                 ],
                 'storage' => [
                     'class' => 'luya\admin\filesystem\DummyFileSystem',
