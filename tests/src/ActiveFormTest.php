@@ -17,6 +17,9 @@ class Bootstrap4Test extends WebApplicationTestCase
         ];
     }
     
+    /**
+    * @runInSeparateProcess
+    */
     public function testActiveFormLayout()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -38,7 +41,9 @@ class Bootstrap4Test extends WebApplicationTestCase
         	</div>', ob_get_clean());
     }
     
-    
+    /**
+    * @runInSeparateProcess
+    */
     public function testActiveFormValidationError()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -62,6 +67,9 @@ class Bootstrap4Test extends WebApplicationTestCase
         	</div>', (string) $form->field($model, 'firstname'));
     }
     
+    /**
+    * @runInSeparateProcess
+    */
     public function testValidAndInvalidWthAttributeHints()
     {
         $model = new Stub2Model();
