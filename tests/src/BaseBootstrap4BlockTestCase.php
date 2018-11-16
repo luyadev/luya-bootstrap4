@@ -11,6 +11,9 @@ class BaseBootstrap4BlockTestCase extends CmsBlockTestCase
         return [
             'id' => 'bootstrap4test',
             'basePath' => dirname(__DIR__) . '/../',
+            'aliases' => [
+                '@app' => 'app_path',
+            ],
             'components' => [
                 'assetManager' => [
                     'basePath' => dirname(__DIR__) . '/assets',

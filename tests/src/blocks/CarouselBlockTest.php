@@ -46,7 +46,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                            <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="cap-title">
+                            <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="cap-title">
                         <div class="carousel-caption d-none d-md-block">
                         <h5>title</h5>
                         <p>cap-title</p>
@@ -100,13 +100,13 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
     <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="caption">
+                <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="caption">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>title</h5><p>caption</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="caption">
+                <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="caption">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>title</h5><p>caption</p>
                 </div>
@@ -116,7 +116,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             
 ', $this->renderFrontendNoSpace());
         
-        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="/var/www/luya-bootstrap4/storage/http-path/0_6" class="img-fluid" /></div><div class="col"><img src="/var/www/luya-bootstrap4/storage/http-path/0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
     /**
