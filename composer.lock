@@ -125,7 +125,8 @@
                     "node_modules",
                     "package.json"
                 ]
-            }
+            },
+            "time": "2014-10-22T12:02:42+00:00"
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -224,24 +225,24 @@
         },
         {
             "name": "curl/curl",
-            "version": "1.9.3",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99"
+                "reference": "d22086dd2eee5ca02e4c29b9a5bdf3645bfdbbff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/43436a604b18c2a985cbc3f983be817fbe500e99",
-                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/d22086dd2eee5ca02e4c29b9a5bdf3645bfdbbff",
+                "reference": "d22086dd2eee5ca02e4c29b9a5bdf3645bfdbbff",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "php": ">=5.3.0"
+                "php": "^5.6 | ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*",
+                "phpunit/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "~2.1"
             },
             "type": "library",
@@ -275,7 +276,7 @@
                 "curl",
                 "dot"
             ],
-            "time": "2018-09-05T17:16:47+00:00"
+            "time": "2018-12-04T19:47:03+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -490,16 +491,16 @@
         },
         {
             "name": "luyadev/luya-composer",
-            "version": "1.0.3",
+            "version": "1.0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-composer.git",
-                "reference": "d5274bd0e7a67987c7b4b3ee9d91f8268f638174"
+                "reference": "2e80ae60066ba53c131a25b0b088a607dc226dc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-composer/zipball/d5274bd0e7a67987c7b4b3ee9d91f8268f638174",
-                "reference": "d5274bd0e7a67987c7b4b3ee9d91f8268f638174",
+                "url": "https://api.github.com/repos/luyadev/luya-composer/zipball/2e80ae60066ba53c131a25b0b088a607dc226dc6",
+                "reference": "2e80ae60066ba53c131a25b0b088a607dc226dc6",
                 "shasum": ""
             },
             "require": {
@@ -536,24 +537,24 @@
                 "composer",
                 "luya"
             ],
-            "time": "2018-01-16T09:12:39+00:00"
+            "time": "2018-12-24T09:18:03+00:00"
         },
         {
             "name": "luyadev/luya-core",
-            "version": "1.0.13",
+            "version": "1.0.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-core.git",
-                "reference": "ac920503016031b39a24ef998d2267ce543031ba"
+                "reference": "46226dc830d03b9428b337a446e2df5837a80b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/ac920503016031b39a24ef998d2267ce543031ba",
-                "reference": "ac920503016031b39a24ef998d2267ce543031ba",
+                "url": "https://api.github.com/repos/luyadev/luya-core/zipball/46226dc830d03b9428b337a446e2df5837a80b7c",
+                "reference": "46226dc830d03b9428b337a446e2df5837a80b7c",
                 "shasum": ""
             },
             "require": {
-                "curl/curl": "~1.0",
+                "curl/curl": "^2.0 || ^1.0",
                 "luyadev/luya-composer": "~1.0.0",
                 "phpmailer/phpmailer": "^6.0",
                 "yiisoft/yii2": "~2.0.15"
@@ -593,20 +594,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-10-30T11:06:56+00:00"
+            "time": "2018-12-03T12:45:15+00:00"
         },
         {
             "name": "luyadev/luya-module-admin",
-            "version": "1.2.2.1",
+            "version": "1.2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-admin.git",
-                "reference": "4889d1a0c81a2ddbe50508ce5a4e8b5251381028"
+                "reference": "58d70f66edabb68ad93224174f7389676ae08b29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/4889d1a0c81a2ddbe50508ce5a4e8b5251381028",
-                "reference": "4889d1a0c81a2ddbe50508ce5a4e8b5251381028",
+                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/58d70f66edabb68ad93224174f7389676ae08b29",
+                "reference": "58d70f66edabb68ad93224174f7389676ae08b29",
                 "shasum": ""
             },
             "require": {
@@ -667,20 +668,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-10-08T14:52:50+00:00"
+            "time": "2018-12-06T19:34:24+00:00"
         },
         {
             "name": "luyadev/luya-module-cms",
-            "version": "1.0.7.2",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-cms.git",
-                "reference": "4b57893b2d847c0cbddf4796332c225188f7c6ca"
+                "reference": "80863ec01f17487ede12cc11d170ef8eba92c64e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/4b57893b2d847c0cbddf4796332c225188f7c6ca",
-                "reference": "4b57893b2d847c0cbddf4796332c225188f7c6ca",
+                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/80863ec01f17487ede12cc11d170ef8eba92c64e",
+                "reference": "80863ec01f17487ede12cc11d170ef8eba92c64e",
                 "shasum": ""
             },
             "require-dev": {
@@ -731,24 +732,24 @@
                 "yii2",
                 "yii2-cms"
             ],
-            "time": "2018-10-17T19:22:23+00:00"
+            "time": "2018-12-03T14:07:31+00:00"
         },
         {
             "name": "luyadev/luya-testsuite",
-            "version": "1.0.13.2",
+            "version": "1.0.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-testsuite.git",
-                "reference": "941544dd0d46e1ac6df818bc42dfd291fba62f12"
+                "reference": "0818dd2acb3ac1324e8af802b77de45514c2d785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/941544dd0d46e1ac6df818bc42dfd291fba62f12",
-                "reference": "941544dd0d46e1ac6df818bc42dfd291fba62f12",
+                "url": "https://api.github.com/repos/luyadev/luya-testsuite/zipball/0818dd2acb3ac1324e8af802b77de45514c2d785",
+                "reference": "0818dd2acb3ac1324e8af802b77de45514c2d785",
                 "shasum": ""
             },
             "require": {
-                "curl/curl": "^1.0",
+                "curl/curl": "^2.0 || ^1.0",
                 "luyadev/luya-core": "^1.0",
                 "luyadev/luya-module-admin": "^1.0",
                 "luyadev/luya-module-cms": "^1.0",
@@ -779,7 +780,7 @@
                 "module",
                 "php"
             ],
-            "time": "2018-10-25T21:44:20+00:00"
+            "time": "2018-11-17T12:24:14+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -980,16 +981,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.0.5",
+            "version": "v6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "cb3ea134d4d3729e7857737d5f320cce9caf4d32"
+                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/cb3ea134d4d3729e7857737d5f320cce9caf4d32",
-                "reference": "cb3ea134d4d3729e7857737d5f320cce9caf4d32",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/8190d73eb5def11a43cfb020b7f36db65330698c",
+                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c",
                 "shasum": ""
             },
             "require": {
@@ -1042,7 +1043,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2018-03-27T13:49:45+00:00"
+            "time": "2018-11-16T00:41:32+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -2157,16 +2158,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.4",
+            "version": "v1.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a"
+                "reference": "730c9c4471b5152d23061feb02b03382264c8a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
-                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/730c9c4471b5152d23061feb02b03382264c8a15",
+                "reference": "730c9c4471b5152d23061feb02b03382264c8a15",
                 "shasum": ""
             },
             "require": {
@@ -2176,12 +2177,12 @@
             "require-dev": {
                 "psr/container": "^1.0",
                 "symfony/debug": "^2.7",
-                "symfony/phpunit-bridge": "^3.3"
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.35-dev"
+                    "dev-master": "1.36-dev"
                 }
             },
             "autoload": {
@@ -2219,24 +2220,25 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-07-13T07:12:17+00:00"
+            "time": "2018-12-16T10:34:11+00:00"
         },
         {
             "name": "webmozart/assert",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^5.3.3 || ^7.0",
+                "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
@@ -2269,7 +2271,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-01-29T19:49:41+00:00"
+            "time": "2018-12-25T11:19:39+00:00"
         },
         {
             "name": "yiisoft/yii2",

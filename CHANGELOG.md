@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project make usage of the [Yii Versioning Strategy](https://github.com/yiisoft/yii2/blob/master/docs/internals/versions.md).
 
+## 1.0.1.1 (1.1.2019)
+
++ [#24](https://github.com/luyadev/luya-bootstrap4/issues/24) Fixed tooltip tag and added test.
+
 ## 1.0.1 (3. December 2018)
 
 + [#20](https://github.com/luyadev/luya-bootstrap4/pull/20) Russian translations.
