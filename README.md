@@ -35,7 +35,7 @@ This package contains the following components:
 Add the package to your project via composer
 
 ```sh
-composer require luyadev/luya-bootstrap4:~1.0.0
+composer require luyadev/luya-bootstrap4:^1.0
 ```
 
 ## Assets Bundle
