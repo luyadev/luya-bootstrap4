@@ -43,7 +43,7 @@
 	"extra" : {
 		"luya" : {
 			"blocks" : [
-				"src/blocks"
+				"src{{DS}}blocks"
 			]
 		},
 		"branch-alias" : {
@@ -53,5 +53,14 @@
 		"asset-installer-paths" : {
 			"bower-asset-library" : "vendor/bower"
 		}
-	}
+	},
+    "config": {
+        "platform": {"php": "7.0"}
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }
