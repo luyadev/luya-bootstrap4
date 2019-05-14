@@ -68,7 +68,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="foobar" title="title">
-                            <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title">
+                            <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
                             <div class="carousel-caption ">
                                 <h5 class="carousel-caption-title">title</h5>
                                 <p class="carousel-caption-text">caption</p>
@@ -111,7 +111,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="foobar" title="title">
-                        <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
                         <div class="carousel-caption ">
                             <h5 class="carousel-caption-title">title</h5>
                             <p class="carousel-caption-text">caption</p>
@@ -120,7 +120,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
                 </div>
                 <div class="carousel-item">
                     <a href="foobar" title="title">
-                        <img class="d-block w-100" src="/var/www/luya-bootstrap4/storage/http-path/0_6" alt="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
                         <div class="carousel-caption ">
                             <h5 class="carousel-caption-title">title</h5>
                         </div>
