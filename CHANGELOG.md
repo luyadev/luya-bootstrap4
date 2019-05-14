@@ -3,13 +3,16 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
+## 1.0.2
+
++ [#22](https://github.com/luyadev/luya-bootstrap4/issues/22) Added the link (around the image). Changed the caption property away from image to slide. Added caption CSS class posibility.
+
 ## 1.0.1.1 (1. January 2019)
 
 + [#24](https://github.com/luyadev/luya-bootstrap4/issues/24) Fixed tooltip tag and added test.
 
 ## 1.0.1 (3. December 2018)
 
-+ [#22](https://github.com/luyadev/luya-bootstrap4/issues/22) Added the link (around the image). Changed the caption property away from image to slide. Added caption CSS class posibility.
 + [#20](https://github.com/luyadev/luya-bootstrap4/pull/20) Russian translations.
 + [#19](https://github.com/luyadev/luya-bootstrap4/pull/19) Polish translations.
 + [#18](https://github.com/luyadev/luya-bootstrap4/issues/18) Update to Bootstrap version 4.1.3, use js bundle file.
