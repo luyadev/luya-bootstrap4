@@ -43,7 +43,7 @@
 	"extra" : {
 		"luya" : {
 			"blocks" : [
-				"src/blocks"
+				"src{{DS}}blocks"
 			]
 		},
 		"branch-alias" : {
