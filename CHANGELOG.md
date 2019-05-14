@@ -5,6 +5,7 @@ In order to read more about upgrading and BC breaks have a look at the [UPGRADE 
 
 ## 1.0.2
 
++ Use {{DS}} separator for block paths.
 + [#22](https://github.com/luyadev/luya-bootstrap4/issues/22) Added the link (around the image). Changed the caption property away from image to slide. Added caption CSS class posibility.
 
 ## 1.0.1.1 (1. January 2019)
