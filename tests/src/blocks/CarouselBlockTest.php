@@ -34,25 +34,12 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         Yii::$app->storage->insertDummyFiles();
         
         $this->block->addExtraVar('images', [
-            [
-                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
-                'title' => 'title',
-                'link' => 'foobar',
-                
-            ]
+            []
         ]);
 
         $this->assertSameTrimmed(
             '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                            <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="cap-title">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>title</h5>
-                        <p>cap-title</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="carousel-inner"></div>
             </div>', $this->renderFrontendNoSpace());
     }
 
@@ -64,7 +51,32 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
      */
     public function testSingleImageInArray()
     {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
 
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar" title="title">
+                            <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
+                            <div class="carousel-caption ">
+                                <h5 class="carousel-caption-title">title</h5>
+                                <p class="carousel-caption-text">caption</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>', $this->renderFrontendNoSpace());
     }
 
     /**
@@ -95,26 +107,27 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             ]
         ]);
         
-        $this->assertSameTrimmed('
-
-    <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="caption">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>title</h5><p>caption</p>
+        $this->assertSameTrimmed('<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
+                        <div class="carousel-caption ">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
+                        <div class="carousel-caption ">
+                            <h5 class="carousel-caption-title">title</h5>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="caption">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>title</h5><p>caption</p>
-                </div>
-            </div>
-        </div>
-    </div>
-            
-', $this->renderFrontendNoSpace());
+        </div>', $this->renderFrontendNoSpace());
         
         $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }

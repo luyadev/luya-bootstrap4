@@ -11,20 +11,26 @@ if ($images):
     $id = $this->extraValue('id');
     $hasImages = false;
     ?>
-    <div id="<?= $id ?>" class="carousel slide<?= $this->cfgValue('crossfade', null , ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
+    <div id="<?= $id ?>" class="carousel <?= $this->cfgValue('blockCssClass') ?> slide<?= $this->cfgValue('crossfade', null , ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
         <div class="carousel-inner">
         <?php foreach ($images as $image): $counter++; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="active"></li>'; ?>
             <div class="carousel-item<?= $counter == 1 ? ' active' : '' ?>">
-                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['image']->caption; ?>">
-                <?php if (!empty($image['title']) || !empty($image['image']->caption)): ?>
-                    <div class="carousel-caption d-none d-md-block">
+                <?php if (!empty($image['link'])): ?>
+                    <a href="<?= $image['link'] ?>" title="<?= $image['title'] ?>">
+                <?php endif; ?>
+                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['title'] ?>">
+                <?php if (!empty($image['title']) || !empty($image['caption'])): ?>
+                    <div class="carousel-caption <?= $this->cfgValue('captionCssClass') ?>">
                         <?php if (!empty($image['title'])): ?>
-                            <h5><?= $image['title'] ?></h5>
+                            <h5 class="carousel-caption-title"><?= $image['title'] ?></h5>
                         <?php endif;
-                        if (!empty($image['image']->caption)): ?>
-                            <p><?= $image['image']->caption ?></p>
+                        if (!empty($image['caption'])): ?>
+                            <p class="carousel-caption-text"><?= $image['caption'] ?></p>
                         <?php endif; ?>
                     </div>
+                <?php endif;
+                if (!empty($image['link'])): ?>
+                    </a>
                 <?php endif; ?>
             </div>
         <?php $hasImages = true; endif;  endforeach;?>

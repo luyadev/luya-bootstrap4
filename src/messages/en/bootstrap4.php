@@ -67,6 +67,8 @@ return [
     'block_inline_wrapper.label'=>'Place inline blocks here ...',
     'block_inline_wrapper.name'=>'Inline Block Container',
 
+    'block_carousel.config_block_css_class' => 'Block CSS Class',
+    'block_carousel.config_caption_css_class' => 'Caption CSS Class',
     'block_carousel.config_controls' => 'Controls',
     'block_carousel.config_indicators' => 'Indicators',
     'block_carousel.config_crossfade' => 'Crossfade',

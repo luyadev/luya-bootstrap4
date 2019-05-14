@@ -57,6 +57,8 @@ class CarouselBlock extends BaseBootstrap4Block
                 ]],
             ],
             'cfgs' => [
+                ['var' => 'blockCssClass', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_block_css_class')],
+                ['var' => 'captionCssClass', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_caption_css_class')],
                 ['var' => 'controls', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_controls'), 'initvalue' => 1],
                 ['var' => 'indicators', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_indicators'), 'initvalue' => 1],
                 ['var' => 'crossfade', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_crossfade'), 'initvalue' => 1],
@@ -81,13 +83,11 @@ class CarouselBlock extends BaseBootstrap4Block
         foreach ($this->getVarValue('images', []) as $item) {
             $image = BlockHelper::imageUpload($item['image'], false, true);
             if ($image) {
-                if (isset($item['caption']) && !empty($item['caption'])) {
-                    $image->caption = $item['caption'];
-                }
                 $images[] = [
                     'image' => $image,
-                    'title' => isset($item['title']) ?: null,
-                    'link' => isset($item['link']) ? BlockHelper::linkObject($item['link']) : null,
+                    'title' => isset($item['title']) ? $item['title'] : null,
+                    'caption' => isset($item['caption']) ? $item['caption'] : null,
+                    'link' => isset($item['link'])  ? BlockHelper::linkObject($item['link']) : null,
                 ];
             }
         }
