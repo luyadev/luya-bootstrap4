@@ -75,8 +75,8 @@ class CarouselBlock extends BaseBootstrap4Block
     public function getFieldHelp()
     {
         return [
-            'controls' => 'Adding in the previous and next controls.',
-            'indicators' => 'You can also add the indicators to the carousel, alongside the controls, too.',
+            'controls' => 'Adds the previous and next controls arrows on the left and right side of the image.',
+            'indicators' => 'Indicators are additional controls which displays all slides with an indicator which is clickable. The indicator is placed in the middle of the image.',
             'crossfade' => 'Add crossfase to your carousel to animate slides with a fade transition instead of a slide.',
             'interval' => 'The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.',
             'keyboard' => 'Whether the carousel should react to keyboard events.',
@@ -132,7 +132,7 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         return [
             'images' => $this->images(),
-            'id' => md5($this->getEnvOption('blockId')),
+            'id' => 'carousel_'.md5($this->getEnvOption('blockId')),
             'jsConfig' => $this->getJsConfig()
         ];
     }

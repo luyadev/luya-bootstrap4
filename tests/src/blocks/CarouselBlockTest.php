@@ -37,7 +37,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         ]);
 
         $this->assertSameTrimmed(
-            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner"></div>
             </div>',
             $this->renderFrontendNoSpace()
@@ -65,7 +65,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
         ]);
 
         $this->assertSameTrimmed(
-            '<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="foobar" title="title">
@@ -110,7 +110,7 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             ]
         ]);
         
-        $this->assertSameTrimmed('<div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+        $this->assertSameTrimmed('<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="foobar" title="title">
