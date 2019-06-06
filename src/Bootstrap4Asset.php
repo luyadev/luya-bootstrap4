@@ -11,12 +11,13 @@ namespace luya\bootstrap4;
 class Bootstrap4Asset extends \yii\web\AssetBundle
 {
     public $js = [
-        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js', 'integrity' => 'sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl', 'crossorigin' => 'anonymous'],
+        ['//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js', 'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o', 'crossorigin' => 'anonymous'],
     ];
     
     public $css = [
-        ['//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', 'integrity' => 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', 'crossorigin' => 'anonymous'], 
+        ['//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', 'crossorigin' => 'anonymous'], 
     ];
+    
         
     public $depends = [
         'yii\web\JqueryAsset',
