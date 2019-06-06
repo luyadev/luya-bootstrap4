@@ -11,7 +11,7 @@ if ($images):
     $id = $this->extraValue('id');
     $hasImages = false;
     ?>
-    <div id="<?= $id ?>" class="carousel <?= $this->cfgValue('blockCssClass') ?> slide<?= $this->cfgValue('crossfade', null , ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
+    <div id="<?= $id ?>" class="carousel<?= $this->cfgValue('blockCssClass', null, ' {{blockCssClass}}') ?> slide<?= $this->cfgValue('crossfade', null, ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
         <div class="carousel-inner">
         <?php foreach ($images as $image): $counter++; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="active"></li>'; ?>
             <div class="carousel-item<?= $counter == 1 ? ' active' : '' ?>">
@@ -37,17 +37,20 @@ if ($images):
         </div>
 
         <?php if ($hasImages): ?>
-            <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>') ?>
+            <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>'); ?>
 
-            <?= $this->cfgValue('controls', null,
-                '<a class="carousel-control-prev" href="#'.$this->extraValue('id').'" role="button" data-slide="prev">
+            <?= $this->cfgValue(
+                    'controls',
+                    null,
+                    '<a class="carousel-control-prev" href="#'.$this->extraValue('id').'" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#'.$this->extraValue('id').'" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>') ?>
+                </a>'
+            ); ?>
         <?php endif; ?>
     </div>
 <?php endif; ?>

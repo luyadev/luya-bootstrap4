@@ -8,15 +8,15 @@ use yii\helpers\Html;
 
 /**
  * Bootstrap 4 Tooltip Tag.
- * 
+ *
  * Usage either trough add the module to the config or link the tag directly:
- * 
+ *
  * ```php
  * 'tags' => [
  *     'tooltip' => ['class' => 'luya\bootstrap4\tags\TooltipTag'],
- * ], 
+ * ],
  * ```
- * 
+ *
  * @author Basil Suter <basil@nadar.io>
  * @since 1.0.0
  */

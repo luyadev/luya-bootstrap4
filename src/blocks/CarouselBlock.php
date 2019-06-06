@@ -72,6 +72,21 @@ class CarouselBlock extends BaseBootstrap4Block
         ];
     }
 
+    public function getFieldHelp()
+    {
+        return [
+            'controls' => 'Adding in the previous and next controls.',
+            'indicators' => 'You can also add the indicators to the carousel, alongside the controls, too.',
+            'crossfade' => 'Add crossfase to your carousel to animate slides with a fade transition instead of a slide.',
+            'interval' => 'The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.',
+            'keyboard' => 'Whether the carousel should react to keyboard events.',
+            'pause' => 'If set to "hover", pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave. If set to false, hovering over the carousel won\'t pause it. On touch-enabled devices, when set to "hover", cycling will pause on touchend (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.',
+            'ride' => 'Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.',
+            'wrap' => 'Whether the carousel should cycle continuously or have hard stops.',
+            "row" => 'Adds the row class to the carousel container',
+        ];
+    }
+
     /**
      * Get all carousel images (slides)
      *

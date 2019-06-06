@@ -5,7 +5,6 @@ namespace luya\bootstrap4\tests\src\tags;
 use luya\testsuite\cases\WebApplicationTestCase;
 use luya\bootstrap4\tags\TooltipTag;
 
-
 class TooltipTagTest extends WebApplicationTestCase
 {
     public function getConfigArray()

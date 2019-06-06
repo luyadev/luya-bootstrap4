@@ -3,8 +3,10 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
-## 1.0.2
+## 1.0.2 (in progress)
 
++ Update to latest bootstrap 4.3.1 version.
++ Added field help info for carousel block.
 + Use {{DS}} separator for block paths.
 + [#22](https://github.com/luyadev/luya-bootstrap4/issues/22) Added the link (around the image). Changed the caption property away from image to slide. Added caption CSS class posibility.
 
