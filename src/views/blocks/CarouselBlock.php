@@ -13,8 +13,8 @@ if ($images):
     ?>
     <div id="<?= $id ?>" class="carousel<?= $this->cfgValue('blockCssClass', null, ' {{blockCssClass}}') ?> slide<?= $this->cfgValue('crossfade', null, ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
         <div class="carousel-inner">
-        <?php foreach ($images as $image): $counter++; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="active"></li>'; ?>
-            <div class="carousel-item<?= $counter == 1 ? ' active' : '' ?>">
+        <?php foreach ($images as $image): $counter++;  $isActiveClass = $counter == 1 ? ' active' : ''; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'"'.$isActiveClass.'></li>'; ?>
+            <div class="carousel-item<?= $isActiveClass; ?>">
                 <?php if (!empty($image['link'])): ?>
                     <a href="<?= $image['link'] ?>" title="<?= $image['title'] ?>">
                 <?php endif; ?>

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
+## 1.0.2.1 (31. July 2019)
+
++ Fixed bug in carousel block when using indicators.
+
 ## 1.0.2 (6. June 2019)
 
 + Update to latest bootstrap 4.3.1 version.
