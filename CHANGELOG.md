@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
+## 1.0.2.2 (23. September 2019)
+
++ Fixed bug with Carousel block when multiple blocks are on the same Page.
+
 ## 1.0.2.1 (31. July 2019)
 
 + Fixed bug in carousel block when using indicators.
