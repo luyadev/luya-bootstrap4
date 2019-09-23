@@ -7,7 +7,7 @@ $indicators = null;
 $counter = 0;
 
 if ($images):
-    $this->registerJs("$('.carousel').carousel(".$this->extraValue('jsConfig', '').")");
+    $this->registerJs("$('.carousel').carousel(".$this->extraValue('jsConfig', '').");");
     $id = $this->extraValue('id');
     $hasImages = false;
     ?>
