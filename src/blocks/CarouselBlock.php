@@ -134,7 +134,7 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         return [
             'images' => $this->images(),
-            'id' => 'carousel_'.md5($this->getEnvOption('blockId')),
+            'id' => 'carousel_'.md5($this->getEnvOption('id')),
             'jsConfig' => $this->getJsConfig()
         ];
     }
