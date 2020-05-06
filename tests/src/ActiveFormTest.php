@@ -54,6 +54,24 @@ class Bootstrap4Test extends WebApplicationTestCase
         		</div>
         	</div>', ob_get_clean());
     }
+
+        /**
+    * @runInSeparateProcess
+    */
+    public function testCheckboxSwitch()
+    {
+        Yii::setAlias('@webroot', dirname(__DIR__));
+        $model = new StubModel();
+        ob_start();
+        ob_implicit_flush(false);
+        
+        $form = ActiveForm::begin(['layout' => 'horizontal']);
+        echo $form->field($model, 'firstname')->checkboxSwitch();
+        ActiveForm::end();
+        
+        $this->assertContainsTrimmed('
+        <div class="form-group row field-stubmodel-firstname"><div class="col-sm-10"><div class="custom-control custom-switch"><input type="hidden" name="StubModel[firstname]" value="0"><input type="checkbox" id="stubmodel-firstname" class="custom-control-input" name="StubModel[firstname]" value="1"><label class="custom-control-label" for="stubmodel-firstname"><label for="stubmodel-firstname">Firstname</label></label></div><div class="invalid-feedback"></div></div></div></form>', ob_get_clean());
+    }
     
     /**
     * @runInSeparateProcess
