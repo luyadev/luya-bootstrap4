@@ -5,7 +5,9 @@ In order to read more about upgrading and BC breaks have a look at the [UPGRADE 
 
 ## 1.0.4 (6. May 2020)
 
++ Update CDN links from 4.3.1 to 4.4.1.
 + Added new `checkboxSwitch()` option for ActiveField in Bootstrap 4 Form Widget.
++ Added PHP 7.4 tests to Travis.
 
 ## 1.0.3 (22. October 2019)
 
