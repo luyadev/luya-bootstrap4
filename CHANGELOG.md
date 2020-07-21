@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
+## 1.1.0 (in progress)
++ [#28] Image block: Added config variable to use LazyLoad; added `alt` and `title` attribute for `luyadev/luya >= 1.6`
++ Added requirement `luyadev/luya-core >= 1.6`; Composer update
+
 ## 1.0.4 (6. May 2020)
 
 + Update CDN links from 4.3.1 to 4.4.1.
