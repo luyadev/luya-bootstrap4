@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
 ## 1.1.0 (in progress)
-+ [#28] Image block: Added config variable to use LazyLoad; added `alt` and `title` attribute for `luyadev/luya >= 1.6`
++ [#28](https://github.com/luyadev/luya-bootstrap4/issues/28) Image block: Added config variable to use LazyLoad; added `alt` and `title` attribute for `luyadev/luya >= 1.6`
 + Added requirement `luyadev/luya-core >= 1.6`; Composer update
 
 ## 1.0.4 (6. May 2020)
