@@ -10,47 +10,58 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
 {
     public $blockClass = 'luya\bootstrap4\blocks\CarouselBlock';
 
-    /**
-     * Test without anything in image array.
-     * Should therefore not output anything.
-     */
-    public function testWithoutImageInArray()
+    public function testWithoutImageArray()
     {
-        $this->assertSame('', $this->renderFrontendNoSpace());
-        
-        $this->assertSame('', $this->renderAdminNoSpace());
+        $this->assertSameTrimmed('',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test with one image item without image in array.
-     * Default configuration.
-     * @todo Image item without image test
-     * @todo Add admin test
-     */
-    public function testOneImageItemWithoutImageInArray()
+    public function testEmptyImageArray()
     {
-        Yii::$app->storage->addDummyFile(['id' => 1]);
-        Yii::$app->storage->insertDummyFiles();
-        
+        $this->block->addExtraVar('images', []);
+
+        $this->assertSameTrimmed(
+            '',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('', $this->renderAdminNoSpace());
+    }
+
+    public function testImageArrayWithEmptyImageInArray()
+    {
         $this->block->addExtraVar('images', [
             []
         ]);
 
         $this->assertSameTrimmed(
-            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner"></div>
-            </div>',
+            '',
             $this->renderFrontendNoSpace()
         );
+
+        $this->assertSameTrimmed('', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test with single image in array.
-     * Default configuration.
-     * @todo single image test
-     * @todo Add admin test
-     */
-    public function testSingleImageInArray()
+    public function testImageArrayWithEmptyImagesInArray()
+    {
+        $this->block->addExtraVar('images', [
+            [],
+            [],
+            []
+        ]);
+
+        $this->assertSameTrimmed(
+            '',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('', $this->renderAdminNoSpace());
+    }
+
+    public function testImageArrayWithSingleImageInArray()
     {
         Yii::$app->storage->addDummyFile(['id' => 1]);
         Yii::$app->storage->insertDummyFiles();
@@ -69,8 +80,8 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="foobar" title="title">
-                            <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
-                            <div class="carousel-caption ">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                            <div class="carousel-caption">
                                 <h5 class="carousel-caption-title">title</h5>
                                 <p class="carousel-caption-text">caption</p>
                             </div>
@@ -80,15 +91,46 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             </div>',
             $this->renderFrontendNoSpace()
         );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test with multiple images in array.
-     * Default configuration.
-     * @todo multiple images test
-     * @todo Add admin test
-     */
-    public function testMultipleImagesInArray()
+    public function testImageArrayWithEmptyFirstAndSingleImageInArray()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [],
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ],
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar" title="title">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                            <div class="carousel-caption">
+                                <h5 class="carousel-caption-title">title</h5>
+                                <p class="carousel-caption-text">caption</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageArrayWithMultipleImagesInArray()
     {
         Yii::$app->storage->addDummyFile(['id' => 1]);
         Yii::$app->storage->addDummyFile(['id' => 2]);
@@ -114,8 +156,8 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="foobar" title="title">
-                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
-                        <div class="carousel-caption ">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
                             <h5 class="carousel-caption-title">title</h5>
                             <p class="carousel-caption-text">caption</p>
                         </div>
@@ -123,8 +165,8 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
                 </div>
                 <div class="carousel-item">
                     <a href="foobar" title="title">
-                        <img class="d-block w-100" src="app_path/storage/http-path/0_6" alt="title">
-                        <div class="carousel-caption ">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
                             <h5 class="carousel-caption-title">title</h5>
                         </div>
                     </a>
@@ -132,77 +174,429 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
             </div>
         </div>', $this->renderFrontendNoSpace());
         
-        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path/0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test vars
-     * @todo correct vars test
-     * @todo Add admin test
-     */
-    public function testVars()
+    public function testImageArrayWithMultipleImagesAndEmptyImageInArray()
     {
-        /*
-        $this->block->setVarValues(['title' => 'my title', 'caption' => 'caption']);
-        $this->block->addExtraVar('image', (object) ['source' => 'image.jpg']);
-        $this->assertContainsTrimmed('
-            <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->addDummyFile(['id' => 2]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [],
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+
+            ],
+            [],
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 2, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar',
+
+            ]
+        ]);
+
+        $this->assertSameTrimmed('<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>', $this->renderFrontendNoSpace());
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageWithoutTitle()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="image.jpg" alt="my title">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>my title</h5>
-                            <p>caption</p>
+                        <a href="foobar">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6">
+                            <div class="carousel-caption">
+                                <p class="carousel-caption-text">caption</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageWithEmptyTitle()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => '',
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6">
+                            <div class="carousel-caption">
+                                <p class="carousel-caption-text">caption</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageWithoutCaption()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar" title="title">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                            <div class="carousel-caption">
+                                <h5 class="carousel-caption-title">title</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageWithEmptyCaption()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar',
+                'caption' => ''
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar" title="title">
+                            <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                            <div class="carousel-caption">
+                                <h5 class="carousel-caption-title">title</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    public function testImageWithoutLink()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#d41d8cd98f00b204e9800998ecf8427e" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#d41d8cd98f00b204e9800998ecf8427e" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>', $this->renderFrontendNoSpace());
-        $this->assertContainsTrimmed('<div><img src="image.jpg" class="img-fluid" /></div>', $this->renderAdminNoSpace());
-        */
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test indicator configuration
-     * @todo indicator configuration test
-     * @todo Add admin test
-     */
-    public function testIndicatorConfiguration()
+    public function testImageWithEmptyLink()
     {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => '',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="app_path/storage/http-path' . DIRECTORY_SEPARATOR . '0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
+                        </div>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test controls configuration
-     * @todo controls configuration test
-     * @todo Add admin test
-     */
-    public function testControlsConfiguration()
+
+    public function testImageWithoutImage()
     {
+        $this->block->addExtraVar('images', [
+            [
+                'title' => 'title',
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '',
+            $this->renderFrontendNoSpace()
+        );
+
+        $this->assertSameTrimmed('', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test crossfade configuration
-     * @todo crossfade configuration test
-     * @todo Add admin test
-     */
-    public function testCrossfadeConfiguration()
+//    /*
+//     * @todo var value testing
+//     */
+//    public function testVars()
+//    {
+//        $this->block->setVarValues(['title' => 'my title', 'caption' => 'caption']);
+//        $this->block->addExtraVar('image', (object) ['source' => 'image.jpg']);
+//        $this->assertContainsTrimmed('
+//            <div id="d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+//                <div class="carousel-inner">
+//                    <div class="carousel-item active">
+//                        <img class="d-block w-100" src="image.jpg" alt="my title">
+//                        <div class="carousel-caption d-none d-md-block">
+//                            <h5>my title</h5>
+//                            <p>caption</p>
+//                        </div>
+//                    </div>
+//                </div>
+//                <a class="carousel-control-prev" href="#d41d8cd98f00b204e9800998ecf8427e" role="button" data-slide="prev">
+//                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+//                    <span class="sr-only">Previous</span>
+//                </a>
+//                <a class="carousel-control-next" href="#d41d8cd98f00b204e9800998ecf8427e" role="button" data-slide="next">
+//                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+//                    <span class="sr-only">Next</span>
+//                </a>
+//            </div>', $this->renderFrontendNoSpace());
+//        $this->assertContainsTrimmed('<div><img src="image.jpg" class="img-fluid" /></div>', $this->renderAdminNoSpace());
+//    }
+
+    public function testIndicatorConfig()
     {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->addDummyFile(['id' => 2]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->setCfgValues(['indicators' => true]);
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+
+            ],
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 2, 'filter_id' => 0]),
+                'title' => 'title',
+                'link' => 'foobar'
+            ]
+        ]);
+
+        $this->assertSameTrimmed('<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel_d41d8cd98f00b204e9800998ecf8427e" data-slide-to="1" class="active"></li>
+                <li data-target="#carousel_d41d8cd98f00b204e9800998ecf8427e" data-slide-to="2"></li>
+            </ol>
+        </div>', $this->renderFrontendNoSpace());
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
     }
 
-    /**
-     * Test row configuration
-     * @todo: row configuration test
-     * @todo Add admin test
-     */
-    public function testRowConfiguration()
+    public function testIndicatorConfigurationWithOneImage()
     {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+
+        $this->block->setCfgValues(['indicators' => true]);
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'caption',  'file_id' => 1, 'filter_id' => 0]),
+                'title' => 'title',
+                'caption' => 'caption',
+                'link' => 'foobar',
+            ]
+        ]);
+
+        $this->assertSameTrimmed('<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="foobar" title="title">
+                        <img class="d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" alt="title">
+                        <div class="carousel-caption">
+                            <h5 class="carousel-caption-title">title</h5>
+                            <p class="carousel-caption-text">caption</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>', $this->renderFrontendNoSpace());
+
+        $this->assertSameTrimmed('<div class="row"><div class="col"><img src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" class="img-fluid" /></div></div>', $this->renderAdminNoSpace());
+    }
+
+    /*
+     * @todo test other configs
+     */
+
+    public function testLazyLoadConfiguration()
+    {
+        Yii::$app->storage->addDummyFile(['id' => 1]);
+        Yii::$app->storage->insertDummyFiles();
+        $this->block->setCfgValues(['lazyload' => 1]);
+
+        $this->block->addExtraVar('images', [
+            [
+                'image' => Item::create(['caption' => 'cap-title', 'file_id' => 1, 'filter_id' => 0, 'resolution_width' => 2, 'resolution_height' => 1]),
+                'title' => 'title',
+                'link' => 'foobar',
+                'caption' => 'caption'
+            ]
+        ]);
+
+        $this->assertSameTrimmed(
+            '<div id="carousel_d41d8cd98f00b204e9800998ecf8427e" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="foobar" title="title">
+                            <div class="lazyimage-wrapper d-block w-100">
+                                <img class="js-lazyimage lazyimage" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="title" title="title" data-src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" data-width="2" data-height="1">
+                                <div class="lazyimage-placeholder">
+                                    <div style="display: block; height: 0px; padding-bottom: 50%;"></div>
+                                    <div class="loader"></div>
+                                </div>
+                                <noscript>
+                                    <img class="lazyimage loaded d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" />
+                                </noscript>
+                            </div>
+                            <div class="carousel-caption">
+                                <h5 class="carousel-caption-title">title</h5>
+                                <p class="carousel-caption-text">caption</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>',
+            $this->renderFrontendNoSpace()
+        );
     }
     
     public function testBlockName()
