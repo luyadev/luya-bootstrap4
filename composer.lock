@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d6353af4e2953e2c4449af251d7a180",
+    "content-hash": "26ec1bb45e74ad7ee95f8671608a53a4",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -32,7 +32,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -1025,16 +1025,16 @@
         },
         {
             "name": "luyadev/luya-module-admin",
-            "version": "3.3.2",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-admin.git",
-                "reference": "d6d55f29eddaadf295a37a51cdf3c347512d6620"
+                "reference": "572f290217c78e7efc97516aa917367e7a4b45f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/d6d55f29eddaadf295a37a51cdf3c347512d6620",
-                "reference": "d6d55f29eddaadf295a37a51cdf3c347512d6620",
+                "url": "https://api.github.com/repos/luyadev/luya-module-admin/zipball/572f290217c78e7efc97516aa917367e7a4b45f0",
+                "reference": "572f290217c78e7efc97516aa917367e7a4b45f0",
                 "shasum": ""
             },
             "require": {
@@ -1108,20 +1108,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2020-06-28T06:37:08+00:00"
+            "time": "2020-07-21T12:51:52+00:00"
         },
         {
             "name": "luyadev/luya-module-cms",
-            "version": "3.3.3",
+            "version": "3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/luyadev/luya-module-cms.git",
-                "reference": "5347c88a14e30c573cf74e38f7be6422e397547e"
+                "reference": "f3724c75a103d3cc0f356e3739a712454232506c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/5347c88a14e30c573cf74e38f7be6422e397547e",
-                "reference": "5347c88a14e30c573cf74e38f7be6422e397547e",
+                "url": "https://api.github.com/repos/luyadev/luya-module-cms/zipball/f3724c75a103d3cc0f356e3739a712454232506c",
+                "reference": "f3724c75a103d3cc0f356e3739a712454232506c",
                 "shasum": ""
             },
             "require-dev": {
@@ -1172,7 +1172,7 @@
                 "yii2",
                 "yii2-cms"
             ],
-            "time": "2020-07-16T09:34:48+00:00"
+            "time": "2020-07-23T08:15:31+00:00"
         },
         {
             "name": "luyadev/luya-testsuite",
