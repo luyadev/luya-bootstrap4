@@ -5,6 +5,7 @@ In order to read more about upgrading and BC breaks have a look at the [UPGRADE 
 
 ## 1.1.0 (in progress)
 
++ [#30](https://github.com/luyadev/luya-bootstrap4/pull/30) Added widget tests
 + [#29](https://github.com/luyadev/luya-bootstrap4/pull/29) CarouselBlock: Added config variable to use LazyLoad; adjusted CarouselBlock tests
 + [#28](https://github.com/luyadev/luya-bootstrap4/issues/28) Image block: Added config variable to use LazyLoad; added `alt` and `title` attribute.
 + Adjust library requirements to `luyadev/luya-core >= 1.6` in composer dependencies.
