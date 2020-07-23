@@ -67,6 +67,9 @@ class ImageBlock extends PhpBlock
                  ['var' => 'align', 'label' => Module::t('block_image.align'), 'type' => self::TYPE_SELECT, 'options' => BlockHelper::selectArrayOption(['left' => Module::t('block_image.align_left'), 'center' => Module::t('block_image.align_center'), 'right' => Module::t('block_image.align_right')])],
                  ['var' => 'showCaption', 'label' => Module::t('block_image.show_caption'), 'type' => self::TYPE_CHECKBOX],
             ],
+            'cfgs' => [
+                ['var' => 'lazyload', 'label' => Module::t('block_image.lazyload'), 'type' => self::TYPE_CHECKBOX]
+            ]
         ];
     }
 

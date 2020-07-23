@@ -2,43 +2,69 @@
 
 /* @var $this \luya\cms\base\PhpBlockView */
 
+use luya\lazyload\LazyLoad;
+
 $images = $this->extraValue('images');
 $indicators = null;
 $counter = 0;
 
-if ($images):
+if (!empty($images)):
     $this->registerJs("$('.carousel').carousel(".$this->extraValue('jsConfig', '').");");
     $id = $this->extraValue('id');
     $hasImages = false;
-    ?>
-    <div id="<?= $id ?>" class="carousel<?= $this->cfgValue('blockCssClass', null, ' {{blockCssClass}}') ?> slide<?= $this->cfgValue('crossfade', null, ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
-        <div class="carousel-inner">
-        <?php foreach ($images as $image): $counter++;  $isActiveClass = $counter == 1 ? ' active' : ''; if (isset($image['image'])): $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter.'" class="'.$isActiveClass.'"></li>'; ?>
-            <div class="carousel-item<?= $isActiveClass; ?>">
-                <?php if (!empty($image['link'])): ?>
-                    <a href="<?= $image['link'] ?>" title="<?= $image['title'] ?>">
-                <?php endif; ?>
-                <img class="d-block w-100" src="<?= $image['image']->source ?>" alt="<?= $image['title'] ?>">
-                <?php if (!empty($image['title']) || !empty($image['caption'])): ?>
-                    <div class="carousel-caption <?= $this->cfgValue('captionCssClass') ?>">
-                        <?php if (!empty($image['title'])): ?>
-                            <h5 class="carousel-caption-title"><?= $image['title'] ?></h5>
+    foreach ($images as $image) {
+        if (isset($image['image'])) {
+            $hasImages = true;
+            break;
+        }
+    }
+    if ($hasImages): ?>
+        <div id="<?= $id ?>" class="carousel<?= $this->cfgValue('blockCssClass', null, ' {{blockCssClass}}') ?> slide<?= $this->cfgValue('crossfade', null, ' carousel-fade'); ?><?= $this->cfgValue('row', null, ' row') ?>" data-ride="carousel">
+            <div class="carousel-inner">
+            <?php foreach ($images as $image):
+                if (isset($image['image'])):
+                    $counter++;
+                    $isActiveClass = $counter == 1 ? 'active' : '';
+                    $indicators .= '<li data-target="#'.$id.'" data-slide-to="'.$counter . (!empty($isActiveClass) ? '" class="'.$isActiveClass : '') . '"></li>'; ?>
+                    <div class="carousel-item<?php echo !empty($isActiveClass) ? ' ' . $isActiveClass : '' ?>">
+                        <?php if (!empty($image['link'])): ?>
+                            <a href="<?= $image['link'] ?>"<?php echo !empty($image['title']) ? ' title="'.$image['title'].'">' : '>' ?>
+                        <?php endif; ?>
+                        <?php if ($this->cfgValue('lazyload', false)):
+                            $options['src'] = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+                            if (!empty($image['title'])) {
+                                $options['alt'] = $image['title'];
+                                $options['title'] = $image['title'];
+                            }
+                            echo LazyLoad::widget([
+                                'src' => $image['image']->source,
+                                'extraClass' => 'd-block w-100',
+                                'width' => $image['image']->itemArray['resolution_width'],
+                                'height' => $image['image']->itemArray['resolution_height'],
+                                'options' => $options
+                            ]);
+                        else: ?>
+                            <img class="d-block w-100" src="<?= $image['image']->source ?>"<?php echo !empty($image['title']) ? ' alt="'.$image['title'].'">' : '>' ?>
+                        <?php endif; ?>
+                        <?php if (!empty($image['title']) || !empty($image['caption'])): ?>
+                            <div class="carousel-caption<?php echo (!empty($this->cfgValue('captionCssClass'))) ? ' '.$this->cfgValue('captionCssClass') : '' ?>">
+                                <?php if (!empty($image['title'])): ?>
+                                    <h5 class="carousel-caption-title"><?= $image['title'] ?></h5>
+                                <?php endif;
+                                if (!empty($image['caption'])): ?>
+                                    <p class="carousel-caption-text"><?= $image['caption'] ?></p>
+                                <?php endif; ?>
+                            </div>
                         <?php endif;
-                        if (!empty($image['caption'])): ?>
-                            <p class="carousel-caption-text"><?= $image['caption'] ?></p>
+                        if (!empty($image['link'])): ?>
+                            </a>
                         <?php endif; ?>
                     </div>
-                <?php endif;
-                if (!empty($image['link'])): ?>
-                    </a>
-                <?php endif; ?>
+                    <?php
+                endif;
+            endforeach;?>
             </div>
-        <?php $hasImages = true; endif;  endforeach;?>
-        </div>
-
-        <?php if ($hasImages): ?>
-            <?= $this->cfgValue('indicators', null, '<ol class="carousel-indicators">'.$indicators.'</ol>'); ?>
-
+            <?= ($this->cfgValue('indicators', null) && $counter > 1) ? '<ol class="carousel-indicators">'.$indicators.'</ol>' : '' ?>
             <?= $this->cfgValue(
                     'controls',
                     null,
@@ -51,6 +77,6 @@ if ($images):
                     <span class="sr-only">Next</span>
                 </a>'
             ); ?>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
 <?php endif; ?>

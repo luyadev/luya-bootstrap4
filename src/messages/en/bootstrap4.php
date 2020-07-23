@@ -16,6 +16,7 @@ return [
     'block_image.align_right' => 'Right',
     'block_image.align_center' => 'Center',
     'block_image.show_caption' => 'Show caption',
+    'block_image.lazyload' => 'LazyLoad',
 
     'block_layout.block_name' => 'Layout: Row',
     'block_layout.content' => 'Row content',
@@ -77,5 +78,6 @@ return [
     'block_carousel.config_pause' => 'Pause',
     'block_carousel.config_ride' => 'Ride',
     'block_carousel.config_wrap' => 'Wrap',
-    'block_carousel.config_row' => 'Row'
+    'block_carousel.config_row' => 'Row',
+    'block_carousel.lazyload' => 'LazyLoad'
 ];

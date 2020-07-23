@@ -67,7 +67,8 @@ class CarouselBlock extends BaseBootstrap4Block
                 ['var' => 'pause', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_pause')],
                 ['var' => 'ride', 'type' => self::TYPE_TEXT, 'label' => Module::t('block_carousel.config_ride')],
                 ['var' => 'wrap', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_wrap'), 'initvalue' => 0],
-                ['var' => 'row', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_row'), 'initvalue' => 0]
+                ['var' => 'row', 'type' => self::TYPE_CHECKBOX, 'label' => Module::t('block_carousel.config_row'), 'initvalue' => 0],
+                ['var' => 'lazyload', 'label' => Module::t('block_carousel.lazyload'), 'type' => self::TYPE_CHECKBOX]
             ]
         ];
     }
@@ -147,13 +148,23 @@ class CarouselBlock extends BaseBootstrap4Block
     {
         return '
         {% if extras.images %}
-        <div class="row">
+            {% set hasImage = false %}
             {% for image in extras.images %}
-                <div class="col">
-                      <img src="{{image.image.source}}" class="img-fluid" />
-                </div>
+                {% if image.image.source %}
+                    {% set hasImage = true %}
+                {% endif %}
             {% endfor %}
-        </div>
+            {% if hasImage %}
+                <div class="row">
+                    {% for image in extras.images %}
+                        {% if image.image.source %}
+                            <div class="col">
+                                  <img src="{{image.image.source}}" class="img-fluid" />
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
         {% endif %}';
     }
 }

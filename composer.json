@@ -27,6 +27,9 @@
 	"support" : {
 		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
 	},
+	"require": {
+		"luyadev/luya-core": "^1.6"
+	},
 	"require-dev" : {
 		"luyadev/luya-testsuite" : "~1.0.0"
 	},
@@ -55,7 +58,10 @@
 		}
 	},
     "config": {
-        "platform": {"php": "7.0"}
+        "platform": {"php": "7.0"},
+		"fxp-asset": {
+			"enabled": false
+		}
     },
     "repositories": [
         {
