@@ -4,6 +4,7 @@ namespace luya\bootstrap4\tests\src;
 
 
 use luya\testsuite\cases\WebApplicationTestCase;
+use luyatests\data\modules\unitmodule\Module;
 
 class BaseBootstrap4WidgetTestCase extends WebApplicationTestCase
 {
@@ -25,6 +26,7 @@ class BaseBootstrap4WidgetTestCase extends WebApplicationTestCase
                     'filesArray' => [],
                     'imagesArray' => [],
                 ],
+                'composition' => null
             ]
         ];
     }
