@@ -5,11 +5,11 @@
 # Bootstrap 4
 
 [![LUYA](https://img.shields.io/badge/Powered%20by-LUYA-brightgreen.svg)](https://luya.io)
-[![Build Status](https://travis-ci.org/luyadev/luya-bootstrap4.svg?branch=master)](https://travis-ci.org/luyadev/luya-bootstrap4)
+![Tests](https://github.com/luyadev/luya-bootstrap4/workflows/Tests/badge.svg)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a5356371e27bf46c2329/test_coverage)](https://codeclimate.com/github/luyadev/luya-bootstrap4/test_coverage)
 [![Latest Stable Version](https://poser.pugx.org/luyadev/luya-bootstrap4/v/stable)](https://packagist.org/packages/luyadev/luya-bootstrap4)
 [![Total Downloads](https://poser.pugx.org/luyadev/luya-bootstrap4/downloads)](https://packagist.org/packages/luyadev/luya-bootstrap4)
-[![Slack Support](https://img.shields.io/badge/Slack-luyadev-yellowgreen.svg)](https://slack.luya.io/)
+[![Forum Support](https://img.shields.io/badge/Slack-luyadev-yellowgreen.svg)](https://forum.luya.io/)
 
 Wrapper classes for new [Bootstrap 4](https://getbootstrap.com/) CSS Framework for [Yii](https://yiiframework.com) and/or [LUYA](https://luya.io).
 
