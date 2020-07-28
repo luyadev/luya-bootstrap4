@@ -3,12 +3,13 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 In order to read more about upgrading and BC breaks have a look at the [UPGRADE Document](UPGRADE.md).
 
-## 1.1.0 (in progress)
+## 1.1.0 (28. July 2020)
 
 + [#30](https://github.com/luyadev/luya-bootstrap4/pull/30) Added widget tests
 + [#29](https://github.com/luyadev/luya-bootstrap4/pull/29) CarouselBlock: Added config variable to use LazyLoad; adjusted CarouselBlock tests
 + [#28](https://github.com/luyadev/luya-bootstrap4/issues/28) Image block: Added config variable to use LazyLoad; added `alt` and `title` attribute.
 + Adjust library requirements to `luyadev/luya-core >= 1.6` in composer dependencies.
++ Remove Travis and replaced by GitHub Actions
 
 ## 1.0.4 (6. May 2020)
 
