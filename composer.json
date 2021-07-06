@@ -31,7 +31,7 @@
 		"luyadev/luya-core": "^1.6"
 	},
 	"require-dev" : {
-		"luyadev/luya-testsuite" : "~1.0.0"
+		"luyadev/luya-testsuite" : "^2.0"
 	},
 	"autoload" : {
 		"psr-4" : {
@@ -48,17 +48,9 @@
 			"blocks" : [
 				"src{{DS}}blocks"
 			]
-		},
-		"branch-alias" : {
-			"dev-master" : "1.0.x-dev"
-		},
-		"asset-pattern-skip-version" : "(-build|-patch)",
-		"asset-installer-paths" : {
-			"bower-asset-library" : "vendor/bower"
 		}
 	},
     "config": {
-        "platform": {"php": "7.0"},
 		"fxp-asset": {
 			"enabled": false
 		}
