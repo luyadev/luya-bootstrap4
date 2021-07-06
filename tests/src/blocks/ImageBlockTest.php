@@ -85,7 +85,7 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'caption' => 'Test', 'itemArray' => [ 'resolution_width' => 2, 'resolution_height' => 1]]);
         $this->block->setCfgValues(['lazyload' => 1]);
 
-        $this->assertContainsTrimmed('<div class="image"><figure class="figure d-block text-left"><div class="lazyimage-wrapper figure-img img-fluid"><img class="js-lazyimage lazyimage" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Test" title="Test" data-src="luya.jpg" data-width="2" data-height="1"><div class="lazyimage-placeholder"><div style="display: block; height: 0px; padding-bottom: 50%;"></div><div class="loader"></div></div><noscript><img class="lazyimage loaded figure-img img-fluid" src="luya.jpg" /></noscript></div></figure></div>', $this->renderFrontendNoSpace());
+        $this->assertContainsTrimmed('<div class="image"><figure class="figure d-block text-left"><div class="lazyimage-wrapper figure-img img-fluid"><img class="js-lazyimage lazyimage figure-img img-fluid" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Test" title="Test" data-src="luya.jpg" data-width="2" data-height="1" data-replace-placeholder="1"><div class="lazyimage-placeholder"><div style="display: block; height: 0px; padding-bottom: 50%;"></div><div class="loader"></div></div><noscript><img class="loaded figure-img img-fluid" src="luya.jpg" /></noscript></div></figure></div>', $this->renderFrontendNoSpace());
     }
 
 
@@ -95,6 +95,6 @@ class ImageBlockTest extends BaseBootstrap4BlockTestCase
         $this->block->addExtraVar('image', (object) ['source' => 'luya.jpg', 'itemArray' => [ 'resolution_width' => 2, 'resolution_height' => 1]]);
         $this->block->setCfgValues(['lazyload' => 1]);
 
-        $this->assertContainsTrimmed('<div class="image"><figure class="figure d-block text-left"><div class="lazyimage-wrapper figure-img img-fluid"><img class="js-lazyimage lazyimage" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="luya.jpg" data-width="2" data-height="1"><div class="lazyimage-placeholder"><div style="display: block; height: 0px; padding-bottom: 50%;"></div><div class="loader"></div></div><noscript><img class="lazyimage loaded figure-img img-fluid" src="luya.jpg" /></noscript></div></figure></div>', $this->renderFrontendNoSpace());
+        $this->assertContainsTrimmed('<div class="image"><figure class="figure d-block text-left"><div class="lazyimage-wrapper figure-img img-fluid"><img class="js-lazyimage lazyimage figure-img img-fluid" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="luya.jpg" data-width="2" data-height="1" data-replace-placeholder="1"><div class="lazyimage-placeholder"><div style="display: block; height: 0px; padding-bottom: 50%;"></div><div class="loader"></div></div><noscript><img class="loaded figure-img img-fluid" src="luya.jpg" /></noscript></div></figure></div>', $this->renderFrontendNoSpace());
     }
 }

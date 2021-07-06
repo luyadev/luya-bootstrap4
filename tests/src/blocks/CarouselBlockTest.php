@@ -578,13 +578,13 @@ class CarouselBlockTest extends BaseBootstrap4BlockTestCase
                     <div class="carousel-item active">
                         <a href="foobar" title="title">
                             <div class="lazyimage-wrapper d-block w-100">
-                                <img class="js-lazyimage lazyimage" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="title" title="title" data-src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" data-width="2" data-height="1">
+                                <img class="js-lazyimage lazyimage d-block w-100" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="title" title="title" data-src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" data-width="2" data-height="1" data-replace-placeholder="1">
                                 <div class="lazyimage-placeholder">
                                     <div style="display: block; height: 0px; padding-bottom: 50%;"></div>
                                     <div class="loader"></div>
                                 </div>
                                 <noscript>
-                                    <img class="lazyimage loaded d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" />
+                                    <img class="loaded d-block w-100" src="app_path/storage/http-path'. DIRECTORY_SEPARATOR .'0_6" />
                                 </noscript>
                             </div>
                             <div class="carousel-caption">
