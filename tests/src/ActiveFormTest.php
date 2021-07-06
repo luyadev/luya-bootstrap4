@@ -7,7 +7,7 @@ use yii\base\Model;
 use luya\bootstrap4\ActiveForm;
 use luya\testsuite\cases\WebApplicationTestCase;
 
-class Bootstrap4Test extends WebApplicationTestCase
+class ActiveFormTest extends WebApplicationTestCase
 {
     public function getConfigArray()
     {
@@ -31,9 +31,6 @@ class Bootstrap4Test extends WebApplicationTestCase
         ];
     }
     
-    /**
-    * @runInSeparateProcess
-    */
     public function testActiveFormLayout()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -54,10 +51,6 @@ class Bootstrap4Test extends WebApplicationTestCase
         		</div>
         	</div>', ob_get_clean());
     }
-
-        /**
-    * @runInSeparateProcess
-    */
     public function testCheckboxSwitch()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -73,9 +66,6 @@ class Bootstrap4Test extends WebApplicationTestCase
         <div class="form-group row field-stubmodel-firstname"><div class="col-sm-10"><div class="custom-control custom-switch"><input type="hidden" name="StubModel[firstname]" value="0"><input type="checkbox" id="stubmodel-firstname" class="custom-control-input" name="StubModel[firstname]" value="1"><label class="custom-control-label" for="stubmodel-firstname"><label for="stubmodel-firstname">Firstname</label></label></div><div class="invalid-feedback"></div></div></div></form>', ob_get_clean());
     }
     
-    /**
-    * @runInSeparateProcess
-    */
     public function testActiveFormValidationError()
     {
         Yii::setAlias('@webroot', dirname(__DIR__));
@@ -99,9 +89,6 @@ class Bootstrap4Test extends WebApplicationTestCase
         	</div>', (string) $form->field($model, 'firstname'));
     }
     
-    /**
-    * @runInSeparateProcess
-    */
     public function testValidAndInvalidWthAttributeHints()
     {
         $model = new Stub2Model();
