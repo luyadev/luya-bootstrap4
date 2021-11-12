@@ -53,7 +53,7 @@ class ImageBlock extends PhpBlock
      */
     public function icon()
     {
-        return 'image'; // see the list of icons on: https://design.google.com/icons/
+        return 'image'; // see the list of icons on: https://material.io/icons/
     }
  
     /**
@@ -88,7 +88,7 @@ class ImageBlock extends PhpBlock
      *
      * @param {{extras.image}}
      * @param {{vars.align}}
-     * @param {{vars.fluid}}
+     * @param {{vars.showCaption}}
      * @param {{vars.image}}
     */
     public function admin()

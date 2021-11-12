@@ -6,7 +6,7 @@
  *
  * @param $this->extraValue('image');
  * @param $this->varValue('align');
- * @param $this->varValue('fluid');
+ * @param $this->varValue('showCaption');
  * @param $this->varValue('image');
  * @param $this->cfgValue('lazyload');
  *
