@@ -32,7 +32,9 @@
     "luyadev/luya-core": ">=1.6"
   },
   "require-dev": {
-    "luyadev/luya-testsuite": "^2.0"
+    "luyadev/luya-testsuite": "^3.0",
+	"luyadev/luya-module-cms": "^4.0",
+	"luyadev/luya-module-admin": "^4.0"
   },
   "autoload": {
     "psr-4": {
