@@ -1,7 +1,5 @@
 name: Tests
-
 on: [push, pull_request]
-
 env:
   DEFAULT_COMPOSER_FLAGS: "--prefer-dist --no-interaction"
   CC_TEST_REPORTER_ID: e5b2383e4b8cb691696f61c6de9d18afcb7fc53d36949295b35da1fb384d8632
@@ -13,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        php: ['7.0', '7.1', '7.2', '7.3', '7.4']
+        php: ['7.0', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1']
 
     steps:
       ## checkout the repoistory 
@@ -35,7 +33,7 @@ jobs:
       ## run unit tests
       - name: PHP Unit tests for PHP 
         run: vendor/bin/phpunit --verbose --configuration actions.phpunit.xml
-        if: matrix.php == '8.0' || matrix.php == '7.4' || matrix.php == '7.3' || matrix.php == '7.2' || matrix.php == '7.0'
+        if: matrix.php == '8.1' || matrix.php == '8.0' || matrix.php == '7.4' || matrix.php == '7.3' || matrix.php == '7.2' || matrix.php == '7.0'
 
       ## unit test with coverage
       - name: PHP Unit tests for PHP 7.1

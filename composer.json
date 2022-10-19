@@ -1,64 +1,72 @@
 {
-	"name" : "luyadev/luya-bootstrap4",
-	"description" : "Bootstrap4 Assets and Helper classes like ActiveForm for LUYA and Yii2.",
-	"type" : "luya-extension",
-	"keywords" : [
-		"php",
-		"luya",
-		"module",
-		"cms",
-		"yii2",
-		"bootstrap",
-		"bootstrap4",
-		"twbs4",
-		"luya-module",
-		"bootstrap4",
-		"bootstrap",
-		"assets"
-	],
-	"license" : "MIT",
-	"homepage" : "https://luya.io",
-	"authors" : [{
-			"name" : "Basil",
-			"email" : "git@nadar.io",
-			"homepage" : "https://github.com/nadar"
-		}
-	],
-	"support" : {
-		"issues" : "https://github.com/luyadev/luya-bootstrap4/issues"
-	},
-	"require": {
-		"luyadev/luya-core": ">=1.6"
-	},
-	"require-dev" : {
-		"luyadev/luya-testsuite" : "^2.0"
-	},
-	"autoload" : {
-		"psr-4" : {
-			"luya\\bootstrap4\\" : "src/"
-		}
-	},
-	"autoload-dev" : {
-		"psr-4" : {
-			"luya\\bootstrap4\\tests\\" : "tests/"
-		}
-	},
-	"extra" : {
-		"luya" : {
-			"blocks" : [
-				"src{{DS}}blocks"
-			]
-		}
-	},
-    "config": {
-		"fxp-asset": {
-			"enabled": false
-		}
+  "name": "luyadev/luya-bootstrap4",
+  "description": "Bootstrap4 Assets and Helper classes like ActiveForm for LUYA and Yii2.",
+  "type": "luya-extension",
+  "keywords": [
+    "php",
+    "luya",
+    "module",
+    "cms",
+    "yii2",
+    "bootstrap",
+    "bootstrap4",
+    "twbs4",
+    "luya-module",
+    "bootstrap4",
+    "bootstrap",
+    "assets"
+  ],
+  "license": "MIT",
+  "homepage": "https://luya.io",
+  "authors": [
+    {
+      "name": "Basil",
+      "email": "git@nadar.io",
+      "homepage": "https://github.com/nadar"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/luyadev/luya-bootstrap4/issues"
+  },
+  "require": {
+    "luyadev/luya-core": ">=1.6"
+  },
+  "require-dev": {
+    "luyadev/luya-testsuite": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "luya\\bootstrap4\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "luya\\bootstrap4\\tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "luya": {
+      "blocks": [
+        "src{{DS}}blocks"
+      ]
+    }
+  },
+  "config": {
+    "fxp-asset": {
+      "enabled": false
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    "platform": {
+      "php": "7.4"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "luyadev/luya-composer": true
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }
