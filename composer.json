@@ -33,8 +33,8 @@
   },
   "require-dev": {
     "luyadev/luya-testsuite": "^3.0",
-	"luyadev/luya-module-cms": "^4.0",
-	"luyadev/luya-module-admin": "^4.0"
+	  "luyadev/luya-module-cms": "^4.0",
+	  "luyadev/luya-module-admin": "^4.0"
   },
   "autoload": {
     "psr-4": {
@@ -56,9 +56,6 @@
   "config": {
     "fxp-asset": {
       "enabled": false
-    },
-    "platform": {
-      "php": "7.4"
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
