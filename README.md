@@ -13,7 +13,7 @@
 
 Wrapper classes for new [Bootstrap 4](https://getbootstrap.com/) CSS Framework for [Yii](https://yiiframework.com) and/or [LUYA](https://luya.io).
 
-> As of Bootstrap 4, the grid is completely written in FLEX. Check the [Browser Support](http://caniuse.com/#search=flex) to decide if you want to use Bootstrap 4 for your project.
+> As of Bootstrap 4, the grid is completely written in FLEX. Check the [Browser Support](https://caniuse.com/#search=flex) to decide if you want to use Bootstrap 4 for your project.
 
 This package contains the following components:
 
